@@ -140,5 +140,10 @@ nav ul li a{
     align-items: center;   
     padding-right: 50px;
 }
-.login a{
+.ForgotPassword{
+    padding-left: 450px;
+    text-align: left;
+}
+.ForgotPassword h3{
+    color: blue;
 }
