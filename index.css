@@ -108,3 +108,14 @@ nav ul li a{
     padding-left: 35px;
     padding-bottom: 15px;
 }
+.Contact{
+    padding-left: 30px;
+}
+.Contact h3{
+    color: blueviolet;
+    font-size: medium;
+    padding-bottom: 10px;
+}
+#submit{
+    font-size: 20px;
+}
