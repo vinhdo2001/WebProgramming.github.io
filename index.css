@@ -98,3 +98,13 @@ nav ul li a{
 .QnA{
     padding-left: 20px;
 }
+.QnA summary{
+    color: red;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.QnA p{
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-bottom: 15px;
+}
