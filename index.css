@@ -95,3 +95,64 @@ nav ul li a{
 .content-table tbody tr:last-of-type{
     border-bottom: 2px solid #009879;
 }
+.QnA{
+    padding-left: 20px;
+}
+.QnA summary{
+    color: red;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.QnA p{
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-bottom: 15px;
+}
+.Contact{
+    padding-left: 30px;
+}
+.Contact h3{
+    color: blueviolet;
+    font-size: medium;
+    padding-bottom: 10px;
+}
+#submit{
+    font-size: 20px;
+}
+.Information{
+    padding-left: 30px;
+}
+.username{
+    padding-left: 460px;
+}
+.username input{
+    width: 250px;
+}
+.username h2{
+    padding-left: 75px;
+}
+
+.login {
+    padding-top: 20px;
+    padding-left: 460px;
+}
+.login input{
+    align-items: center;   
+    padding-right: 50px;
+}
+.ForgotPassword{
+    padding-left: 450px;
+    text-align: left;
+}
+.ForgotPassword h3{
+    color: blue;
+}
+.register{
+    padding-left: 300px;
+}
+.name input{
+    width: 250px;
+} 
+.register p{
+    color: blue;
+}
