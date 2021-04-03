@@ -44,6 +44,7 @@ nav ul li a{
     color: red;
 }
 
+
 @media (min-width:768px) {
     .parent1{
     display: flex;
@@ -59,6 +60,9 @@ nav ul li a{
     .team-info img {
         height: 350px;
         width: 280px;
+    }
+    .team-info p{
+        width: 300px;
     }
 }
 .content-table {
