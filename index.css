@@ -122,3 +122,23 @@ nav ul li a{
 .Information{
     padding-left: 30px;
 }
+.username{
+    padding-left: 460px;
+}
+.username input{
+    width: 250px;
+}
+.username h2{
+    padding-left: 75px;
+}
+
+.login {
+    padding-top: 20px;
+    padding-left: 460px;
+}
+.login input{
+    align-items: center;   
+    padding-right: 50px;
+}
+.login a{
+}
