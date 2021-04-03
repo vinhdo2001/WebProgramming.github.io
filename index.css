@@ -95,3 +95,6 @@ nav ul li a{
 .content-table tbody tr:last-of-type{
     border-bottom: 2px solid #009879;
 }
+.QnA{
+    padding-left: 20px;
+}
