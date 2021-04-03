@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title> Register</title>
+        <link rel="stylesheet" href="index.css" type="text/css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <img src="Image/Logo.jpg" alt="Logo" class="logo">
+                <h1 class="info"> Register</h1>
+                <nav>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Fees</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">My Account</a></li>
+                        <li><a href="">Browse</a></li>
+                    </ul>
+                </nav>  
+            </div>
+            <div class="register">
+                <h2>Register your new account</h2> <br>
+                <form enctype="text/plain">
+                    <input type="text" name="name" placeholder="First name"> <label for="name"> </label>  <br/> <br/>               
+                    <input type="text" name="name" placeholder="Last name"> <label for="name"> </label>  <br/> <br/> 
+                    <input type="email" name="email" placeholder="Email"> <label for="email"> </label>  <br/> <br/> 
+                    <label for="password"></label>
+                    <input type="password" name="password" placeholder="Password"> <br> <br>
+                    <label for="password"></label>
+                    <input type="password" name="password" placeholder="Confirm Password"> <br>     <br>
+                    <p> Choose your profile picture.</p> <br>
+                    <input type='file' name='picture' placeholder="Choose your profile picture" > <br> <br>
+                    <input type="text" name="address" placeholder="Address"> <label for="address"> </label>  <br/> <br/> 
+                    <input type="text" name="city" placeholder="City"> <label for="city"> </label>  <br/> <br/> 
+                    <input type="text" name="zipcode" placeholder="Zip code (4 to 6 digits)" 
+                    maxlength="6" minlength="4"> <label for="zipcode" > </label>  <br/> <br/>  
+                    <select name="Country">
+                        <option value="" id="country"> <label for="country"> Select Country </label></option>
+                        <option value="" id="VN"> <label for="VN"> Vietnam </label></option>
+                        <option value="" id="US"> <label for="US"> The United States of America </label></option>
+                        <option value="" id="JP"> <label for="JP"> Japan </label></option>
+                        <option value="" id="KR"> <label for="KR"> Korea </label></option>
+                    </select><br/> <br/>
+                    <div class="Type">
+                        <h3>Choose Account Type</h3> <br>
+                        <input type="radio" name="account" value="Store Owners"> <label for="account"> Store Owners </label>
+                        <input type="radio" name="account" value="Shoppers"> <label for="account"> Shoppers </label>
+                    </div>  <br>
+                    <input type="submit"name='submit' value='Submit' > <label for="submit"></label>
+                    <input type="reset"name='reset' value='Clear' > <label for="reset"></label><br> <br>
+                </form>                         
+            </div>
+        </div>
+    </body>
+</html> 
