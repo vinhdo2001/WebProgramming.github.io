@@ -147,3 +147,12 @@ nav ul li a{
 .ForgotPassword h3{
     color: blue;
 }
+.register{
+    padding-left: 300px;
+}
+.name input{
+    width: 250px;
+} 
+.register p{
+    color: blue;
+}
