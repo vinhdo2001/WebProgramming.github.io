@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products - Simba </title>
+    <title>Product Details - Simba </title>
     <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -42,84 +42,64 @@
                     </li>
                 </ul>
             </nav>
+            <!-- resview later -->
             <img src="productImages/cart.png" width="30px" height="30px" alt="">
-            <img src="productImages/menu.png" class="menu-icon">
-
+            <img src="productImages/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
-
-
-
-    <!-- featured productes -->
-    <div class="small-container">
-        <!-- <h2 class="title">Featured Products</h2> -->
-        <div class="row row-2">
-            <h2>All Products</h2>
-            <select>
-                <option>Default Shorting</option>
-                <option>
-                    Short by categories
-                </option>
-                <option>
-                    Short by time created
-                </option>
-            </select>
-        </div>
+    <!------------- single product details ----------->
+    <div class="small-container single-product">
         <div class="row">
-            <div class="col-4">
-                <a href="ProductDetails.html">
-                    <img src="productImages//product-1.jpg" alt="">
-                </a>
-                <h4>Red T-shirt</h4>
-                <div class="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star "></span>
-                    <span class="fa fa-star "></span>
-                </div>
-                <p>$50.00</p>
-            </div>
-            <div class="col-4">
-                <a href="ProductDetails.html">
-                    <img src="productImages/product-2.jpg" alt="">
-                </a>
-                <h4>Red T-shirt</h4>
-                <div class="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star "></span>
-                    <span class="fa fa-star "></span>
-                </div>
-                <p>$50.00</p>
+            <div class="col-2">
+                <img src="productImages/category-1.jpg" id="ProductImg" alt="" width="100%">
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="productImages/category-1.jpg" alt="" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="productImages/category-2.jpg" alt="" width="100%">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="productImages/category-3.jpg" alt="" width="100%">
 
-            </div>
-            <div class="col-4">
-                <img src="productImages/product-3.jpg" alt="">
-                <h4>Red T-shirt</h4>
-                <div class="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star "></span>
-                    <span class="fa fa-star "></span>
+                    </div>
+                    <div class="small-img-col">
+                        <img src="productImages/category-3.jpg" alt="" width="100%">
+
+                    </div>
                 </div>
-                <p>$50.00</p>
             </div>
-            <div class="col-4">
-                <img src="productImages/product-4.jpg" alt="">
-                <h4>Red T-shirt</h4>
-                <div class="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star "></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star "></span>
-                </div>
-                <p>$50.00</p>
+            <div class="col-2">
+                <p>Home / T-shirt</p>
+                <h1>Red T-Shirt</h1>
+                <h4>$50.00</h4>
+                <select>
+                    <option>Select size</option>
+                    <option>XXL</option>
+                    <option>L</option>
+                    <option>M</option>
+                    <option>S</option>
+                </select>
+                <input type="number" value="1">
+                <a href="" class="btn">Add to cart</a>
+                <h3>Product details</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Est numquam quo hic atque, asperiores assumenda iste et,
+                    reiciendis totam nulla deserunt nostrum dolores inventore
+                    praesentium quia odit, soluta nobis exercitationem.
+                </p>
             </div>
         </div>
+    </div>
+    <!-- -------title----- -->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
+    </div>
+    <!-- -------product----- -->
+    <div class="small-container">
         <div class="row">
             <div class="col-4">
                 <img src="productImages//product-1.jpg" alt="">
@@ -171,18 +151,6 @@
             </div>
         </div>
 
-        <div class="page-btn">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>&#8594;</span>
-        </div>
-
-        <!-- Latest Products -->
-        <!-- <h2 class="title">Latest Products</h2> -->
-
-        <!-- offer 2:09 -->
-        <!-- brand 2:27 -->
     </div>
 
 </body>
