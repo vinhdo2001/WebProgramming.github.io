@@ -50,21 +50,25 @@ a{
 }
 .btn{
     display: inline-block;
-    background: #ff523b;
+    background: #f48b29;
     color: #fff;
     padding: 8px 30px;
     margin: 30px 0px;
     border-radius: 30px;
 }
 .btn:hover{
-    background: #563434;
+    background: #7ebdb4;
+    /* color:#364547 */
 }
 
 .header{
-    background: radial-gradient(#F8C213,#FDEBB1);
+    background: linear-gradient(#dbf6e9,#ffdcdc);
 }
 .header h1{
-    color:#6F90FB ;
+    color:#cc561e ;
+}
+.header p{
+    color:#364547 ;
 }
 .header .row{
     margin-top: 70px;
@@ -150,8 +154,8 @@ small{
 
 /*-------------footer-------*/
 .footer{
-    background:#ffd6d6;
-    color: black;
+    background:#ffb4b4;
+    color: #ffe268;
     font-size: 14px;
     padding: 60px 0 20px;
 
