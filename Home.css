@@ -169,8 +169,10 @@ small{
 .footer-col-1, .footer-col-2, .footer-col-3{
     text-align: center;
     margin-bottom: 20px;
-
-
+}
+.small-container h1{
+    padding-bottom: 20px;
+    padding-left: 10px;
 }
 /* .footer h3{
     color:#ff523b;
