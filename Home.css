@@ -29,6 +29,7 @@ a{
     color: #555;
 }
 .container{
+    max-width: 1300px ;
     margin: auto;
     padding-left: 25px ;
     padding-right: 25px ;
@@ -45,9 +46,10 @@ a{
 }
 .col-2 img{
     max-width: 100%;
+    margin-left: 200px;
     
 }
-.btn{
+.button{
     display: inline-block;
     background: #f48b29;
     color: #fff;
@@ -55,52 +57,80 @@ a{
     margin: 30px 0px;
     border-radius: 30px;
 }
-.btn:hover{
+.button:hover{
     background: #7ebdb4;
     /* color:#364547 */
 }
 
-.header{
-    background: linear-gradient(#dbf6e9,#ffdcdc);
-}
-.header h1{
-    color:#cc561e ;
-}
-.header p{
-    color:#364547 ;
-}
-.header .row{
-    margin-top: 10px;
-}
+
 #ecommerce_Image{
     width: 50%;
+
 }
 
-.col-3{
-    flex-basis: 30%;
-    min-width: 250px;
-    margin-bottom: 30px;
-}
-.col-3 img{
-width: 100%;
-}
-.small-container{
-    max-width: 1080px;
-    margin:auto;
-    padding-left: 25px;
-    padding-right: 25px;
+/*------------account------------*/
+.account{
+    padding: 50px 0;
+    background: radial-gradient(#fff,#ffd6d6);
 }
 
+.form{
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+}
+.form span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: silver;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
 
-h4{
-    color: #555;
-    font-weight:bolder;
 }
-.col-4{
-    font-size: 14px;
+.form form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 80px;
 }
-.col-4:hover{
-transform: translateY(-5px);
+.form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.form button{
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+#Indicator {
+    width: 100px;
+    border: none;
+    background: #ff523b;
+    height: 3px;
+    margin-top: 8px;
+}
+
+.social-icons {
+    margin: 30px ;
+    text-align: center;
+}
+
+.social-icons img {
+    width: 30px;
+    text-align: center;
 }
 
 /*-------------footer-------*/
@@ -157,141 +187,22 @@ ul{
     margin-left: 20px;
     /* display:none; */
 }
-/*-------------All Products page-------*/
-.row-2{
-    justify-content: space-between;
-    margin: 100px auto 50px;
-}
-select{
-    border: 1px solid #ff523b;
-    padding: 5px;
-}
-select:focus{
-    outline: none;
-}
-.page-btn{
-    margin: 0 auto 80px;
-}
-.page-btn span{
-    display:inline-block;
-    border: 1px solid #ff523b;
-    margin-left: 10px;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-}
-.page-btn span:hover{
-    background-color: #ff523b;
-    color: #fff;
-}
 
-
-input:focus{
-    outline: none;
-}
-.small-img-row{
-    display: flex;
-    justify-content: space-between;
-}
-.small-img-col{
-    flex-basis: 24%;
-    cursor: pointer;
-}
-/* media query for menu */
-@media only screen and(max-width: 800px){
-    nav ul{
-        position: absolute;
-        top:70px;
-        left:0;
-        background:#333;
-        width: 100%;
-    }
-    nav ul li{
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    nav ul li a{
-        color: #fff;
-    }
-    .menu-icon{
-        display: block;
-        cursor: pointer;
-    }
-}
 @media only screen and(max-width: 800px){
     .row{
         text-align: center;
     }
-    .col-2 .col-3 .col-4{
+    .col-2 .col-4{
         flex-basis: 100%;
     }
-}
-/*------------login form-------------*/
-.input {
-	width: 320px;
-	height: 420px;
-	top: 20%;
-	left: 60%;
-	position: absolute;
-	box-sizing: border-box;
-	
-}
-
-.input input{
-	width: 100%;
-	margin-bottom: 10px;
-}
-
-.input input[type="text"], input[type="password"] {
-    padding: 10px;
-	border-radius: 10px;
-	height: 40px;
-}
-
-.input input[type="submit"] {
-	background: brown;
-	color: #fff;
-	border-radius: 10px;
-	height: 40px;
-	transition: transform 0.5s;
-	margin-top: 30px;
-}
-
-.input input[type="submit"]:hover {
-	transform: translateY(-5px);
-}
-
-.input a{
-	text-decoration: none;
-	font-style: italic;
-	align: left;
-}
-
-.input input[type="button"] {
-	background: georgian;
-	color: black;
-	border-radius: 10px;
-	height: 40px;
-	transition: transform 0.5s;
-	margin-top: 5px;
-}
-
-.input input[type="button"]:hover {
-	transform: translateY(-5px);
-}
-
-.line {
-	border-top: 1px solid #222;
-	opacity: 0.2;
-	margin-top: 20px;
-	
-	
-}
-
-.input p{
-	float: right;
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 22px;
+    }
 }
