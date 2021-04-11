@@ -123,16 +123,7 @@ a{
     margin-top: 8px;
 }
 
-.social-icons {
-    margin: 30px ;
-    text-align: center;
-}
-
-.social-icons img {
-    width: 30px;
-    text-align: center;
-}
-
+  
 /*-------------footer-------*/
 .footer{
     background:#ffb4b4;
