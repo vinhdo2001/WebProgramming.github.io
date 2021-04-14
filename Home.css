@@ -47,6 +47,7 @@ a{
 .col-2 img{
     max-width: 100%;
     
+    
 }
 .btn{
     display: inline-block;
@@ -127,8 +128,9 @@ width: 100%;
     border-radius: 5px;
     position: absolute;
     bottom: 0;
-    left:50%;
+    left:45.5%;
     transform: translateX(-50);
+    
 
 }
 h4{
