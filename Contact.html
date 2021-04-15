@@ -2,63 +2,134 @@
 <html>
 
     <head>
-        <meta charset="utf-8">
-        <title> Contact</title>
-        <link rel="stylesheet" href="index.css" type="text/css" />
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simba | Online Shopping Mall</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Montserrat:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <div class="container">
-            <div class="navbar">
-                <img src="Image/Logo.jpg" alt="Logo" class="logo">
-                <h1 class="info"> Contact Form</h1>
-                <nav>
-                    <ul>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Fees</a></li>
-                        <li><a href="">FAQs</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">My Account</a></li>
-                        <li><a href="">Browse</a></li>
-                    </ul>
-                </nav>  
-            </div>
-            <div class="Contact">
-                <form enctype="text/plain">
-                    <h3> Choose Contact Purpose</h3> 
-                    <select name="contact-purpose">
-                        <option value="" id="Select"> <label for="Select"> Select Contact Purpose </label></option>
-                        <option value="" id="idk"> <label for="idk"> I dont know </label></option>
-                        <option value="" id="Select"> <label for="Select"> Select Contact Purpose </label></option>
-                        <option value="" id="Select"> <label for="Select"> Select Contact Purpose </label></option>
-                    </select><br/> <br/>
-                    <h3>Enter your name</h3>
-                    <input type="text" name="name"> <label for="name"> </label>  <br/> <br/>               
-                    <h3>Enter your email</h3>
-                    <input type="email" name="email"> <label for="email"> </label> <br> <br>    
-                    <div class="method">
-                        <h3>Choose contact method</h3>
-                        <input type="radio" name="method" value="phone"> <label for="method"> Phone </label>
-                        <input type="radio" name="method" value="email"> <label for="method"> Email </label>
-                    </div>  <br>
-                    <div class="days">
-                        <h3> Choose contact days</h3> 
-                        <input type='checkbox' name='days' value='Mon' /> <label for="Mon"> Monday</label>
-                        <input type='checkbox' name='days' value='Tues' /> <label for="Tues"> Tuesday</label>
-                        <input type='checkbox' name='days' value='Wed' /> <label for="Wed"> Wednesday</label>
-                        <input type='checkbox' name='days' value='Thu' /> <label for="Thu"> Thursday</label>
-                        <input type='checkbox' name='days' value='Fri' /> <label for="Fri"> Friday</label>
-                        <input type='checkbox' name='days' value='Sat' /> <label for="Sat"> Saturday</label>
-                        <input type='checkbox' name='days' value='Sun' /> <label for="Sun"> Sunday</label>
-                    </div>  
-                    <div class="message">
-                        <textarea cols="100" rows="10"> </textarea>
-                    </div> <br>
-                    <input type="submit"name='submit' value='Submit' > <label for="submit"></label>
-                    <input type="reset"name='reset' value='Clear' > <label for="reset"></label><br> <br>
-
-
-                </form>            
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="Homepage.html">
+                            <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="50%">
+                        </a>
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li>
+                                <a href="About Us.html">About us</a>
+                            </li>
+                            <li>
+                                <a href="Fees.html">Fees</a>
+                            </li>
+                            <li>
+                                <a href="MyAccount(logged-in).html">Account</a>
+                            </li>
+                            <li>
+                                <a href="ProductBrowser.html">Browse</a>
+                            </li>
+                            <li>
+                                <a href="FAQs.html">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="Contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <img src="https://i.imgur.com/vPyCGZZ.png" width="30px" height="30px" alt="">
+                    <img src="https://i.imgur.com/OA07E9Y.png" class="menu-icon">
+    
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <h1>Give your workout<br>A new style</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
+                            Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
+                        </p>
+                        <a href="" class="btn">Explore now &#8594;</a>
+                    </div>
+                    <div class="col-2">
+                        <!-- 23:20 https://www.youtube.com/watch?v=yQimoqo0-7g-->
+                        <img src="productImages/Logo.jpg" alt="">
+                    </div>
+    
+                </div>
             </div>
         </div>
+
+        <div class="container">
+            <div style="text-align:center">
+              <h2>Contact Us</h2>
+           
+            </div>
+            <div class="row">
+              
+              <div class="column">
+                <form action="/action_page.php">
+                    <label for="contact-purpose">Contact Purpose</label>
+                    <select id="contact-purpose" name="contact-purpose">
+                        <option value="australia">Order</option>
+                        <option value="canada">Complain</option>
+                        
+                      </select>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Your name..">
+                  
+                  <label for="email">Email</label>
+                  <input type="text" id="email" name="email" placeholder="Your email..">
+                  
+                  <label for="phone">Phone</label>
+                  <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+
+                  <label for="contact-method">Preferred Contact Method</label> <br>
+                  <input type="radio" id="email" name="method" value="email">
+                  <label for="email">Email</label>
+                  <input type="radio" id="phone" name="method" value="phone">
+                  <label for="phone">Phone</label>
+
+                  <p style="padding-top: 20px;">Contact Day</p>
+                    <input type="checkbox" id="day1" name="day1" value="Monday">
+                    <label for="day1"> Monday </label>
+
+                    <input type="checkbox" id="day2" name="day2" value="Tuesday">
+                    <label for="day2"> Tuesday </label>
+
+                    <input type="checkbox" id="day3" name="day3" value="Wednesday">
+                    <label for="day3"> Wednesday </label>
+
+                    <input type="checkbox" id="day4" name="day4" value="Thursday">
+                    <label for="day4"> Thursday </label>
+
+                    <input type="checkbox" id="day5" name="day5" value="Friday">
+                    <label for="day5"> Friday </label>
+
+                    <input type="checkbox" id="day6" name="day6" value="Saturday">
+                    <label for="day6"> Saturday </label>
+
+                    <input type="checkbox" id="day7" name="day7" value="Sunday">
+                    <label for="day7"> Sunday </label>
+                
+                    
+                  
+                  
+                  <p style="padding-top: 20px;">Message</p>
+                  <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
+                  <input type="submit" value="Submit">
+                  <input type="reset" value="Clear">
+                </form>
+              </div>
+            </div>
+          </div>
+        
     </body>
 </html>
