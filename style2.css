@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat',sans-serif;
+
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+.container{
+    max-width: 1300px ;
+    margin: auto;
+    padding-left: 25px ;
+    padding-right: 25px ;
+}
+.row{
+    display: flex;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    margin-left: 200px;
+    
+}
+.button {
+    display: inline-block;
+    background: #f48b29;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0px;
+    border-radius: 30px;
+}
+.button:hover{
+    background: #7ebdb4;
+    /* color:#364547 */
+}
+
+
+#ecommerce_Image{
+    width: 50%;
+
+}
+
+/*------------account------------*/
+.account, .faqs {
+    padding: 50px 0;
+    background: radial-gradient(#fff,#ffd6d6);
+}
+.account-retrieve {
+    background: radial-gradient(#fff,#ffd6d6);
+}
+
+.ForgotPassword {
+    position: relative;
+    text-align: left;
+    padding: 50px 0;
+    margin: auto;
+}
+.question {
+    background: white;
+    max-width: 1300px ;
+    font-size: 22px;
+    padding: 50px 0;
+    position: relative;
+
+}
+.container h1 {
+    padding: 20px 0;
+    position: relative;
+}
+
+.form-login {
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+}
+
+.form-register{
+    background: #fff;
+    width: 300px;
+    height: 800px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+}
+
+.form-login span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: silver;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
+
+}
+.form-login form, .form-register form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 80px;
+}
+.form-login input, .form-register input {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.ForgotPassword input {
+    width: 30%;
+    padding: 0 10px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.form-login button, .form-register button{
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+#Indicator {
+    width: 100px;
+    border: none;
+    background: #ff523b;
+    height: 3px;
+    margin-top: 8px;
+}
+
+  
+/*-------------footer-------*/
+.footer{
+    background:#ffb4b4;
+    color: #ffe268;
+    font-size: 14px;
+    padding: 60px 0 20px;
+
+}
+/* .footer .p{
+    color: aqua;
+} */
+.footer-col-1, .footer-col-2, .footer-col-3{
+    text-align: center;
+    margin-bottom: 20px;
+
+
+}
+/* .footer h3{
+    color:#ff523b;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-3{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex:1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width:180px;
+    margin-bottom: 20px;
+}
+.footer-col-3 ,.footer-col-4{
+    flex-basis: 12%;    
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px; */
+/* } */
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    /* display:none; */
+}
+
+@media only screen and(max-width: 800px){
+    .row{
+        text-align: center;
+    }
+    .col-2 .col-4{
+        flex-basis: 100%;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 22px;
+    }
+}
