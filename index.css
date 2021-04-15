@@ -5,39 +5,12 @@
     box-sizing: border-box;
 
 }
-.container{
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
-.navbar {
-     height: 12%;
-     display: flex;
-     align-items: center;
-}
-.logo {
-    width:130px;
-    height: 100px;
 
-}
 .info{
     text-align: center;
     color: blue;
 }
-nav{
-    flex:1;
-    text-align: right;
-    padding-right: 8%;
-}
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 15px;
-}
-nav ul li a{
-    text-decoration: none;
-    font-size: 22px;
-}
+
 .member{
     text-align: center ;
     font-size: 35px;
@@ -45,26 +18,6 @@ nav ul li a{
 }
 
 
-@media (min-width:768px) {
-    .parent1{
-    display: flex;
-    padding-right: 0px;
-    }
-    .parent2{
-        display: flex;
-    }
-    .team-info{
-        width: 33.33%;
-        padding-left: 25%;
-    }
-    .team-info img {
-        height: 350px;
-        width: 280px;
-    }
-    .team-info p{
-        width: 300px;
-    }
-}
 .content-table {
     border-collapse: collapse;
     margin: 25px;
@@ -154,5 +107,9 @@ nav ul li a{
     width: 250px;
 } 
 .register p{
+    color: blue;
+}
+.QnA a{
+    text-decoration: none;
     color: blue;
 }
