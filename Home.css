@@ -330,6 +330,7 @@ input:focus{
         line-height: 22px;
     }
 }
+/*About Us */
 .TeamInformation h2{
     color: #cc561e;
     margin-left: 52px;
@@ -371,4 +372,28 @@ input:focus{
 }
 .member img{
     margin-bottom: 20px;
+}
+/*ToS */
+.ToS h2{
+    color: #cc561e;
+    margin-left: 52px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.ToS h3 {
+    color: #cc561e;
+    margin-left: 52px;
+    font-weight: 900;
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.ToS p{
+    color: #333;
+    width: 80%;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    padding-left: 53px;
 }
