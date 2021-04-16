@@ -1,0 +1,32 @@
+.products-in-cart{
+    margin-top: 20px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+.products-in-cart img{
+    width: 10%;
+    margin-top: 10px;
+}
+@media only screen and (max-width: 768px) {
+    .products-in-cart{
+        margin-top: 10px;
+        margin-right: 0%;
+        margin-left: 0%;
+        
+    }
+    .products-in-cart img{
+        width: 70px;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .products-in-cart{
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 0%;
+        
+    }
+    .products-in-cart img{
+        width: 100px;
+    }
+  }
+  
