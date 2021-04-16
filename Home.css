@@ -130,7 +130,7 @@ width: 100%;
     position: absolute;
     bottom: 0;
     left:50%;
-    transform: translateX(-50);
+    transform: translateX(-50px);
 
 }
 h4{
@@ -143,18 +143,6 @@ h4{
 .col-4:hover{
 transform: translateY(-5px);
 }
-/*-------------offer-------*/
-/* .offer{
-    background: radial-gradient(#fff,#ffd6d6);
-    margin-top: 80px;
-    padding: 30px 0px;
-}
-.col-2 .offer-img{
-    padding: 50px;
-}
-small{
-    color: red;
-} */
 
 /*-------------footer-------*/
 .footer{
@@ -193,7 +181,7 @@ ul{
 .menu-icon{
     width: 28px;
     margin-left: 20px;
-    /* display:none; */
+    display:none;
 }
 /*-------------footer responsive-------*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -306,8 +294,6 @@ input:focus{
         display: block;
         cursor: pointer;
     }
-}
-@media only screen and(max-width: 800px){
     .row{
         text-align: center;
     }
@@ -325,94 +311,21 @@ input:focus{
         line-height: 22px;
     }
 }
-/*About Us */
-.TeamInformation h2{
-    color: #cc561e;
-    margin-left: 52px;
-    font-weight: 900;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 40px;
-}
-.TeamInformation p{
-    margin-left: 25%;
-    margin-right: 17%;
-}
-.parent1{
-    display: flex;
-    padding-right: 0px;
+/* @media only screen and(max-width: 800px){
+    .row{
+        text-align: center;
     }
-.parent2{
-    display: flex;
-}
-.team-info{
-    width: 33.33%;
-    padding-left: 25%;
-}
-.team-info img {
-    height: 350px;
-    width: 280px;
-}
-.team-info p{
-    width: 300px;
-    margin-bottom: 20px;
-}
-.member > h2{
-    color: #cc561e;
-    margin-left: 52px;
-    font-weight: 900;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 40px;
-}
-.member img{
-    margin-bottom: 20px;
-}
-/*ToS */
-.ToS h2{
-    color: #cc561e;
-    margin-left: 52px;
-    font-weight: 900;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 40px;
-}
-.ToS h3 {
-    color: #cc561e;
-    margin-left: 52px;
-    font-weight: 900;
-    text-align: left;
-    padding-top: 30px;
-    padding-bottom: 40px;
-}
-.ToS p{
-    color: #333;
-    width: 80%;
-    margin-bottom: 20px;
-    padding-bottom: 40px;
-    padding-left: 53px;
-}
-/*Privacy Policy */
-.policy h2{
-    color: #cc561e;
-    margin-left: 52px;
-    font-weight: 900;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 40px;
-}
-.policy h3 {
-    color: #cc561e;
-    margin-left: 52px;
-    font-weight: 900;
-    text-align: left;
-    padding-top: 30px;
-    padding-bottom: 40px;
-}
-.policy p{
-    color: #333;
-    width: 80%;
-    margin-bottom: 20px;
-    padding-bottom: 40px;
-    padding-left: 53px;
-}
+    .col-2 .col-3 .col-4{
+        flex-basis: 100%;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 22px;
+    }
+} */
