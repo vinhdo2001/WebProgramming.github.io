@@ -1,0 +1,60 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+/* table */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .column {
+      width: 50%;
+    }
+  }
+  /* desktops */
+  @media screen and (min-width: 1024px) {
+    .column {
+      width: 25%;
+    }
+  }
+  /* Responsive nav bar */
+  nav input[type="checkbox"] {
+    display: none;
+  }
+  nav label {
+    display: none;
+  }
+  nav ul li {
+    width: 100px;
+    /* padding: 10px; */
+    float: right;
+    text-align: center;
+    list-style: none;
+  }
+  nav ul li:hover {
+    background-color: aquamarine;
+  }
+  /* Clearfix */
+  ul::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* phone */
+  @media screen and (max-width: 1023px) {
+    nav label {
+      width: 30px;
+      float: right;
+      display: block;
+    }
+
+    nav input[type="checkbox"] ~ ul {
+      display: none;
+    }
+
+    nav input[type="checkbox"]:checked ~ ul {
+      display: block;
+    }
+
+    nav input[type="checkbox"]:checked ~ ul li {
+      width: 95%;
+    }
+  }
