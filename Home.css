@@ -7,22 +7,11 @@ body{
     font-family: 'Montserrat',sans-serif;
 
 }
-.navbar{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-nav{
-    flex: 1;
-    text-align: right;
-}
-nav ul{
-    display: inline-block;
-    list-style-type: none;
-}
-nav ul li{
-    display: inline-block;
-    margin-right: 20px;
+
+.logo{
+    width: 25%;
+  /* max-width:; */
+  /* height: auto; */
 }
 a{
     text-decoration: none;
@@ -85,7 +74,7 @@ a{
     min-width: 250px;
     margin-bottom: 30px;
 }
-.col-3 img{
+.col-4 img{
 width: 100%;
 }
 .small-container{
@@ -128,9 +117,8 @@ width: 100%;
     border-radius: 5px;
     position: absolute;
     bottom: 0;
-    left:45.5%;
-    transform: translateX(-50);
-    
+    left:50%;
+    transform: translateX(-50px);
 
 }
 h4{
@@ -143,19 +131,6 @@ h4{
 .col-4:hover{
 transform: translateY(-5px);
 }
-/*-------------offer-------*/
-/* .offer{
-    background: radial-gradient(#fff,#ffd6d6);
-    margin-top: 80px;
-    padding: 30px 0px;
-
-}
-.col-2 .offer-img{
-    padding: 50px;
-}
-small{
-    color: red;
-} */
 
 /*-------------footer-------*/
 .footer{
@@ -165,33 +140,20 @@ small{
     padding: 60px 0 20px;
 
 }
-/* .footer .p{
-    color: aqua;
-} */
-.footer-col-1, .footer-col-2, .footer-col-3{
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    
+    font-size: 14px;
+    /* padding: 60px 0 20px; */
+    box-sizing: border-box;
+        /* margin: 10px auto; */
     text-align: center;
-    margin-bottom: 20px;
-}
-.small-container h1{
-    padding-bottom: 20px;
-    padding-left: 10px;
-}
-/* .footer h3{
-    color:#ff523b;
-    margin-bottom: 20px;
-}
-.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-3{
-    min-width: 250px;
-    margin-bottom: 20px;
-}
-.footer-col-1{
-    flex-basis: 30%;
-}
-.footer-col-2{
-    flex:1;
-    text-align: center;
-}
-.footer-col-2 img{
+    width: 100%;
+    float: left;
+
+}      
+
+.footer-col-1 img{
     width:180px;
     margin-bottom: 20px;
 }
@@ -206,12 +168,19 @@ ul{
     margin-top: 20px;
 }
 .app-logo img{
-    width: 140px; */
-/* } */
-.menu-icon{
-    width: 28px;
-    margin-left: 20px;
-    /* display:none; */
+    width: 140px; 
+}
+
+/*-------------footer responsive-------*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+      width: 50%;
+    }
+  }
+@media screen and (min-width: 1024px) {
+    .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+      width: 25%;
+    }
 }
 /*-------------All Products page-------*/
 .row-2{
