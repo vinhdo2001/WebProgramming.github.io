@@ -220,19 +220,25 @@ ul{
     margin-left: 12px;
 }
 select{
+    margin-right: 12px;
     margin-left: 12px;
     border: 2px solid #ff523b;
     padding: 5px;
     height: 42px;
     border-radius: 8px;
     appearance: none;
+    text-align: center;
 }
 select:focus{
     outline: none;
     border: 2px solid blue;
+
 }
 select::after{
     content: "";
+}
+.row-2 option{
+    text-align: center;
 
 }
 .page-btn{
