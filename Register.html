@@ -58,10 +58,11 @@
                             <hr id="Indicator">
                         </div>                 
                         <form>
-                            <input type="text" placeholder="Full name" required>
-                            <input type="text" placeholder="Username" required>
+                            <input type="text" placeholder="First name" required>
+                            <input type="text" placeholder="Last name" required>
                             <input type="tel" placeholder="Phone number. Format: 1234-567-890 " pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
                             <input type="password" name="password" placeholder="Password" required> 
+                            <input type="password" name="retype-password" placeholder="Confirm password" required>
                             <small>Profile picture</small>
                             <input type='file' class="custom-file-input" name='picture' placeholder="Choose your profile picture" required>
                             <input type="text" name="address" placeholder="Address"required> 
@@ -75,10 +76,30 @@
                                 <option value="" id="JP"> <label for="JP"> Japan </label></option>
                                 <option value="" id="KR"> <label for="KR"> Korea </label></option>
                             </select>
-                                <input type="radio" name="account" value="Store Owners"> <label for="account"> Store Owners </label>
+                                <div class="radio-button">
+                                <input type="radio" name="account" value="Store Owners"> <label for="account"> Store Owners </label> <br>
                                 <input type="radio" name="account" value="Shoppers"> <label for="account"> Shoppers </label>
-        
+                                </div>
+                            <input type="text" name="business" value="Business name" placeholder="Business name">
+                            <input type="text" name="store" value="Store name" placeholder="Store name">
+                            <select name="Categories">
+                                <option value="" id="category"> <label for="category"> Select Category </label></option>
+                                <option value="" id="ds"> <label for="ds"> Department Store                   </label></option>
+                                <option value="" id="gs"> <label for="gs"> Grocery Store </label></option>
+                                <option value="" id="res"> <label for="res"> Restaurant </label></option>
+                                <option value="" id="cs"> <label for="cs"> Clothing Store </label></option>
+                                <option value="" id="as"> <label for="as"> Accessory Store </label></option>
+                                <option value="" id="ph"> <label for="ph"> Pharmacies </label></option>
+                                <option value="" id="ts"> <label for="ts"> Technology Store </label></option>
+                                <option value="" id="ps"> <label for="ps"> Pet Store </label></option>
+                                <option value="" id="tys"> <label for="tys"> Toy Store </label></option>
+                                <option value="" id="ss"> <label for="ss"> Specialty Store </label></option>
+                                <option value="" id="ths"> <label for="ths"> Thrift Store </label></option>
+                                <option value="" id="sv"> <label for="sv"> Service </label></option>
+                                <option value="" id="kk"> <label for="kk"> Kiosk </label></option>
+                            </select>                            
                             <button type="submit" class="button">Register</button>
+                            <button type="reset" class="button">Clear</button>
                         </form>
                     </div>
                     </div> 
