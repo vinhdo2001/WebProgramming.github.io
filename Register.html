@@ -52,10 +52,6 @@
     </div>
     <div class="account">
         <div class="cointainer">
-                <div class="col-2">
-                    <div class="row">
-                        <div class="col-2"> <img src="Image/ecommerce_Image.png" width="50%">
-                        </div>
                     <div class="form-register">   
                         <div class="form-btn"> 
                             <span>Register</span>
@@ -67,11 +63,11 @@
                             <input type="tel" placeholder="Phone number. Format: 1234-567-890 " pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
                             <input type="password" name="password" placeholder="Password" required> 
                             <small>Profile picture</small>
-                            <input type='file' name='picture' placeholder="Choose your profile picture" required>
+                            <input type='file' class="custom-file-input" name='picture' placeholder="Choose your profile picture" required>
                             <input type="text" name="address" placeholder="Address"required> 
-                            <input type="text" name="city" placeholder="City"> <label for="city">  
+                            <input type="text" name="city" placeholder="City"> 
                             <input type="text" name="zipcode" placeholder="Zip code (4 to 6 digits)" 
-                            maxlength="6" minlength="4" required>  
+                            maxlength="6" minlength="4" required> <br> </br>
                             <select name="Country" required>
                                 <option value="" id="country"> <label for="country"> Select Country </label></option>
                                 <option value="" id="VN"> <label for="VN"> Vietnam </label></option>
@@ -135,7 +131,7 @@
                     </div>
                 </div>
             </div>
-    
+        </div>
     
 
 </body>
