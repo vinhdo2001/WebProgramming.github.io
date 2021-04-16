@@ -7,23 +7,7 @@ body{
     font-family: 'Montserrat',sans-serif;
 
 }
-.navbar{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-nav{
-    flex: 1;
-    text-align: right;
-}
-nav ul{
-    display: inline-block;
-    list-style-type: none;
-}
-nav ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
+
 .logo{
     width: 25%;
   /* max-width:; */
@@ -86,7 +70,7 @@ a{
     min-width: 250px;
     margin-bottom: 30px;
 }
-.col-3 img{
+.col-4 img{
 width: 100%;
 }
 .small-container{
@@ -158,9 +142,9 @@ transform: translateY(-5px);
     /* padding: 60px 0 20px; */
     box-sizing: border-box;
         /* margin: 10px auto; */
-        text-align: center;
-        width: 100%;
-        float: left;
+    text-align: center;
+    width: 100%;
+    float: left;
 
 }      
 
@@ -178,22 +162,18 @@ ul{
 .app-logo img{
     width: 140px; 
 }
-.menu-icon{
-    width: 28px;
-    margin-left: 20px;
-    display:none;
-}
+
 /*-------------footer responsive-------*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
       width: 50%;
     }
   }
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
       width: 25%;
     }
-  }
+}
 /*-------------All Products page-------*/
 .row-2{
     justify-content: space-between;
@@ -272,60 +252,3 @@ input:focus{
     flex-basis: 24%;
     cursor: pointer;
 }
-/* media query for menu */
-@media only screen and(max-width: 800px){
-    nav ul{
-        position: absolute;
-        top:70px;
-        left:0;
-        background:#333;
-        width: 100%;
-    }
-    nav ul li{
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    nav ul li a{
-        color: #fff;
-    }
-    .menu-icon{
-        display: block;
-        cursor: pointer;
-    }
-    .row{
-        text-align: center;
-    }
-    .col-2 .col-3 .col-4{
-        flex-basis: 100%;
-    }
-    .single-product .row{
-        text-align: left;
-    }
-    .single-product .col-2{
-        padding: 20px 0;
-    }
-    .single-product h1{
-        font-size: 26px;
-        line-height: 22px;
-    }
-}
-/* @media only screen and(max-width: 800px){
-    .row{
-        text-align: center;
-    }
-    .col-2 .col-3 .col-4{
-        flex-basis: 100%;
-    }
-    .single-product .row{
-        text-align: left;
-    }
-    .single-product .col-2{
-        padding: 20px 0;
-    }
-    .single-product h1{
-        font-size: 26px;
-        line-height: 22px;
-    }
-} */
