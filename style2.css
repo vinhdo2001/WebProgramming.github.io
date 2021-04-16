@@ -46,8 +46,7 @@ a{
 }
 .col-2 img{
     max-width: 100%;
-    margin-left: 200px;
-    
+    margin-left: 100px;
 }
 .button {
     display: inline-block;
@@ -73,18 +72,10 @@ a{
     padding: 50px 0;
     background: radial-gradient(#fff,#ffd6d6);
 }
-.account-retrieve {
-    background: radial-gradient(#fff,#ffd6d6);
-}
 
-.ForgotPassword {
-    position: relative;
-    text-align: left;
-    padding: 50px 0;
-    margin: auto;
-}
+
+
 .question {
-    background: white;
     max-width: 1300px ;
     font-size: 22px;
     padding: 50px 0;
@@ -163,6 +154,14 @@ a{
     margin-top: 8px;
 }
 
+#IndicatorQuestion {
+    width: 100%;
+    border: none;
+    background: #ff523b;
+    height: 3px;
+    margin-top: 8px;
+}
+
   
 /*-------------footer-------*/
 .footer{
@@ -219,21 +218,26 @@ ul{
     /* display:none; */
 }
 
-@media only screen and(max-width: 800px){
-    .row{
-        text-align: center;
+
+
+
+@media only screen and (min-width:100px) and (max-width:767px){
+    .col-2 img{
+        display: none;
     }
-    .col-2 .col-4{
-        flex-basis: 100%;
+
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1368px) {
+/* Styles */
+    .account, .account-retrieve, .faqs{
+        height: 100%;
     }
-    .single-product .row{
-        text-align: left;
+    .col-2 {
+        margin-top: 20%;
     }
-    .single-product .col-2{
-        padding: 20px 0;
-    }
-    .single-product h1{
-        font-size: 26px;
-        line-height: 22px;
-    }
+    html, body {height: 100%; margin: 0; padding: 0;}
+
 }
