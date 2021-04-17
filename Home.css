@@ -29,7 +29,7 @@ a{
     min-width: 300px;
 }
 .col-2 img{
-    width: 100%;
+    width: 85%;
 }
 .btn{
     display: inline-block;
@@ -197,10 +197,14 @@ ul{
     margin-left: 12px;
 }
 select{
+<<<<<<< HEAD
     border: 1px solid #f48b29;
     margin-right: 12px;
     margin-left: 12px;
     border: 2px solid #ff523b;
+=======
+    border: 1px solid #ff523b;
+>>>>>>> parent of 2e6c99a (products details edit (not really attractive when it is smaller))
     padding: 5px;
     height: 42px;
     border-radius: 8px;
@@ -224,7 +228,7 @@ select::after{
 }
 .page-btn span{
     display:inline-block;
-    border: 1px solid #f48b29;
+    border: 1px solid #ff523b;
     margin-left: 10px;
     height: 40px;
     width: 40px;
@@ -233,22 +237,12 @@ select::after{
     cursor: pointer;
 }
 .page-btn span:hover{
-    background-color: #f48b29;
+    background-color: #ff523b;
     color: #fff;
 }
 
 /* --------single product details ---------*/
 
-#recommended-products{
-    font-family: 'Shrikhand', cursive;
-	text-align: center;
-	font-weight:lighter;
-	font-size:xx-large;
-    color:#7ebdb4;
-}
-#recommended-products:hover{
-    color:#f48b29;
-}
 .single-product{
     margin-top: 80px;
 }
