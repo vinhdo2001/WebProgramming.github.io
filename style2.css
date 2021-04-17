@@ -50,8 +50,8 @@ a{
     min-width: 300px;
 }
 .col-2 img{
-    max-width: 100%;
-    margin-left: 100px;
+    max-width: 70%;
+    padding-left: 20%;
 }
 .button {
     display: inline-block;
@@ -78,7 +78,6 @@ a{
     background: white;
     min-height: 100vh;
 }
-
 
 
 .question {
@@ -241,18 +240,18 @@ ul{
 
 
 
-@media only screen and (min-width:100px) and (max-width:1000px)  {
+@media only screen and  (max-width:600px)  {
     .col-2 img{
         display: none;
     }
-    .account-retrieve, .account-login, .faqs, .account-register{
-        min-height: 100vh;
+    .col-2{
+        flex: none;
     }
 
     
     html, body {height: 100%; margin: 0; padding: 0;}
     .findyouraccount [type="submit"], .findyouraccount [type="text"] {
-        width: 100%;
+        width: 80%;
     }
     .form-register{
         width: 300px;
@@ -265,33 +264,8 @@ ul{
     .form-register [type=radio] {
         width: 30px;
         border: 0px;
-        height: 10px;
+        height: 15px;
     }
 
 
-}
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1368px) {
-/* Styles */
-    .account-retrieve, .account-login, .faqs, .account-register{
-        min-height: 100vh;
-    }
-
-    html, body {height: 110%; margin: 0; padding: 0;}
-
-    .findyouraccount [type="submit"], .findyouraccount [type="text"] {
-        width: 80%;
-    }
-    .form-register label{
-        font-size: 10px;
-        margin-bottom: 5px;
-
-    }
-    .form-register [type=radio] {
-        width: 30px;
-        border: 0px;
-        height: 10px;
-    }
 }
