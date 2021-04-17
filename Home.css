@@ -148,10 +148,7 @@ transform: translateY(-5px);
     width:180px;
     margin-bottom: 20px;
 }
-/* .footer-col-3 ,.footer-col-4{
-    flex-basis: 12%;    
-    text-align: center;
-} */
+
 ul{
     list-style-type: none;
 }
@@ -313,58 +310,7 @@ input:focus{
         line-height: 22px;
     }
 }
-/* table */
-/* @media screen and (min-width: 768px) and (max-width: 1023px) {
-    
-  } */
-  /* desktops */
-  /* @media screen and (min-width: 1024px) {
-    
-  } */
-/* media query for menu */
-/* @media only screen and(max-width: 800px){
-    nav ul{
-        position: absolute;
-        top:70px;
-        left:0;
-        background:#333;
-        width: 100%;
-    }
-    nav ul li{
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    nav ul li a{
-        color: #fff;
-    }
-    .menu-icon{
-        display: block;
-        cursor: pointer;
-    } 
-    .col-4 img {
-        width: 20%;
-    }
-}
-@media only screen and(max-width: 800px){
-    .row{
-        text-align: center;
-    }
-    .col-2 .col-3 .col-4{
-        flex-basis: 100%;
-    }
-    .single-product .row{
-        text-align: left;
-    }
-    .single-product .col-2{
-        padding: 20px 0;
-    }
-    .single-product h1{
-        font-size: 26px;
-        line-height: 22px;
-    }
-} */
+
 /*About Us */
 .TeamInformation h2{
     color: #cc561e;
