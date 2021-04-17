@@ -294,6 +294,24 @@ ul{
     margin-left: 25%;
     margin-right: 17%;
 }
+.parent1, .parent2{
+    display: flex;
+    margin-right: 10%;
+}
+.member{
+    margin-left: 20%;
+}
+.team-info{
+    margin-left: 10%;
+}
+.team-info img {
+    height: 75%;
+    width: 280px;
+}
+.team-info p{
+    width: 300px;
+    margin-bottom: 20px;
+}
 .members h2{
     color: #cc561e;
     font-weight: 900;
@@ -301,27 +319,8 @@ ul{
     padding-top: 30px;
     padding-bottom: 40px;
 }
-.member{
-    margin-left: 20%;
-    margin-bottom: 20%;
-}
-.team-info{
-    clear: both;
-    margin-left: 10%;
-    margin-bottom: 5%;
-}
-.team-info img {
-    float: left;
-    height: 75%;
-    width: 280px;
-    margin-bottom: 5%;
-    padding-right: 10%;
-}
-.team-info p{
-    float: left;
-    width: 300px;
-    padding-bottom: 50px;
-    margin-bottom: 5%;
+.member img{
+    margin-bottom: 20px;
 }
 /*ToS */
 .ToS h2{

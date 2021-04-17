@@ -379,11 +379,15 @@ input:focus{
     margin-bottom: 5%;
     padding-right: 10%;
 }
+.team-info h3{
+    color: darksalmon;
+}
 .team-info p{
     float: left;
     width: 300px;
     padding-bottom: 50px;
     margin-bottom: 5%;
+    color: blueviolet;
 }
 /*ToS */
 .ToS h2{
