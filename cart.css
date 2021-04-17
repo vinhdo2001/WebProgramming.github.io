@@ -23,9 +23,7 @@
   
     float: right;
 }
-.displaying{
-    font-size: large;
-}
+
 @media only screen and (max-width: 1000px) {
     .products-in-cart{
         margin-top: 10px;
@@ -41,9 +39,7 @@
        
         font-size: 20px;
     }
-    .displaying{
-        display: none;
-    }
+
   }
   @media only screen and (max-width: 600px) {
     .products-in-cart{
