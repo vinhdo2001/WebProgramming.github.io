@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simba | Online Shopping Mall</title>
     <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="NavBar.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Montserrat:wght@100&display=swap"
         rel="stylesheet">
@@ -19,75 +20,81 @@
             <div class="navbar">
                 <div class="logo">
                     <a href="Homepage.html">
-                        <img src="productImages/Logo.png" alt="Logo" width="25%">
+                        <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
                     </a>
                 </div>
                 <nav>
+                    <input type="checkbox" id="menu-icon">
+                    <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
+                        <li><img src="https://i.imgur.com/vPyCGZZ.png" width="30px" height="30px" alt=""></li>
                         <li>
-                            <a href="About Us.html">About us</a>
-                        </li>
-                        <li>
-                            <a href="Fees.html">Fees</a>
+                            <a href="AboutUs.html">About us</a>
                         </li>
                         <li>
                             <a href="MyAccount(logged-in).html">Account</a>
                         </li>
                         <li>
-                            <a href="ProductBrowser.html">Browse</a>
+                            <a href="Fees.html">Fees</a>
                         </li>
+
                         <li>
                             <a href="FAQs.html">FAQs</a>
                         </li>
                         <li>
                             <a href="Contact.html">Contact</a>
                         </li>
+                        <li>
+                            <a href="ProductBrowser.html">Product Browser</a>
+                        </li>
                     </ul>
                 </nav>
-                <img src="productImages/cart.png" width="30px" height="30px" alt="">
-                <img src="productImages/menu.png" class="menu-icon">
+                <!-- <img src="https://i.imgur.com/vPyCGZZ.png" width="30px" height="30px" alt=""> -->
+                <!-- <img src="https://i.imgur.com/OA07E9Y.png" class="menu-icon"> -->
 
             </div>
             <div class="row">
                 <div class="col-2">
-                    <h1>Favorite brands and <br> hottest trends</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    <h1 id="slogan">Favorite brands and <br> hottest trends</h1>
+                    <p id="header-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
                         Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
                     </p>
-                    <a href="" class="btn">Explore now &#8594;</a>
+                    <a href="ProductBrowser.html" class="btn">Explore now &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <!-- 23:20 https://www.youtube.com/watch?v=yQimoqo0-7g-->
-                    <img src="productImages/ecommerce_Image.png" id="ecommerce_Image" alt="">
+                    <img src="productImages/ecommerce_Image.png" id="ecommerce_Image" alt="ecommerce_Image">
                 </div>
 
             </div>
         </div>
     </div>
-    <!-----------Featured categories-->
+    <!-----------New stores-->
     <div class="categories">
         <div class="small-container">
-            <a href="">
+            <a href="store.html">
                 <h2 class="title">New Stores</h2>
             </a>
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-4">
                     <img src="productImages/category-1.jpg" alt="">
                 </div>
-                <div class="col-3">
+                <div class="col-4">
                     <img src="productImages/category-2.jpg" alt="">
                 </div>
-                <div class="col-3">
+                <div class="col-4">
                     <img src="productImages/category-3.jpg" alt="">
                 </div>
+                <!-- <div class="col-4">
+                    <img src="productImages/category-3.jpg" alt="">
+                </div> -->
             </div>
         </div>
-        <!-- featured productes -->
+        <!-- New productes -->
         <div class="small-container">
-            <a href="">
-                <h2 class="title">Featured Products</h2>
+            <a href="Product(Newest).html">
+                <h2 class="title">New Products</h2>
             </a>
             <div class="row">
                 <div class="col-4">
@@ -126,7 +133,7 @@
                     </div>
                     <p>$50.00</p>
                 </div>
-                <div class="col-4">
+                <!-- <div class="col-4">
                     <img src="productImages/product-4.jpg" alt="">
                     <h4>Red T-shirt</h4>
                     <div class="rating">
@@ -137,9 +144,31 @@
                         <span class="fa fa-star "></span>
                     </div>
                     <p>$50.00</p>
+                </div> -->
+            </div>
+            <a href="store.html">
+                <h2 class="title">Featured stores</h2>
+            </a>
+            <div class="row">
+                <div class="col-4">
+                    <img src="productImages/product-5.jpg" alt="">
+                    <h4>Red T-shirt</h4>
+                </div>
+                <div class="col-4">
+                    <img src="productImages/product-6.jpg" alt="">
+                    <h4>Red T-shirt</h4>
+
+                </div>
+                <div class="col-4">
+                    <img src="productImages/product-7.jpg" alt="">
+                    <h4>Red T-shirt</h4>
+
                 </div>
             </div>
-            <h2 class="title">Latest Products</h2>
+            <a href="ProductBrowser.html">
+                <h2 class="title">Featured Products</h2>
+            </a>
+
             <div class="row">
                 <div class="col-4">
                     <img src="productImages/product-5.jpg" alt="">
@@ -180,69 +209,36 @@
             </div>
         </div>
     </div>
-    <!-- <div class="offer">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-2">
-                    <img src="productImages/exclusive.png" alt="offer-img">
-                </div>
-                <div class="col-2">
-                    <p>exclusiveon our web</p>
-                    <h1>smart band (name products)</h1>
-                    <small>description bla blanksjkdkaskd</small>
-                    <a href="">Buy now &#8594;</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
 
     <!-------footer---->
     <div class="footer">
         <div class="container">
             <div class="row">
+
                 <div class="footer-col-1">
+                    <img src="productImages/Logo.png" alt="">
+                </div>
+                <div class="footer-col-2">
                     <a href="">
                         <p>ToS (Term of Service)</p>
                     </a>
-                    <!-- <h3>Downdload our App</h3>
-                    <p>download app and android......</p>
-                    <div class="app-logo">
-                        <img src="productImages/play-store.png" alt="">
-                        <img src="productImages/app-store.png" alt="">
-                    </div>
-                </div>
-                <div class="footer-col-2">
-                    <img src="productImages/Logo.png" alt="">
-                    <p>our purpose is......</p> -->
-                </div>
-                <div class="footer-col-2">
-                    <a href="">
-                        <p>Privacy Policy</p>
-                    </a>
-                    <!-- <ul>
-                        <li>coupon</li>
-                        <li>coupon</li>
-                        <li>coupon</li>
-                        <li>coupon</li>
-                    </ul> -->
+
                 </div>
                 <div class="footer-col-3">
                     <a href="">
-                        <p>Copy right 2021</p>
+                        <p>Privacy Policy</p>
                     </a>
 
-                    <!-- <ul>
-                        <li>FB</li>
-                        <li>IG</li>
-                        <li>Zalo</li>
-                        <li>Gmail</li>
+                </div>
 
-                    </ul> -->
+                <div class="footer-col-4">
+                    <a href="">
+                        <p>Copy right 2021</p>
+                    </a>
                 </div>
             </div>
         </div>
-
+    </div>
 </body>
 
 </html>

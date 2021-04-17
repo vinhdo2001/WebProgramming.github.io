@@ -1,0 +1,114 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    /* background: #dbf6e9; */
+  
+}
+nav label {
+  width: 100%;
+  float: right;
+  display: block;
+}
+/* .logo{
+  width: 80%;
+} */
+/* table */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .column {
+    width: 50%;
+  }
+  /* nav label {
+    width: 100%;
+    float: right;
+    display: block;
+  }
+  nav{
+    width: 100%;
+    float: right;
+  } */
+  .logo{
+    width: 40%;
+  }
+}
+  /* desktops */
+  @media screen and (min-width: 1024px) {
+    .column {
+      width: 50%;
+    }
+    nav{
+      width: 100%;
+      float: right;
+    }
+    .logo{
+      width: 25%;
+  }
+    
+}
+  /* Responsive nav bar */
+  nav input[type="checkbox"] {
+    display: none;
+  }
+  nav label {
+    display: none;
+  }
+  nav ul li {
+    width: 100px;
+    /* padding: 10px; */
+    float: right;
+    text-align: right;
+    list-style: none;
+  }
+  nav ul li a:hover {
+    color: #a35709;
+  }
+  nav ul li img:hover {
+    background-color: #a35709;
+  }
+  /* Clearfix */
+  ul::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media screen and (max-width: 1023px) {
+    #slogan {
+      font-size:x-large;
+    }
+    #header-content{
+      font-size: small;
+    }
+    #ecommerce_Image{
+      width: 60%;
+    }
+    .logo{
+      width: 50%;
+  }
+    
+    nav{
+    width: 100%;
+    float: right;
+  }
+  nav label {
+    width: 30px;
+    float: right;
+    display: block;
+  }
+
+    nav input[type="checkbox"] ~ ul {
+      display: none;
+    }
+
+    nav input[type="checkbox"]:checked ~ ul {
+      display: block;
+      
+    }
+
+    nav input[type="checkbox"]:checked ~ ul li {
+      width: 95%;
+      float: right;
+    }
+    nav input[type="checkbox"]:checked ~ li:first-child{
+      margin-top: 20px;
+    }
+  }
