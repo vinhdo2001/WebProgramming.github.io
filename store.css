@@ -296,6 +296,12 @@ input:focus{
     font-size: 20px;
     
 }
+.store-image{
+    width: 10%;
+}
+
+
+
 /* media query for menu */
 @media only screen and(max-width: 800px){
     nav ul{
@@ -319,6 +325,7 @@ input:focus{
         cursor: pointer;
     }
 }
+
 @media only screen and(max-width: 800px){
     .row{
         text-align: center;
