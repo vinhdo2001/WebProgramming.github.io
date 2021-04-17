@@ -7,6 +7,16 @@
     width: 10%;
     margin-top: 10px;
 }
+.total-price{
+    margin-right: 200px;
+    font-size: 30px;
+}
+.small-containering{
+    max-width: 1080px;
+    margin:auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
 @media only screen and (max-width: 768px) {
     .products-in-cart{
         margin-top: 10px;
@@ -16,6 +26,14 @@
     }
     .products-in-cart img{
         width: 70px;
+    }
+    .total-price{
+        padding-top: 30px;
+       
+        font-size: 20px;
+    }
+    .displaying{
+        display: none;
     }
   }
   @media only screen and (max-width: 600px) {
@@ -27,6 +45,14 @@
     }
     .products-in-cart img{
         width: 100px;
+    }
+    .total-price{
+        padding-top: 30px;
+       
+        font-size: 20px;
+    }
+    .displaying{
+        display: none;
     }
   }
   

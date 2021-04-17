@@ -76,6 +76,7 @@ a{
 .account-login, .account-register, .account-retrieve, .faqs {
     padding: 50px 0;
     background: white;
+    min-height: 100vh;
 }
 
 
@@ -105,7 +106,7 @@ a{
 .form-register{
     background: radial-gradient(#fff,#ffd6d6);
     width: 500px;
-    height: 910px;
+    height: 950px;
     position: relative;
     text-align: center;
     padding: 20px 0;
@@ -127,7 +128,7 @@ a{
 .form-login form, .form-register form{
     max-width: 100%;
     padding: 0 20px;
-    position: absolute;
+    position: relative;
     top: 80px;
 }
 .form-login input, .form-register input {
@@ -179,6 +180,7 @@ a{
 
 
 }
+
 
   
 /*-------------footer-------*/
@@ -244,7 +246,7 @@ ul{
         display: none;
     }
     .account-retrieve, .account-login, .faqs, .account-register{
-        height: 130%;
+        min-height: 100vh;
     }
 
     
@@ -274,7 +276,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1368px) {
 /* Styles */
     .account-retrieve, .account-login, .faqs, .account-register{
-        height: 120%;
+        min-height: 100vh;
     }
 
     html, body {height: 110%; margin: 0; padding: 0;}
