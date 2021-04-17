@@ -70,12 +70,7 @@ nav ul li a{
 
 .product-container{
   display: grid;
-  
   grid-template-columns: auto auto auto;
- 
-  
-  
-
 }
 .product-display{
   
