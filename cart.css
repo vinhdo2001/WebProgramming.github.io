@@ -48,14 +48,6 @@
         margin-left: 0%;
         
     }
-    .products-in-cart img{
-        width: 100px;
-    }
-    .total-price{
-        padding-top: 30px;
-       
-        font-size: 20px;
-    }
     .displaying{
         display: none;
     }
