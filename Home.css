@@ -29,8 +29,7 @@ a{
     min-width: 300px;
 }
 .col-2 img{
-    width: 85%;
-}
+    width: 100%;}
 .btn{
     display: inline-block;
     background: #f48b29;
