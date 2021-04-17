@@ -197,13 +197,10 @@ ul{
     margin-left: 12px;
 }
 select{
-<<<<<<< HEAD
     border: 1px solid #f48b29;
-=======
     margin-right: 12px;
     margin-left: 12px;
     border: 2px solid #ff523b;
->>>>>>> d7996f5a3ffda5126320648762ee5de0891c4bb6
     padding: 5px;
     height: 42px;
     border-radius: 8px;
