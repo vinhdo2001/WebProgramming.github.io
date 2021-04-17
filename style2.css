@@ -75,7 +75,6 @@ a{
 /*------------account------------*/
 .account-login, .account-register, .account-retrieve, .faqs {
     padding: 50px 0;
-    background: radial-gradient(#fff,#ffd6d6);
 }
 
 
