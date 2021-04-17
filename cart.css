@@ -39,8 +39,20 @@
     margin:auto;
     padding-left: 25px;
     padding-right: 25px;
+<<<<<<< HEAD
 } */
 @media only screen and (max-width: 768px) {
+=======
+}
+.cart-button{
+    padding-top: 50px;
+    padding-right: 100px;
+  
+    float: right;
+}
+
+@media only screen and (max-width: 1000px) {
+>>>>>>> 5cf1798614cfc24b8248a9cee8fc0d07589a82c0
     .products-in-cart{
         margin-top: 10px;
         margin-right: 0%;
@@ -55,9 +67,7 @@
        
         font-size: 20px;
     }
-    .displaying{
-        display: none;
-    }
+
   }
   @media only screen and (max-width: 600px) {
     .products-in-cart{
