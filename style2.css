@@ -76,6 +76,7 @@ a{
 .account-login, .account-register, .account-retrieve, .faqs {
     padding: 50px 0;
     background: radial-gradient(#fff,#ffd6d6);
+    min-height: 100vh;
 }
 
 
@@ -244,7 +245,7 @@ ul{
         display: none;
     }
     .account-retrieve, .account-login, .faqs, .account-register{
-        height: 130%;
+        min-height: 100vh;
     }
 
     
@@ -274,7 +275,8 @@ and (min-device-width : 768px)
 and (max-device-width : 1368px) {
 /* Styles */
     .account-retrieve, .account-login, .faqs, .account-register{
-        height: 120%;
+        min-height: 100vh;
+
     }
 
     html, body {height: 110%; margin: 0; padding: 0;}
@@ -284,7 +286,7 @@ and (max-device-width : 1368px) {
     }
     .form-register label{
         font-size: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 5px; 
 
     }
     .form-register [type=radio] {
@@ -292,4 +294,5 @@ and (max-device-width : 1368px) {
         border: 0px;
         height: 10px;
     }
+
 }
