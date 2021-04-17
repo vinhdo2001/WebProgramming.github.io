@@ -385,13 +385,16 @@ input:focus{
     margin-left: 20%;
 }
 .team-info{
+    clear: left;
     margin-left: 10%;
 }
 .team-info img {
+    float: left;
     height: 75%;
     width: 280px;
 }
 .team-info p{
+    float: right;
     width: 300px;
     margin-bottom: 20px;
 }
