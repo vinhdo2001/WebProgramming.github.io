@@ -3,32 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-*:focus {
-    outline: none;
-  }
-/*code snippet from: https://stackoverflow.com/questions/39571618/removing-the-blue-borders-in-a-summary-element-using-css*/
-
 body{
     font-family: 'Montserrat',sans-serif;
 
 }
-.navbar{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-nav{
-    flex: 1;
-    text-align: right;
-}
-nav ul{
-    display: inline-block;
-    list-style-type: none;
-}
-nav ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
+
 a{
     text-decoration: none;
     color: #555;
@@ -45,6 +24,14 @@ a{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+
+*:focus {
+    outline: none;
+  }
+/*code snippet from: https://stackoverflow.com/questions/39571618/removing-the-blue-borders-in-a-summary-element-using-css*/
+
+
 .col-2{
     flex-basis: 50%;
     min-width: 300px;
@@ -65,6 +52,22 @@ a{
     background: #7ebdb4;
     /* color:#364547 */
 }
+
+.header{
+    background: linear-gradient(#dbf6e9,#ffdcdc);
+    /* font-size: 100%; */
+}
+.header h1{
+    color:#cc561e ;
+}
+.header p{
+    color:#364547 ;
+}
+.header .row{
+    margin-top: 10px;
+}
+.categories{
+    margin: 70px 0px;}
 
 
 #ecommerce_Image{
@@ -105,7 +108,7 @@ a{
 .form-register{
     background: radial-gradient(#fff,#ffd6d6);
     width: 500px;
-    height: 950px;
+    height: 970px;
     position: relative;
     text-align: center;
     padding: 20px 0;
@@ -167,10 +170,10 @@ a{
     height: 3px;
     margin-top: 8px;
 }
-.form-register [type=radio] {
-    width: 50px;
+.form-register [type="radio"] {
+    width: 5%;
     border: 0px;
-    height: 17px;
+    height: 1rem;
 }
 .form-register label{
     display: inline-block;
@@ -182,60 +185,7 @@ a{
 
 
   
-/*-------------footer-------*/
-.footer{
-    background:#ffb4b4;
-    color: #ffe268;
-    font-size: 14px;
-    padding: 60px 0 20px;
 
-}
-/* .footer .p{
-    color: aqua;
-} */
-.footer-col-1, .footer-col-2, .footer-col-3{
-    text-align: center;
-    margin-bottom: 20px;
-
-
-}
-/* .footer h3{
-    color:#ff523b;
-    margin-bottom: 20px;
-}
-.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-3{
-    min-width: 250px;
-    margin-bottom: 20px;
-}
-.footer-col-1{
-    flex-basis: 30%;
-}
-.footer-col-2{
-    flex:1;
-    text-align: center;
-}
-.footer-col-2 img{
-    width:180px;
-    margin-bottom: 20px;
-}
-.footer-col-3 ,.footer-col-4{
-    flex-basis: 12%;    
-    text-align: center;
-}
-ul{
-    list-style-type: none;
-}
-.app-logo{
-    margin-top: 20px;
-}
-.app-logo img{
-    width: 140px; */
-/* } */
-.menu-icon{
-    width: 28px;
-    margin-left: 20px;
-    /* display:none; */
-}
 
 
 
@@ -262,10 +212,191 @@ ul{
 
     }
     .form-register [type=radio] {
-        width: 30px;
+        height: 1rem;
         border: 0px;
-        height: 15px;
+        width: 15%;
     }
 
 
+}
+/*-------------footer-------*/
+.footer{
+    background:#dbf6e9;
+    /* font-size: 14px; */
+    padding: 60px 0 20px;
+
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+
+    box-sizing: border-box;
+        /* margin: 10px auto; */
+    text-align: center;
+    width: 100%;
+    float: left;
+    flex-basis: 12%;    
+    text-align: center;
+    font-size: 14px;
+
+}      
+
+.footer-col-1 img{
+    width:180px;
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px; 
+}
+
+/*-------------footer responsive-------*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .footer-col-1{
+        width: 100%;
+    }
+    .footer-col-2, .footer-col-3, .footer-col-4 {
+      width: 33%;
+    }
+    
+  }
+  @media screen and (max-width: 767px) {
+    .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+      width: 100%;
+      flex-basis: 100%;    
+    text-align: center;
+    }
+    
+  }
+  /* desktop */
+@media screen and (min-width: 1024px) {
+    .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+      width: 25%;
+    }
+    
+}
+
+/*About Us */
+.TeamInformation h2{
+    color: #cc561e;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.TeamInformation p{
+    margin-left: 25%;
+    margin-right: 17%;
+}
+.parent1, .parent2{
+    display: flex;
+    margin-right: 10%;
+}
+.member{
+    margin-left: 20%;
+}
+.team-info{
+    margin-left: 10%;
+}
+.team-info img {
+    height: 75%;
+    width: 280px;
+}
+.team-info p{
+    width: 300px;
+    margin-bottom: 20px;
+}
+.members h2{
+    color: #cc561e;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.member img{
+    margin-bottom: 20px;
+}
+/*ToS */
+.ToS h2{
+    color: #cc561e;
+    margin-left: 4%;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.ToS h3 {
+    color: #cc561e;
+    margin-left: 10%;
+    font-weight: 900;
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.ToS p{
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/*Privacy Policy */
+.policy h2{
+    color: #cc561e;
+    margin-left: 52px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.policy h3 {
+    color: #cc561e;
+    margin-left: 10%;
+    font-weight: 900;
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.policy p{
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.h2{
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+}
+.profile{
+    margin-left: 35%;
+    margin-bottom: 32px;
+    width: 30%;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
+    border: 2px solid    #cc561e;
+    border-radius: 10px;
+}
+.profile img{
+    border-radius: 10px;
+    height: 32%;
+}
+.profile h3{
+    font-family: sans-serif;
+    text-align: center;
+    margin: 10px;
+}
+.userInfo{
+    padding-bottom: 32px;
+}
+.userInfo p{
+    padding-left: 32px;
+    margin-bottom: 10px;
 }
