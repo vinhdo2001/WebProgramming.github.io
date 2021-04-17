@@ -29,7 +29,8 @@ a{
     min-width: 300px;
 }
 .col-2 img{
-    width: 100%;}
+    width: 100%;
+}
 .btn{
     display: inline-block;
     background: #f48b29;
@@ -147,7 +148,10 @@ transform: translateY(-5px);
     width:180px;
     margin-bottom: 20px;
 }
-
+/* .footer-col-3 ,.footer-col-4{
+    flex-basis: 12%;    
+    text-align: center;
+} */
 ul{
     list-style-type: none;
 }
@@ -194,6 +198,9 @@ ul{
 }
 select{
     border: 1px solid #f48b29;
+    margin-right: 12px;
+    margin-left: 12px;
+    border: 2px solid #ff523b;
     padding: 5px;
     height: 42px;
     border-radius: 8px;
@@ -202,20 +209,7 @@ select{
 }
 select:focus{
     outline: none;
-    border: 2px solid #58391c;
-
-}
-input{
-    border: 1px solid #f48b29;
-    padding: 5px;
-    height: 42px;
-    border-radius: 8px;
-    appearance: none;
-    text-align: center;
-}
-input:focus{
-    outline: none;
-    border: 2px solid #58391c;
+    border: 2px solid blue;
 
 }
 select::after{
@@ -230,7 +224,7 @@ select::after{
 }
 .page-btn span{
     display:inline-block;
-    border: 1px solid #ff523b;
+    border: 1px solid #f48b29;
     margin-left: 10px;
     height: 40px;
     width: 40px;
@@ -239,22 +233,22 @@ select::after{
     cursor: pointer;
 }
 .page-btn span:hover{
-    background-color: #ff523b;
+    background-color: #f48b29;
     color: #fff;
 }
 
 /* --------single product details ---------*/
+
 #recommended-products{
     font-family: 'Shrikhand', cursive;
-    text-align: center;
-    font-weight:lighter;
-    font-size:xx-large;
-    color:#e27802;
+	text-align: center;
+	font-weight:lighter;
+	font-size:xx-large;
+    color:#7ebdb4;
 }
 #recommended-products:hover{
-    color:#58391c;
+    color:#f48b29;
 }
-
 .single-product{
     margin-top: 80px;
 }
@@ -319,7 +313,58 @@ input:focus{
         line-height: 22px;
     }
 }
-
+/* table */
+/* @media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+  } */
+  /* desktops */
+  /* @media screen and (min-width: 1024px) {
+    
+  } */
+/* media query for menu */
+/* @media only screen and(max-width: 800px){
+    nav ul{
+        position: absolute;
+        top:70px;
+        left:0;
+        background:#333;
+        width: 100%;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    } 
+    .col-4 img {
+        width: 20%;
+    }
+}
+@media only screen and(max-width: 800px){
+    .row{
+        text-align: center;
+    }
+    .col-2 .col-3 .col-4{
+        flex-basis: 100%;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 22px;
+    }
+} */
 /*About Us */
 .TeamInformation h2{
     color: #cc561e;
@@ -332,15 +377,19 @@ input:focus{
     margin-left: 25%;
     margin-right: 17%;
 }
-.parent1, .parent2{
+.parent1{
     display: flex;
-    margin-right: 10%;
+    padding-right: 0px;
+    }
+.parent2{
+    display: flex;
 }
 .member{
-    margin-left: 20%;
+    margin-right: 20%;
+
 }
 .team-info{
-    margin-left: 10%;
+    margin-left: 20%;
 }
 .team-info img {
     height: 75%;
@@ -350,7 +399,7 @@ input:focus{
     width: 300px;
     margin-bottom: 20px;
 }
-.members h2{
+.member > h2{
     color: #cc561e;
     font-weight: 900;
     text-align: center;
