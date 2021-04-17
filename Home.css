@@ -29,7 +29,7 @@ a{
     min-width: 300px;
 }
 .col-2 img{
-    width: 85%;
+    width: 100%;
 }
 .btn{
     display: inline-block;
@@ -197,6 +197,7 @@ ul{
     margin-left: 12px;
 }
 select{
+    border: 1px solid #f48b29;
     margin-right: 12px;
     margin-left: 12px;
     border: 2px solid #ff523b;
@@ -223,7 +224,7 @@ select::after{
 }
 .page-btn span{
     display:inline-block;
-    border: 1px solid #ff523b;
+    border: 1px solid #f48b29;
     margin-left: 10px;
     height: 40px;
     width: 40px;
@@ -232,12 +233,22 @@ select::after{
     cursor: pointer;
 }
 .page-btn span:hover{
-    background-color: #ff523b;
+    background-color: #f48b29;
     color: #fff;
 }
 
 /* --------single product details ---------*/
 
+#recommended-products{
+    font-family: 'Shrikhand', cursive;
+	text-align: center;
+	font-weight:lighter;
+	font-size:xx-large;
+    color:#7ebdb4;
+}
+#recommended-products:hover{
+    color:#f48b29;
+}
 .single-product{
     margin-top: 80px;
 }
