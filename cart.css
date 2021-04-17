@@ -8,23 +8,16 @@
     flex-wrap: nowrap;
     justify-content: center;
     text-align: center;
-
-    /* width: 70%; */
     align-items: center;
-    /* flex-direction: column; */
-    /* background-color: DodgerBlue; */
+ 
   }
   
   .flex-container > div {
-    /* background-color: #f1f1f1; */
     width: 30%;
-    /* margin: 10px; */
     text-align: center;
     line-height: 40px;
     font-size: 15px;
-    /* flex-basis: auto; */
-    /* flex-grow: 8; */
-    /* width: 50rem; */
+   
   }
 .flex-container img{
     width: 50%;
