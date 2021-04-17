@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
     <title>Simba | Register</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -50,28 +50,25 @@
             </div>
         </div>
     </div>
-    <div class="account">
+    <div class="account-register">
         <div class="cointainer">
-                <div class="col-2">
-                    <div class="row">
-                        <div class="col-2"> <img src="Image/ecommerce_Image.png" width="50%">
-                        </div>
                     <div class="form-register">   
                         <div class="form-btn"> 
                             <span>Register</span>
                             <hr id="Indicator">
                         </div>                 
                         <form>
-                            <input type="text" placeholder="Full name" required>
-                            <input type="text" placeholder="Username" required>
+                            <input type="text" placeholder="First name" required>
+                            <input type="text" placeholder="Last name" required>
                             <input type="tel" placeholder="Phone number. Format: 1234-567-890 " pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
                             <input type="password" name="password" placeholder="Password" required> 
+                            <input type="password" name="retype-password" placeholder="Confirm password" required>
                             <small>Profile picture</small>
-                            <input type='file' name='picture' placeholder="Choose your profile picture" required>
+                            <input type='file' class="custom-file-input" name='picture' placeholder="Choose your profile picture" required>
                             <input type="text" name="address" placeholder="Address"required> 
-                            <input type="text" name="city" placeholder="City"> <label for="city">  
+                            <input type="text" name="city" placeholder="City"> 
                             <input type="text" name="zipcode" placeholder="Zip code (4 to 6 digits)" 
-                            maxlength="6" minlength="4" required>  
+                            maxlength="6" minlength="4" required> <br> </br>
                             <select name="Country" required>
                                 <option value="" id="country"> <label for="country"> Select Country </label></option>
                                 <option value="" id="VN"> <label for="VN"> Vietnam </label></option>
@@ -79,10 +76,31 @@
                                 <option value="" id="JP"> <label for="JP"> Japan </label></option>
                                 <option value="" id="KR"> <label for="KR"> Korea </label></option>
                             </select>
-                                <input type="radio" name="account" value="Store Owners"> <label for="account"> Store Owners </label>
-                                <input type="radio" name="account" value="Shoppers"> <label for="account"> Shoppers </label>
-        
+                            <div class="radio-button">
+                                <input type="radio" name="accountstyle" value="storeowner" id="storeowner"><label for="storeowner">Store Owners</label> 
+                        
+                                <input type="radio" name="accountstyle" value="shopper" id="shopper"><label for="shopper">Shoppers</label>
+                            </div>
+                            <input type="text" name="business" value="Business name" placeholder="Business name">
+                            <input type="text" name="store" value="Store name" placeholder="Store name">
+                            <select name="Categories">
+                                <option value="" id="category"> <label for="category"> Select Category </label></option>
+                                <option value="" id="ds"> <label for="ds"> Department Store                   </label></option>
+                                <option value="" id="gs"> <label for="gs"> Grocery Store </label></option>
+                                <option value="" id="res"> <label for="res"> Restaurant </label></option>
+                                <option value="" id="cs"> <label for="cs"> Clothing Store </label></option>
+                                <option value="" id="as"> <label for="as"> Accessory Store </label></option>
+                                <option value="" id="ph"> <label for="ph"> Pharmacies </label></option>
+                                <option value="" id="ts"> <label for="ts"> Technology Store </label></option>
+                                <option value="" id="ps"> <label for="ps"> Pet Store </label></option>
+                                <option value="" id="tys"> <label for="tys"> Toy Store </label></option>
+                                <option value="" id="ss"> <label for="ss"> Specialty Store </label></option>
+                                <option value="" id="ths"> <label for="ths"> Thrift Store </label></option>
+                                <option value="" id="sv"> <label for="sv"> Service </label></option>
+                                <option value="" id="kk"> <label for="kk"> Kiosk </label></option>
+                            </select>                            
                             <button type="submit" class="button">Register</button>
+                            <button type="reset" class="button">Clear</button>
                         </form>
                     </div>
                     </div> 
@@ -90,54 +108,51 @@
             </div>
         </div>
     </div>
-    <!-------footer---->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
-                    <a href="">
-                        <p>ToS (Term of Service)</p>
-                    </a>
-                    <!-- <h3>Downdload our App</h3>
-                    <p>download app and android......</p>
-                    <div class="app-logo">
-                        <img src="productImages/play-store.png" alt="">
-                        <img src="productImages/app-store.png" alt="">
+        <!-------footer---->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <a href="ToS.html">
+                            <p>ToS (Term of Service)</p>
+                        </a>
+                        <!-- <h3>Downdload our App</h3>
+                        <p>download app and android......</p>
+                        <div class="app-logo">
+                            <img src="productImages/play-store.png" alt="">
+                            <img src="productImages/app-store.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="footer-col-2">
-                    <img src="productImages/Logo.png" alt="">
-                    <p>our purpose is......</p> -->
-                </div>
-                <div class="footer-col-2">
-                    <a href="">
-                        <p>Privacy Policy</p>
-                    </a>
-                    <!-- <ul>
-                        <li>coupon</li>
-                        <li>coupon</li>
-                        <li>coupon</li>
-                        <li>coupon</li>
-                    </ul> -->
-                </div>
-                <div class="footer-col-3">
-                    <a href="">
-                        <p>Copy right 2021</p>
-                    </a>
-
-                    <!-- <ul>
-                        <li>FB</li>
-                        <li>IG</li>
-                        <li>Zalo</li>
-                        <li>Gmail</li>
-
-                    </ul> -->
+                    <div class="footer-col-2">
+                        <img src="productImages/Logo.png" alt="">
+                        <p>our purpose is......</p> -->
+                    </div>
+                    <div class="footer-col-2">
+                        <a href="PrivacyPolicy.html">
+                            <p>Privacy Policy</p>
+                        </a>
+                        <!-- <ul>
+                            <li>coupon</li>
+                            <li>coupon</li>
+                            <li>coupon</li>
+                            <li>coupon</li>
+                        </ul> -->
+                    </div>
+                    <div class="footer-col-3">
+                        <a href="CopyRight.html">
+                            <p>Copy right 2021</p>
+                        </a>
+    
+                        <!-- <ul>
+                            <li>FB</li>
+                            <li>IG</li>
+                            <li>Zalo</li>
+                            <li>Gmail</li>
+    
+                        </ul> -->
+                    </div>
                 </div>
             </div>
         </div>
-    
-    
-
 </body>
-
 </html>
