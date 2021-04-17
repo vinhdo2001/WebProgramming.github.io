@@ -199,16 +199,29 @@ ul{
 select{
     border: 1px solid #f48b29;
     padding: 5px;
-    /* height: 42px; */
-    /* border-radius: 8px;
+    height: 42px;
+    border-radius: 8px;
     appearance: none;
-    text-align: center; */
+    text-align: center;
 }
-/* select:focus{
+select:focus{
     outline: none;
-    border: 2px solid blue;
+    border: 2px solid #58391c;
 
-} */
+}
+input{
+    border: 1px solid #f48b29;
+    padding: 5px;
+    height: 42px;
+    border-radius: 8px;
+    appearance: none;
+    text-align: center;
+}
+input:focus{
+    outline: none;
+    border: 2px solid #58391c;
+
+}
 select::after{
     content: "";
 }
@@ -240,10 +253,10 @@ select::after{
     text-align: center;
     font-weight:lighter;
     font-size:xx-large;
-    color:#7ebdb4;
+    color:#e27802;
 }
 #recommended-products:hover{
-    color:#f48b29;
+    color:#58391c;
 }
 
 .single-product{
