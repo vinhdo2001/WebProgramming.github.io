@@ -75,7 +75,7 @@ a{
 /*------------account------------*/
 .account-login, .account-register, .account-retrieve, .faqs {
     padding: 50px 0;
-    background: radial-gradient(#fff,#ffd6d6);
+    background: white;
 }
 
 
@@ -93,7 +93,7 @@ a{
 }
 
 .form-login {
-    background: #fff;
+    background: radial-gradient(#fff,#ffd6d6);
     width: 300px;
     height: 400px;
     position: relative;
@@ -103,7 +103,7 @@ a{
 }
 
 .form-register{
-    background: #fff;
+    background: radial-gradient(#fff,#ffd6d6);
     width: 500px;
     height: 910px;
     position: relative;
