@@ -414,6 +414,10 @@ input:focus{
     margin-right: 10%;
 }
 /*Privacy Policy */
+.policy{
+    height: 60vh;
+    min-height: 500px;
+}
 .policy h2{
     color: #cc561e;
     margin-left: 52px;
