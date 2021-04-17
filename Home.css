@@ -234,6 +234,16 @@ select::after{
 }
 
 /* --------single product details ---------*/
+#recommended-products{
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    font-weight:lighter;
+    font-size:xx-large;
+    color:#7ebdb4;
+}
+#recommended-products:hover{
+    color:#f48b29;
+}
 
 .single-product{
     margin-top: 80px;
