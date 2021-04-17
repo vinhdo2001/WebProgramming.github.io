@@ -205,7 +205,7 @@ select{
 }
 select:focus{
     outline: none;
-    border: 2px solid blue;
+    border: 2px solid #f48b29;
 
 }
 select::after{
@@ -229,7 +229,7 @@ select::after{
     cursor: pointer;
 }
 .page-btn span:hover{
-    background-color: #ff523b;
+    background-color: #f48b29;
     color: #fff;
 }
 
