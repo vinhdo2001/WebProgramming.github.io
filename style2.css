@@ -105,7 +105,7 @@ a{
 .form-register{
     background: radial-gradient(#fff,#ffd6d6);
     width: 500px;
-    height: 950px;
+    height: 970px;
     position: relative;
     text-align: center;
     padding: 20px 0;
@@ -168,9 +168,9 @@ a{
     margin-top: 8px;
 }
 .form-register [type=radio] {
-    width: 50px;
+    width: 5%;
     border: 0px;
-    height: 17px;
+    height: 1rem;
 }
 .form-register label{
     display: inline-block;
@@ -262,9 +262,9 @@ ul{
 
     }
     .form-register [type=radio] {
-        width: 30px;
+        height: 1rem;
         border: 0px;
-        height: 15px;
+        width: 15%;
     }
 
 
