@@ -455,6 +455,8 @@ input:focus{
     margin-bottom: 32px;
     width: 30%;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
+    border: 2px solid    #cc561e;
+    border-radius: 10px;
 }
 .profile img{
     width: 100%;
