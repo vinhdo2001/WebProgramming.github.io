@@ -456,6 +456,7 @@ input:focus{
 .profile img{
     border-radius: 10px;
     height: 32%;
+    width: 100%;
 }
 .profile h3{
     font-family: sans-serif;
@@ -466,6 +467,5 @@ input:focus{
     padding-bottom: 32px;
 }
 .userInfo p{
-    padding-left: 32px;
     margin-bottom: 10px;
 }
