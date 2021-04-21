@@ -364,18 +364,18 @@ input:focus{
     padding-bottom: 40px;
 }
 .member{
+
     margin-left: 20%;
     margin-bottom: 30%;
 }
 .team-info{
     clear: both;
     margin-left: 10%;
-    padding-bottom: 15%;
 }
 .team-info img {
     float: left;
-    height: 65%;
-    width: 280px;
+    height: 200%;
+    width: 46%;
     margin-bottom: 5%;
     padding-right: 10%;
 }
