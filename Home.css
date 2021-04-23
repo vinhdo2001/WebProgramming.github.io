@@ -345,6 +345,12 @@ input:focus{
 }
 
 /*About Us */ 
+.information{
+    background: radial-gradient(#fff,#ffd6d6);
+}
+.information p,div{
+    color: black;
+}
 .TeamInformation h2{
     color: #cc561e;
     font-weight: 900;
