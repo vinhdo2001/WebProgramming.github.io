@@ -54,44 +54,5 @@
         align-items: center;
         flex-direction: column;
         /* background-color: DodgerBlue; */
-      }
-}
-/* @media only screen and (max-width: 768px) {
-    .products-in-cart{
-        margin-top: 10px;
-        margin-right: 0%;
-        margin-left: 0%;
-        
     }
-    .products-in-cart img{
-        width: 70px;
-    }
-    .total-price{
-        padding-top: 30px;
-       
-        font-size: 20px;
-    }
-    .displaying{
-        display: none;
-    }
-  }
-  @media only screen and (max-width: 600px) {
-    .products-in-cart{
-        margin-top: 10px;
-        margin-right: 20px;
-        margin-left: 0%;
-        
-    }
-    .products-in-cart img{
-        width: 100px;
-    }
-    .total-price{
-        padding-top: 30px;
-       
-        font-size: 20px;
-    }
-    .displaying{
-        display: none;
-    }
-  } */
-  
+}  
