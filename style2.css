@@ -84,7 +84,7 @@ a{
 
 .account-register{
     background: radial-gradient(#fff,#ffd6d6);
-    min-height: 100vh;
+    min-height: 170vh;
     padding: 50px 0;
 
 }
@@ -187,6 +187,12 @@ a{
     margin-bottom: 5px;
 
 
+}
+.form-control small{
+    visibility: hidden;
+    position: relative;
+    top: 0;
+    bottom: 0;
 }
 
 
