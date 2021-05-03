@@ -344,7 +344,18 @@ input:focus{
     }
 }
 
-/*About Us */
+/*About Us */ 
+.information{
+    background: radial-gradient(#fff,#ffd6d6);
+}
+.information p, h4{
+    color: black;
+}
+.information > h2{
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
 .TeamInformation h2{
     color: #cc561e;
     font-weight: 900;
@@ -355,39 +366,16 @@ input:focus{
 .TeamInformation p{
     margin-left: 25%;
     margin-right: 17%;
-}
-.members h2{
-    color: #cc561e;
-    font-weight: 900;
+} 
+.information .small-container .row .col-4 p{
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 40px;
+    margin-top: 7%;
+    margin-bottom: 7%;
 }
-.member{
-    margin-left: 20%;
-    margin-bottom: 30%;
-}
-.team-info{
-    clear: both;
-    margin-left: 10%;
-    padding-bottom: 15%;
-}
-.team-info img {
-    float: left;
-    height: 65%;
-    width: 280px;
-    margin-bottom: 5%;
-    padding-right: 10%;
-}
-.team-info h3{
-    color: darksalmon;
-}
-.team-info p{
-    float: left;
-    width: 300px;
-    padding-bottom: 50px;
-    margin-bottom: 5%;
-    color: blueviolet;
+.information .small-container .row .col-4 h4{
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 7%;
 }
 /*ToS */
 .ToS h2{
@@ -456,6 +444,7 @@ input:focus{
 .profile img{
     border-radius: 10px;
     height: 32%;
+    width: 100%;
 }
 .profile h3{
     font-family: sans-serif;
@@ -466,6 +455,5 @@ input:focus{
     padding-bottom: 32px;
 }
 .userInfo p{
-    padding-left: 32px;
     margin-bottom: 10px;
 }
