@@ -11,6 +11,13 @@
     align-items: center;
  
   }
+.boldText{
+    font-family: 'Shrikhand';
+    text-align: center;
+    font-weight:lighter;
+    font-size:large;
+    color:#e27802;
+}
   
   .flex-container > div {
     width: 30%;

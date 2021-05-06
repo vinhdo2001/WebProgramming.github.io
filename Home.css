@@ -293,10 +293,23 @@ select::after{
     text-align: center;
     font-weight:lighter;
     font-size:xx-large;
-    color:#e27802;
+    color:#7ebdb4;
 }
 #recommended-products:hover{
     color:#58391c;
+}
+#view-more{
+    color: #f48b29;
+}
+#view-more:hover{
+    color:#58391c;
+}
+#all-product{
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    font-weight:lighter;
+    font-size:xx-large;
+    color:#e27802;
 }
 
 .single-product{
