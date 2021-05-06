@@ -78,6 +78,27 @@
         </a>
         <div class="slider">
             <a href="hnoss.html">
+                <img name="slide1" alt="" class="image">
+                <h4 name="caption1"></h4>
+
+            </a>
+        </div>
+        <div class="slider">
+            <a href="hnoss.html">
+                <img name="slide2" alt="" class="image">
+                <h4 name="caption2"></h4>
+
+            </a>
+        </div>
+        <div class="slider">
+            <a href="hnoss.html">
+                <img name="slide3" alt="" class="image">
+                <h4 name="caption3"></h4>
+
+            </a>
+        </div>
+        <!-- <div class="slider">
+            <a href="hnoss.html">
                 <div class="image">
                     <img name="slide1" alt="">
                 </div>
@@ -92,7 +113,7 @@
                     <img name="slide3" alt="">
                 </div>
             </a>
-        </div>
+        </div>  -->
         <!-- New products -->
         <a href="Product(Newest).html">
             <h2 class="title">New Products</h2>
@@ -231,41 +252,43 @@
     <!--script-link----------->
     <script>
         var i = 0;
-        // var isecond = 1;
         var newstoreImages = ['https://i.imgur.com/vNOl7V7.png', 'https://i.imgur.com/3jOolCX.png', 'https://i.imgur.com/NwaKv5J.png', 'https://i.imgur.com/vIBzeJ6.png'];
-        // var 
+        var storeName = ['rabbit', 'hello', 'allo', 'hnoss'];
+        var slideList = ['slide1', 'slide2', 'slide3']
         var time = 2000;
 
-        // function changeImg() {
-        //     document.slide.src = images[ifirst];
-        //     if (ifirst < images.length - 1) {
-        //         console.log(images[ifirst].inner)
-        //         ifirst++;
-        //     }
-        //     else {
-        //         ifirst = 0;
-        //     }
-        //     setTimeout(changeImg, time)
-        // }
+        function changeImg(slide, index) {
+            const parsed = parseInt(index);
+            document.getElementsByName(slide).src = newstoreImages[parsed];
+            console.log(document.getElementsByName(slide))
+        }
+        function changeCaption(caption, index) {
+            const parsed = parseInt(index);
+            document.getElementsByName(caption).src = storeName[parsed];
+            console.log(document.getElementsByName(caption))
+        }
 
-        function changeStoreImg() {
-            document.slide1.src = newstoreImages[i];
-            document.slide2.src = newstoreImages[i + 1];
-            document.slide3.src = newstoreImages[i + 2];
+        function changeBlock(slide, index) {
+            const parsed = parseInt(index);
+            changeImg(slide, parsed)
+            changeCaption(slide, parsed)
+        }
+        function autoSliderImg() {
+            // var index = i;
+            changeBlock(slide1, i)
+            changeBlock(slide2, i + 1);
+            changeBlock(slide3, i + 2);
+            // document.slide.src = images[index];
             if (i < newstoreImages.length - 1) {
-                console.log(newstoreImages[i].inner)
                 i++;
             }
             else {
                 i = 0;
             }
-            setTimeout(changeStoreImg, time)
+            setTimeout(autoSliderImg, time)
         }
-        // function autoSliderImg(){
-        //     for (i in ra)
 
-        // }
-        window.onload = changeStoreImg;
+        window.onload = autoSliderImg;
     </script>
 
 </body>
