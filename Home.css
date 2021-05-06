@@ -17,13 +17,33 @@ a{
     margin: auto;
     /* padding-left: 25px ;
     padding-right: 25px ; */
+    overflow-x:scroll;
 }
+
 .row{
     display: flex;
     align-items:center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.slider{
+    display: flex;
+    align-items:center;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+}
+.slider .image{
+    flex-basis:25%;
+    padding: 10px;
+    /* min-width: 200px; */
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+    
+}
+.image img{
+    max-width: 100%;
+}
+
 .col-2{
     flex-basis: 50%;
     min-width: 300px;
