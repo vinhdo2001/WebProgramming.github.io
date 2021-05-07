@@ -94,7 +94,7 @@ function countChars(obj){
 }
 
 function isEmail(email){
-    return /^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z0–9\-.]+)@([a-zA-Z0-9-.]+)\.([a-zA-Z]{2,5})$/.test(email)
+    return /^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z\d\-.]+)@([a-zA-Z\d\-.]+)\.([a-zA-Z]{2,5})$/.test(email)
 }
 function isPhone(phone) {
     return /^\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?[\d{1}]?[-\s\.]?[\d{1}]?$/.test(phone);

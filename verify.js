@@ -13,7 +13,7 @@ function validateInput(){
     if(fname.value.trim() === ""){
         errorMessage(fname, "First name cannot be blank");
     }
-    else if(fname.value.length < 4){
+    else if(fname.value.length < 3){
         errorMessage(fname, "First name must be at least 3 characters");
     }
     else{
@@ -22,7 +22,7 @@ function validateInput(){
     if(lname.value.trim() === ""){
         errorMessage(lname, "Last name cannot be blank");
     }
-    else if(lname.value.length < 4){
+    else if(lname.value.length < 3){
         errorMessage(lname, "Last name must be at least 3 characters");
     }
     else{
@@ -31,7 +31,7 @@ function validateInput(){
     if(address.value.trim() === ""){
         errorMessage(address, "Address cannot be blank");
     }
-    else if(address.value.length < 4){
+    else if(address.value.length < 3){
         errorMessage(address, "Address must be at least 3 characters");
     }
     else{
@@ -40,7 +40,7 @@ function validateInput(){
     if(city.value.trim() === ""){
         errorMessage(city, "City cannot be blank");
     }
-    else if(city.value.length < 4){
+    else if(city.value.length < 3){
         errorMessage(city, "City must be at least 3 characters");
     }
     else{
@@ -49,7 +49,7 @@ function validateInput(){
     if(email.value.trim() === ""){
         errorMessage(email, "Email cannot be blank");
     }
-    else if(!isEmail(email)){
+    else if(!isEmail(email.value)){
         errorMessage(email, "Email invalid")
     }
     else{
@@ -100,7 +100,7 @@ function validateInput(){
     if(phone.value.trim() === ""){
       errorMessage(phone, "Phone cannot be blank");
     }
-    else if(!isPhone(phone)){
+    else if(!isPhone(phone.value)){
         errorMessage(phone, "Phone number invalid")
     }
     else{
@@ -109,7 +109,7 @@ function validateInput(){
 
 }
 function isEmail(email){
-    return /^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z0–9\-.]+)@([a-zA-Z0-9-.]+)\.([a-zA-Z]{2,5})$/.test(email)
+    return /^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z\d\-.]+)@([a-zA-Z\d\-.]+)\.([a-zA-Z]{2,5})$/.test(email)
 }
 
 
@@ -166,6 +166,8 @@ function containsLower(str) {
     }
     return false;
   }
+
+  /*code password verification snippets taken from answers in week 8*/
   function optionCheck() {
     if (document.getElementById('storeowner').checked) {
         document.getElementById('owneroption').style.visibility = 'visible';

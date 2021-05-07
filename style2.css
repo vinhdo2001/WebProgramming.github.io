@@ -113,12 +113,14 @@ a{
 }
 
 .form-register{
+    background: white;
     width: 500px;
-    height: 970px;
+    height: 1200px;
     position: relative;
     text-align: center;
     padding: 20px 0;
     margin: auto;
+    border-radius: 20px;
 }
 
 .form-login span{
