@@ -56,62 +56,42 @@
         </div>
     </div>
 
-
-    <div class="products-in-cart">
-
-        <!-- <div class="row"> -->
-        <div class="flex-container">
-            <div>Added Products</div>
-            <div>Product Name</div>
-            <div>Price</div>
-            <div>Quantity</div>
-
-        </div>
-        <div class="flex-container">
-            <div><img src="https://i.imgur.com/mxa2mlS.png" alt="pant"></div>
-            <div>Blue dress</div>
-            <div>vnd 340.000</div>
-            <div><input type="number" placeholder="Quantity"></div>
-        </div>
-        <div class="flex-container">
-            <div><img src="https://i.imgur.com/BwV5Cvx.png" alt="pant"></div>
-            <div>Blue dress</div>
-            <div>vnd 340.000</div>
-            <div><input type="number" placeholder="Quantity"></div>
-        </div>
-
-        <div class="flex-container">
-            <div><img src="https://i.imgur.com/o0Lhluh.png" alt="pant"></div>
-            <div>Blue dress</div>
-            <div>vnd 340.000</div>
-            <div><input type="number" placeholder="Quantity"></div>
-        </div>
-        <div class="flex-container">
-            <div><img src="https://i.imgur.com/jfULO2A.png" alt="pant"></div>
-            <div>Blue dress</div>
-            <div>vnd 340.000</div>
-            <div><input type="number" placeholder="Quantity"></div>
-        </div>
-        <div class="flex-container">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div>Total Price: 647.000 VND</div>
-        </div>
-        <div class="flex-container">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div class="btn"><a href="ProductDetails.html">Order</a></div>
-        </div>
-        <div class="flex-container">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div class="btn"><a href="thankyou.html"></a>Continue Shopping &#8594;</div>
-        </div>
-
+  
+    
+        <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="product-container">
+            <div class="cart-row">
+                <span  class="cart-item cart-header cart-column">NAME ITEM</span>
+              
+                <span  class="cart-price cart-header cart-column">PRICE</span>
+    
+            </div>
     </div>
+    </section>
+
+    
+        
+    
+       
+    
+        <div class="products-here">
+            <table style="width: 100%; text-align: center;" id="myTable" class="table" >
+               <tbody>
+                    <tr>
+                        <td id="total"></td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+    </section>
+    
+    <h2 style="text-align: right; margin-right: 10%;">COUPON</h2> <input style="max-width: 20%; margin-left: 70%;" type="text" id="field1"  value=""><br>
+    <h2 style="text-align: right; margin-right: 10%;">Total price after coupon added:</h2> <input style="max-width: 20%; margin-left: 70%;" type="text" id="field2"><br><br>
+    <button style="float: right; margin-right: 10%;" class="btn" onclick="myFunction()">Add Coupon</button>
+   
+
 
     <div class="small-container">
         <div class="row row-2">
@@ -175,5 +155,59 @@
 
     </div>
 </body>
+<script>
+
+    
+
+    
+    let table = document.getElementById("myTable");
+
+
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    let productContainer = document.querySelector(".products-here");
+    let total = 0;
+    
+    cart.forEach((element, index) => {
+
+        let row = table.insertRow(index);
+        let cell0 = row.insertCell(0);
+        let cell1= row.insertCell(1)
+       
+        
+
+        cell0.innerHTML = element.title;
+        
+        cell1.innerHTML = element.price;
+        total += parseFloat(element.price);
+    });
+    console.log(cart.length);
+    let lastRow = table.insertRow(cart.length);
+    console.log(lastRow);
+    let lastCell0 = lastRow.insertCell(0);
+    let lastCell1 = lastRow.insertCell(1);
+  
+    
+    lastCell0.innerHTML = "Total";
+    lastCell1.innerHTML = total;
+    
+    
+    console.log(discount);
+    console.log(total);
+ 
+    function myFunction() {
+  if(document.getElementById("field1").value == 'COSC2430-HD') {    
+  document.getElementById("field2").value = total*0.2;
+  }else if(document.getElementById("field1").value == 'COSC2430-DI'){
+    document.getElementById("field2").value = total*0.1;
+  }else{
+    document.getElementById("field2").value = "you must add coupon";
+  }
+}
+
+
+
+
+</script>
+
 
 </html>
