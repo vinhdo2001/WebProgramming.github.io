@@ -12,10 +12,12 @@ addButton.addEventListener('click', addProduct);
 function addProduct() {
     let title = document.querySelector('#shop-item-title').textContent;
     let price = document.querySelector('#shop-item-price').textContent;
+ 
     
 
     let product = {
         "title": title,
+        
         "price": price,
      
     };
