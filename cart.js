@@ -10,8 +10,8 @@ let addButton = document.querySelector('#add-button');
 addButton.addEventListener('click', addProduct);
 
 function addProduct() {
-    let title = document.querySelector('#title').textContent;
-    let price = document.querySelector('#price').textContent;
+    let title = document.querySelector('#shop-item-title').textContent;
+    let price = document.querySelector('#shop-item-price').textContent;
     
 
     let product = {
@@ -30,8 +30,8 @@ let buyButton = document.querySelector('#buy-button');
 buyButton.addEventListener('click', buyProduct);
 
 function buyProduct() {
-    let title = document.querySelector('#title').textContent;
-    let price = document.querySelector('#price').textContent;
+    let title = document.querySelector('#shop-item-title').textContent;
+    let price = document.querySelector('#shop-item-price').textContent;
     
 
     let product = {

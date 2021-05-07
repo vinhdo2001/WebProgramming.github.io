@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Montserrat:wght@100&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="cart.js" async></script>
 </head>
 
 <body>
@@ -62,66 +64,48 @@
 
         <!-- <div class="row"> -->
         <div class="flex-container">
-            <div class="boldText">
-                <h3>Added Products</h3>
-            </div>
+            
             <div class="boldText">
                 <h3>Product Name</h3>
             </div>
             <div class="boldText">
-                <h3>Price</h3>
-            </div>
-            <div class="boldText">
                 <h3>Quantity</h3>
             </div>
+            <div class="boldText">
+                <h3>Price</h3>
+            </div>
+           
 
 
         </div>
-        <div class="flex-container">
-            <div><img src="https://i.imgur.com/mxa2mlS.png" alt="pant"></div>
-            <div>Blue dress</div>
-            <div>vnd 340.000</div>
-            <div><input type="number" placeholder="Quantity"></div>
-        </div>
-        <div class="flex-container">
-            <div><img src="https://i.imgur.com/BwV5Cvx.png" alt="pant"></div>
-            <div>Blue dress</div>
-            <div>vnd 340.000</div>
-            <div><input type="number" placeholder="Quantity"></div>
-        </div>
+    </div>
 
-        <div class="flex-container">
-            <div><img src="https://i.imgur.com/o0Lhluh.png" alt="pant"></div>
-            <div>Blue dress</div>
-            <div>vnd 340.000</div>
-            <div><input type="number" placeholder="Quantity"></div>
+    
+        <div class="products-here">
+            <table style="width: 100%; text-align: center;" id="myTable" class="table" >
+               <tbody>
+                    <tr>
+                        <td id="total"></td>
+                    </tr>
+                </tbody>
+            </table>
+        
         </div>
-        <div class="flex-container">
-            <div><img src="https://i.imgur.com/jfULO2A.png" alt="pant"></div>
-            <div>Blue dress</div>
-            <div>vnd 340.000</div>
-            <div><input type="number" placeholder="Quantity"></div>
-        </div>
-        <div class="flex-container">
+    </section>
+
+    <h2 style="text-align: right; margin-right: 10%;">COUPON</h2> <input style="max-width: 20%; margin-left: 70%;" type="text" id="field1"  value=""><br>
+    <h2 style="text-align: right; margin-right: 10%;">Total price after coupon added:</h2> <input style="max-width: 20%; margin-left: 70%;" type="text" id="field2"><br><br>
+    <button style="float: right; margin-right: 10%;" class="btn" onclick="myFunction()">Add Coupon</button>
+
+        <div style="margin-top: 10%;" class="flex-container">
             <div></div>
             <div></div>
             <div></div>
-            <div>Total Price: 647.000 VND</div>
-        </div>
-        <div class="flex-container">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div class="btn"><a href="ProductDetails.html">Order</a></div>
-        </div>
-        <div class="flex-container">
-            <div></div>
-            <div></div>
-            <div></div>
+            
             <div class="btn"><a href="thankyou.html">Continue Shopping &#8594;</a></div>
         </div>
 
-    </div>
+    
 
     <div class="small-container">
         <div class="row row-2">
@@ -215,5 +199,51 @@
         </div>
     </div>
 </body>
+<script>
+    let table = document.getElementById("myTable");
+
+
+let cart = JSON.parse(localStorage.getItem('cart'));
+let productContainer = document.querySelector(".products-here");
+let total = 0;
+
+cart.forEach((element, index) => {
+
+    let row = table.insertRow(index);
+    let cell0 = row.insertCell(0);
+    let cell1= row.insertCell(1)
+   
+    
+
+    cell0.innerHTML = element.title;
+    
+    cell1.innerHTML = element.price;
+    total += parseFloat(element.price);
+});
+console.log(cart.length);
+let lastRow = table.insertRow(cart.length);
+console.log(lastRow);
+let lastCell0 = lastRow.insertCell(0);
+let lastCell1 = lastRow.insertCell(1);
+
+
+lastCell0.innerHTML = "Total";
+lastCell1.innerHTML = total;
+
+
+console.log(discount);
+console.log(total);
+
+function myFunction() {
+if(document.getElementById("field1").value == 'COSC2430-HD') {    
+document.getElementById("field2").value = total*0.2;
+}else if(document.getElementById("field1").value == 'COSC2430-DI'){
+document.getElementById("field2").value = total*0.1;
+}else{
+document.getElementById("field2").value = "you must add coupon";
+}
+}
+
+</script>
 
 </html>
