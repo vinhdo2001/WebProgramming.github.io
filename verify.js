@@ -97,11 +97,21 @@ function validateInput(){
     else {
         successMessage(zipcode)
     }
+    if(phone.value.trim() === ""){
+      errorMessage(phone, "Phone cannot be blank");
+    }
+    else if(!isPhone(phone)){
+        errorMessage(phone, "Phone number invalid")
+    }
+    else{
+        successMessage(phone);
+    }
 
 }
 function isEmail(email){
-    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
+    return /^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z0–9\-.]+)@([a-zA-Z0-9-.]+)\.([a-zA-Z]{2,5})$/.test(email)
 }
+
 
 function errorMessage(input, message){
     let parent = input.parentElement;
@@ -162,6 +172,10 @@ function containsLower(str) {
     }
     else document.getElementById('owneroption').style.visibility = 'hidden';
 
+}
+
+function isPhone(phone) {
+  return /^\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?[\d{1}]?[-\s\.]?[\d{1}]?$/.test(phone);
 }
 
 form.addEventListener("submit", (e) =>{
