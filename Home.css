@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Montserrat',sans-serif;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 
 }
 
@@ -15,15 +15,35 @@ a{
 .container{
     max-width: 1300px ;
     margin: auto;
-    padding-left: 25px ;
-    padding-right: 25px ;
+    /* padding-left: 25px ;
+    padding-right: 25px ; */
+    overflow-x:scroll;
 }
+
 .row{
     display: flex;
     align-items:center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.slider{
+    display: flex;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.slider img{
+    flex-basis:25%;
+    padding: 10px;
+    /* min-width: 200px; */
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+    
+}
+.image img{
+    max-width: 100%;
+}
+
 .col-2{
     flex-basis: 50%;
     min-width: 300px;
@@ -273,10 +293,23 @@ select::after{
     text-align: center;
     font-weight:lighter;
     font-size:xx-large;
-    color:#e27802;
+    color:#7ebdb4;
 }
 #recommended-products:hover{
     color:#58391c;
+}
+#view-more{
+    color: #f48b29;
+}
+#view-more:hover{
+    color:#58391c;
+}
+#all-product{
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    font-weight:lighter;
+    font-size:xx-large;
+    color:#e27802;
 }
 
 .single-product{

@@ -17,19 +17,23 @@ body {
   }
   
   input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-  }
+    display: inline-block;
+    background: #f48b29;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0px;
+    border-radius: 30px;
+}
+  
   input[type=reset] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-  }
+    display: inline-block;
+    background: #f48b29;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0px;
+    border-radius: 30px;
+}
+  
   
   input[type=submit]:hover {
     background-color: #45a049;
