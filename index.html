@@ -261,12 +261,13 @@
         function changeImg(slide, index) {
             const parsed = parseInt(index);
             document.getElementsByName(slide).src = newstoreImages[parsed];
-            console.log(document.getElementsByName(slide))
+            // console.log(document.getElementsByName(slide))
         }
         function changeCaption(caption, index) {
             const parsed = parseInt(index);
-            document.getElementsByName(caption).src = storeName[parsed];
-            console.log(document.getElementsByName(caption))
+            let x = document.getElementsByName(caption);
+            console.log(x);
+            // console.log(document.getElementsByName(caption))
         }
 
         function changeBlock(slide, index) {
