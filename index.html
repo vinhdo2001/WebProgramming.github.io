@@ -234,10 +234,9 @@
         var i = 0;
         // var isecond = 1;
         var newstoreImages = ['https://i.imgur.com/vNOl7V7.png', 'https://i.imgur.com/3jOolCX.png', 'https://i.imgur.com/NwaKv5J.png', 'https://i.imgur.com/vIBzeJ6.png'];
-<<<<<<< HEAD
         var storeName = ["rabbit", "hello", "allo", "hnoss"];
         var slideList = ["slide1", "slide2", "slide3"]
-        var time = 2000;
+        var time = 3000;
 
         function changeImg(slide, index) {
             const parsed = parseInt(index);
@@ -250,22 +249,6 @@
             console.log(x);
             // console.log(document.getElementsByName(caption))
         }
-=======
-        // var 
-        var time = 2000;
-
-        // function changeImg() {
-        //     document.slide.src = images[ifirst];
-        //     if (ifirst < images.length - 1) {
-        //         console.log(images[ifirst].inner)
-        //         ifirst++;
-        //     }
-        //     else {
-        //         ifirst = 0;
-        //     }
-        //     setTimeout(changeImg, time)
-        // }
->>>>>>> parent of e797799 (edit scroll)
 
         function changeStoreImg() {
             document.slide1.src = newstoreImages[i];
@@ -280,11 +263,8 @@
             }
             setTimeout(changeStoreImg, time)
         }
-        // function autoSliderImg(){
-        //     for (i in ra)
 
-        // }
-        window.onload = changeStoreImg;
+        window.load = changeStoreImg();
     </script>
 
 </body>
