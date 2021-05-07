@@ -29,10 +29,10 @@ a{
 .slider{
     display: flex;
     align-items:center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-around;
 }
-.slider img{
+.slider .image{
     flex-basis:25%;
     padding: 10px;
     /* min-width: 200px; */
