@@ -79,7 +79,7 @@ a{
 .account-login, .account-retrieve, .faqs {
     padding: 50px 0;
     background: white;
-    min-height: 100vh;
+    min-height: 65vh;
 }
 
 .account-register{
@@ -103,6 +103,7 @@ a{
 }
 
 .form-login {
+    margin-top: 30%;
     background: radial-gradient(#fff,#ffd6d6);
     width: 300px;
     height: 400px;
@@ -110,6 +111,7 @@ a{
     text-align: center;
     padding: 20px 0;
     margin: auto;
+    /* transform: translate(-50%, -50%)  */
 }
 
 .form-register{
