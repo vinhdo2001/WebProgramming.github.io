@@ -1,0 +1,14 @@
+.consent{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background-color: blue;
+    max-width: 365px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 25 px 25 px 25px 30px;
+}
+.consent .cookie-content{
+    margin-top: 10px;
+}
+
