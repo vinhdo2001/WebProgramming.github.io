@@ -11,6 +11,13 @@
     align-items: center;
  
   }
+.boldText{
+    font-family: 'Shrikhand';
+    text-align: center;
+    font-weight:lighter;
+    font-size:large;
+    color:#e27802;
+}
   
   .flex-container > div {
     width: 30%;
@@ -23,16 +30,7 @@
     width: 50%;
     margin-top: 10px;
 }
-/* .total-price{
-    margin-right: 200px;
-    font-size: 30px;
-}
-.small-containering{
-    max-width: 1080px;
-    margin:auto;
-    padding-left: 25px;
-    padding-right: 25px;
-} */
+
 @media screen and (max-width: 1023px) {
     #header-table{
         display: none;
