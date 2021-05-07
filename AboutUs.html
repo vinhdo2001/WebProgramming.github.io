@@ -6,16 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simba | About Us</title>
-    <link rel="stylesheet" href="Home.css">
-    <link rel="stylesheet" href="NavBar.css">
-    <link rel="stylesheet" href="cart.css">
-
+    <link href="Vinh's/AU.css" rel="stylesheet" >
+    <link href="Vinh's/format.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Montserrat:wght@100&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
     <div class="header">
         <div class="container">
@@ -57,6 +54,7 @@
             </div>
         </div>
     </div>
+
     <div class="information">
         <div class="TeamInformation">
             <h2>    Team Information</h2>
@@ -65,65 +63,81 @@
                 perferendis blanditiis repellat ipsam.</p>
         </div> 
         <h2> Member</h2>
-        <div class="small-container">
-            <div class="row">
-                <div class="col-4">
-                    <img src="Image/Vinh.jpg" alt="">
-                    <h4>Thanh Vinh</h4>
-                    <p>A man with true love for football and games</p>
-                </div>
-                <div class="col-4">
-                    <img src="Image/Nguyen.jpg" alt="">
-                    <h4>Khoi Nguyen</h4>
-                    <p>Need self description</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <img src="Image/Phuong.jpg" alt="">
-                    <h4>Lam Phuong</h4>
-                    <p>Need self description</p>
-                </div>
-                <div class="col-4">
-                    <img src="Image/Tram.jpg" alt="">
-                    <h4>Ngoc Tram</h4>
-                    <p>Need self description</p>
-                    <p>$50.00</p>
-                </div>
-            </div>
-        </div>       
     </div>
-    
-        
-<!-------footer---->
-<div class="footer">
-    <div class="container">
-        <div class="row">
-
-            <div class="footer-col-1">
-                <img src="productImages/Logo.png" alt="">
+    <section id="portfolio">
+        <div class="project">
+            <img src="Image/Nguyen.jpg" alt="" class="project-image">
+            <div class="grid-overlay">
+                <button class="button">View</button>
             </div>
-            <div class="footer-col-2">
-                <a href="ToS.html">
-                    <p>ToS (Term of Service)</p>
-                </a>
-
+        </div>
+        <div class="project">
+            <h3>Vinh</h3>
+            <p>love futbol</p>
+            <img src="Image/Vinh.jpg" alt="" class="project-image">
+            <div class="grid-overlay">
+                <button class="button">View</button>
             </div>
-            <div class="footer-col-3">
-                <a href="PrivacyPolicy.html">
-                    <p>Privacy Policy</p>
-                </a>
-
+        </div>
+        <div class="project">
+            <img src="Image/Tram.jpg" alt="" class="project-image">
+            <div class="grid-overlay">
+                <button class="button">View</button>
             </div>
+        </div>
+        <div class="project">
+            <img onclick="on()" src="Image/Phuong.jpg" alt="" class="project-image">
+            <div class="grid-overlay">
+                <button class="button">View</button>
+            </div>
+        </div>
+        <div class="overlay">
+            <div class="overlay-inner">
+                <button class="close">Close X</button>
+                <img src="">
+            </div>
+        </div> 
+    </section>
+    <script>
+        const buttons = document.querySelectorAll('.project');
+        const overlay = document.querySelector('.overlay');
+        const overlayImage = document.querySelector('.overlay-inner  img');
 
-            <div class="footer-col-4">
-                <a href="CopyRight.html">
-                    <p>Copy right 2021</p>
-                </a>
+        function open(e) {
+            overlay.classList.add('open');
+            const src = e.currentTarget.querySelector('img').src;
+            overlayImage.src = src;
+        } 
+        function close(){
+            overlay.classList.remove('open');
+        }
+            buttons.forEach(button => button.addEventListener('click',open));
+            overlay.addEventListener('click',close);
+    </script>
+    <!-------footer---->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="productImages/Logo.png" alt="">
+                </div>
+                <div class="footer-col-2">
+                    <a href="ToS.html">
+                        <p>ToS (Term of Service)</p>
+                    </a>
+                </div>
+                <div class="footer-col-3">
+                    <a href="PrivacyPolicy.html">
+                        <p>Privacy Policy</p>
+                    </a>
+                </div>
+                <div class="footer-col-4">
+                    <a href="CopyRight.html">
+                        <p>Copy right 2021</p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </body>
-
 </html>
