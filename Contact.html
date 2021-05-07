@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="store.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Montserrat:wght@100&display=swap"
         rel="stylesheet">
@@ -78,29 +79,42 @@
         </div>
         <div class="row">
             <div class="column">
-            <form action="/action_page.php">
+            <form action="/action_page.php" id="form-contact">
                 <label for="contact-purpose">Contact Purpose</label>
                 <select id="contact-purpose" name="contact-purpose">
                     <option value="australia">Order</option>
-                    <option value="canada">Complain</option>
-                    
-                    </select>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name..">
+                    <option value="canada">Complain</option>     
+                </select>
+                <div class="form-control">
+                <label for="name">Full Name</label>
+                <small>Error message</small>
+                <input type="text" id="fname" name="name" placeholder="Your name..">
+                </div>
                 
+                <div class="form-control">
                 <label for="email">Email</label>
+                <small>Error message</small>
                 <input type="text" id="email" name="email" placeholder="Your email..">
+                </div>    
                 
+                <div class="form-control">
                 <label for="phone">Phone</label>
+                <small>Error message</small> 
                 <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+                </div>
 
+                <div class="form-control">
                 <label for="contact-method">Preferred Contact Method</label> <br>
-                <input type="radio" id="email" name="method" value="email">
-                <label for="email">Email</label>
-                <input type="radio" id="phone" name="method" value="phone">
-                <label for="phone">Phone</label>
+                <small>Error message</small> <br>
+                <input type="radio" id="method1" name="method" value="email">
+                <label for="method1">Email</label>
+                <input type="radio" id="method2" name="method" value="phone">
+                <label for="method2">Phone</label>
+                </div>
 
+                <div class="form-control">
                 <p style="padding-top: 20px;">Contact Day</p>
+                <small>Error message</small> <br>
                 <input type="checkbox" id="day1" name="day1" value="Monday">
                 <label for="day1"> Monday </label>
 
@@ -121,20 +135,24 @@
 
                 <input type="checkbox" id="day7" name="day7" value="Sunday">
                 <label for="day7"> Sunday </label>
+                </div>
             
                 
                 
-                
-                <p style="padding-top: 20px;">Message</p>
-                <textarea id="message" name="message" placeholder="Write something.." style="height:170px"></textarea>
+                <div class="form-control">
+                <p style="padding-top: 20px;">Message</p> <p style="font-weight: bold;" id="charNum">Enter 50 - 500 characters</p>
 
-                <input type="reset" value="Submit">
+                <textarea name="message" placeholder="Write something.." style="height:170px" onkeyup="countChars(this);"></textarea>
+                </div>
+
+                <input type="submit" value="Submit">
                 <input type="reset" value="Clear">
+
             </form>
             </div>
         </div>
     </div>
     <!-------footer---->
-   
+<script src="contact.js"></script>
 </body>
 </html>
