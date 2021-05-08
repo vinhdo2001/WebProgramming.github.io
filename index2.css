@@ -13,8 +13,8 @@
   }
   
   .slider-wrap {
-    position: fixed;
-    /* position:relative; */
+    /* position: fixed; */
+    position:relative;
     bottom: 20%;
     top: 20%;
     left: 10%;
