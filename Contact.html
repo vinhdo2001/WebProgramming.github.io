@@ -64,7 +64,7 @@
         </div>
         <div class="row">
             <div class="column">
-            <form action="/action_page.php" id="form-contact">
+            <form action="AfterContact.html"  id="form-contact">
                 <label for="contact-purpose">Contact Purpose</label>
                 <select id="contact-purpose" name="contact-purpose">
                     <option value="australia">Order</option>
@@ -130,7 +130,7 @@
                 <textarea name="message" placeholder="Write something.." style="height:170px" onkeyup="countChars(this);"></textarea>
                 </div>
 
-                <input type="submit" onclick="window.location.href='AfterContact.html'" value="Submit">
+                <input type="submit" onsubmit="return validateInput()" value="Submit">
                 <input type="reset" value="Clear">
 
             </form>
