@@ -1,9 +1,9 @@
-var visited = true;
-if (visited) { //condition fot recognizeing the link visited or not
-    localStorage.getItem('visitedLink') = true
-} else {
-    localStorage.getItem('visitedLink') = []
-}
+// var visited = "true";
+const addButton = document.querySelector('#activeLink');
+addButton.addEventListener("click", () => {
+    // localStorage.setItem("visitedLink", visited);
+});
+
 
 function directToLoginPage(className) {
     document.getElementsByClassName(className).src = 'Login.html';
