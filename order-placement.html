@@ -231,7 +231,7 @@ cart.forEach((element, index) => {
     cell2.innerHTML = element.price;
     
     
-    total += parseFloat(element.price);
+    total += parseFloat(element.price)*parseInt(element.quantity);
 });
 console.log(cart.length);
 let lastRow = table.insertRow(cart.length);

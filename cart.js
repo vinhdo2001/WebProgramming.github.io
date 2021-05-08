@@ -19,7 +19,7 @@ function addProduct() {
 
     let product = {
         "title": title,
-        quantity : 0,
+        quantity : 1,
         "price": price
         
      
