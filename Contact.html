@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simba Contact Page</title>
+
     <link rel="stylesheet" href="store.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="NavBar.css">
@@ -63,7 +64,7 @@
         </div>
         <div class="row">
             <div class="column">
-            <form action="/action_page.php" id="form-contact">
+            <form action="AfterContact.html"  id="form-contact">
                 <label for="contact-purpose">Contact Purpose</label>
                 <select id="contact-purpose" name="contact-purpose">
                     <option value="australia">Order</option>
@@ -129,7 +130,7 @@
                 <textarea name="message" placeholder="Write something.." style="height:170px" onkeyup="countChars(this);"></textarea>
                 </div>
 
-                <input type="submit" onclick="window.location.href='AfterContact.html'" value="Submit">
+                <input type="submit" onsubmit="return validateInput()" value="Submit">
                 <input type="reset" value="Clear">
 
             </form>
