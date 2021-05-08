@@ -9,20 +9,21 @@ if (localStorage.getItem('cart') == null) {
 let addButton = document.querySelector('#add-button');
 addButton.addEventListener('click', addProduct);
 
-function addProduct() {
-    
-    
+function addProduct() { 
+    let title = document.querySelector('#shop-item-title').textContent;
  
+    let price = document.querySelector('#shop-item-price').textContent;
+    
+    
     
 
     let product = {
         "title": title,
         quantity : 0,
-        "price": price,
+        "price": price
         
      
     };
-    console.log(product);
     let isNewItem = cartItems.filter(item => item.title == product.title).length ==0;
     if (isNewItem){
         cartItems.push(product);
@@ -30,10 +31,8 @@ function addProduct() {
         let item = cartItems.find(item =>item.title == product.title);
         item.quantity ++;
     }
-    let title = document.querySelector('#shop-item-title').textContent;
- 
-    let price = document.querySelector('#shop-item-price').textContent;
-    
+    console.log(product);
+  
 
    
 

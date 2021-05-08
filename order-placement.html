@@ -227,8 +227,8 @@ cart.forEach((element, index) => {
     
 
     cell0.innerHTML = element.title;
-    cell1.innerHTML = parseFloat(element.quantity);
-    cell2.innerHTML = parseFloat(element.price);
+    cell1.innerHTML = element.quantity;
+    cell2.innerHTML = element.price;
     
     
     total += parseFloat(element.price);
