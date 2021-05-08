@@ -69,25 +69,25 @@
         </div>
         <h2> Member</h2>
     </div>
-    <div class="small-container">
-        <div class="row">
+    <div class="small-container" >
+        <div class="row"id="blur">
             <div class="col-4">
-                <img src="Image/Nguyen.jpg" alt="product Image">
+                <img src="Image/Nguyen.jpg" alt="product Image" class="project-image">
                 <h4>Khoi Nguyen</h4>
                 <p>Guitarist</p>
             </div>
             <div class="col-4">
-                <img src="Image/Phuong.jpg" alt="product Image">
+                <img src="Image/Phuong.jpg" alt="product Image" class="project-image">
                 <h4>Lam Phuong</h4>
                 <p>Need information</p>
             </div>
             <div class="col-4">
-                <img src="Image/Tram.jpg" alt="product Image">
+                <img src="Image/Tram.jpg" alt="product Image" class="project-image">
                 <h4>Ngoc Tram</h4>
                 <p>Need information</p>
             </div>
             <div class="col-4">
-                <img src="Image/Vinh.jpg" alt="product Image">
+                <a href="#"><img src="Image/Vinh.jpg" alt="product Image" class="project-image"></a>
                 <h4>Thanh Vinh</h4>
                 <p>futbol lover</p>
             </div>
@@ -99,11 +99,15 @@
             </div> 
         </div>
     </div>
-    <script>
+    <script type="text/javascript">
         const buttons = document.querySelectorAll('.col-4');
         const overlay = document.querySelector('.overlay');
         const overlayImage = document.querySelector('.overlay-inner  img');
 
+        function toggle(){
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active')
+        }
         function open(e) {
             overlay.classList.add('open');
             const src = e.currentTarget.querySelector('img').src;
