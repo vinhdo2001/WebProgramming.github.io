@@ -19,7 +19,7 @@ function validateInput(){
     if(fname.value.trim() === ""){
         errorMessage(fname, "   Name cannot be blank");
     }
-    else if(fname.value.length < 4){
+    else if(fname.value.length < 3){
         errorMessage(fname, "First name must be at least 3 characters");
     }
     else{

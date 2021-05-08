@@ -227,8 +227,8 @@ cart.forEach((element, index) => {
     
 
     cell0.innerHTML = element.title;
-    cell1.innerHTML = parseFloat(element.quantity);
-    cell2.innerHTML = parseFloat(element.price);
+    cell1.innerHTML = element.quantity;
+    cell2.innerHTML = element.price;
     
     
     total += parseFloat(element.price);
@@ -249,9 +249,9 @@ console.log(total);
 
 function myFunction() {
 if(document.getElementById("field1").value == 'COSC2430-HD') {    
-document.getElementById("field2").value = total*0.2;
+document.getElementById("field2").value = total*0.8;
 }else if(document.getElementById("field1").value == 'COSC2430-DI'){
-document.getElementById("field2").value = total*0.1;
+document.getElementById("field2").value = total*0.9;
 }else{
 document.getElementById("field2").value = "you must add coupon";
 }
