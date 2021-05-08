@@ -7,15 +7,18 @@ let scrollPos1 = 1
 let sliderHover1 = false;
 let req1; // request animation frame reference
 let items1 = [...document.querySelectorAll('.slider-item1')];
-let images = [...document.querySelectorAll('.img-div1')];
+let images1 = [...document.querySelectorAll('.img-div1')];
 
 let imgLinks1 = [
-    'https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-    'https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80',
-    'https://images.unsplash.com/photo-1550686041-366ad85a1355?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-    'https://images.unsplash.com/photo-1495001258031-d1b407bc1776?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-    'https://images.unsplash.com/photo-1507120410856-1f35574c3b45?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-    'https://images.unsplash.com/photo-1466036692599-070d032f4711?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2600&q=80'
+
+    'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
+    'https://i.imgur.com/3jOolCX.png',
+    'https://i.imgur.com/vIBzeJ6.png',
+    'https://i.imgur.com/WjvtOcr.png',
+    'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
+    'productImages//product-1.jpg'
+
+
 ]
 // apply above images as a background to the image items
 images1.forEach((image1, idx) => {
@@ -38,49 +41,45 @@ sliderWrap1.addEventListener('mouseleave', () => {
 })
 
 function getClonesWidth1() {
-    let width1 = 0;
+    let width = 0;
     clones1.forEach(clone => {
-        width1 += clone1.offsetWidth1;
+        width += clone.offsetWidth;
     })
-    return width1;
+    return width;
 }
+
+
 function scrollUpdate1() {
     if (window.innerWidth > 760) {
         sliderWrap1.style.overflow = 'hidden';
         if (!sliderHover1) {
             scrollPos1 -= 2
         }
-
         if (clonesWidth1 + scrollPos1 >= sliderWidth1) {
-
-            window.scrollTo({ top: 1 });
             scrollPos1 = 1;
         } else if (scrollPos1 <= 0) {
-            // console.log('go here scrollPos, ', scrollPos1)
-            window.scrollTo({ top: sliderWidth1 - clonesWidth1 - 1 })
-            scrolscrollPos1lPo1s = sliderWidth1 - clonesWidth1 - 1
+            scrollPos1 = sliderWidth1 - clonesWidth1 - 1
         }
         slider1.style.transform = `translateX(${-scrollPos1}px)`
-
         req1 = requestAnimationFrame(scrollUpdate1)
     } else {
         sliderWrap1.style.overflow = 'scroll';
     }
 
 }
+
 window.addEventListener('resize', onLoad1)
 
 function onLoad1() {
-    cancelAnimationFrame1(req1);
+    cancelAnimationFrame(req1);
     calaculateDimensions1()
-    document.body.style.height = `${sliderWidth1}px`
     scrollPos1 = 1;
     scrollUpdate1();
 }
 
 function calaculateDimensions1() {
-
-    sliderWidth1 = slider1.getBoundingClientRect1().width;
+    sliderWidth1 = slider1.getBoundingClientRect().width;
     clonesWidth1 = getClonesWidth1();
 }
+
 onLoad1()

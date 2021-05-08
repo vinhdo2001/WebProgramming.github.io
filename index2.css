@@ -22,7 +22,7 @@
     width: 80%;
     height: 400px;
     overflow: hidden;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
   
   .slider,  .slider1 {
@@ -54,7 +54,7 @@
   .img-div,.img-div1{
     position: relative;
     left: 5%;
-    top: 2.5%;
+    /* top: 2.5%; */
     width: 98%;
     height: 75%;
     background-size: cover;
@@ -77,6 +77,7 @@
   
 .slider-item1 h4,p, .rating{
     margin-right: 30px;
+    margin-left: 20px;
   }
   a{
     text-decoration: none;

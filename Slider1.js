@@ -56,7 +56,6 @@ function scrollUpdate() {
             window.scrollTo({ top: 1 });
             scrollPos = 1;
         } else if (scrollPos <= 0) {
-            console.log('go here scrollPos, ', scrollPos)
             window.scrollTo({ top: sliderWidth - clonesWidth - 1 })
             scrollPos = sliderWidth - clonesWidth - 1
         }
