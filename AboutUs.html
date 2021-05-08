@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simba | About Us</title>
-    <link href="Vinh's/AU.css" rel="stylesheet" >
-    <link href="Vinh's/format.css" rel="stylesheet">
+    <title>Simba | Product Details</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="Vinh's/AU.css">
     <link href="Vinh's/cookie.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Montserrat:wght@100&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
     <div class="header">
         <div class="container">
@@ -27,7 +31,9 @@
                     <input type="checkbox" id="menu-icon">
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
-                        <li><img src="https://i.imgur.com/vPyCGZZ.png" width="30px" height="30px" alt=""></li>
+                        <li>
+                            <a href="order-placement.html">Cart</a>
+                            <li>
                         <li>
                             <a href="order-placement.html">Cart</a>
                         <li>
@@ -49,13 +55,10 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- <img src="https://i.imgur.com/vPyCGZZ.png" width="30px" height="30px" alt=""> -->
-                <!-- <img src="https://i.imgur.com/OA07E9Y.png" class="menu-icon"> -->
 
             </div>
         </div>
     </div>
-
     <div class="information">
         <div class="TeamInformation">
             <h2> Team Information</h2>
@@ -66,42 +69,38 @@
         </div>
         <h2> Member</h2>
     </div>
-    <section id="portfolio">
-        <div class="project">
-            <img src="Image/Nguyen.jpg" alt="" class="project-image">
-            <div class="grid-overlay">
-                <button class="button">View</button>
+    <div class="small-container">
+        <div class="row">
+            <div class="col-4">
+                <img src="Image/Nguyen.jpg" alt="product Image">
+                <h4>Khoi Nguyen</h4>
+                <p>Guitarist</p>
             </div>
+            <div class="col-4">
+                <img src="Image/Phuong.jpg" alt="product Image">
+                <h4>Lam Phuong</h4>
+                <p>Need information</p>
+            </div>
+            <div class="col-4">
+                <img src="Image/Tram.jpg" alt="product Image">
+                <h4>Ngoc Tram</h4>
+                <p>Need information</p>
+            </div>
+            <div class="col-4">
+                <img src="Image/Vinh.jpg" alt="product Image">
+                <h4>Thanh Vinh</h4>
+                <p>futbol lover</p>
+            </div>
+            <div class="overlay">
+                <div class="overlay-inner">
+                    <button class="close">Close X</button>
+                    <img src="">
+                </div>
+            </div> 
         </div>
-        <div class="project">
-            <h3>Vinh</h3>
-            <p>love futbol</p>
-            <img src="Image/Vinh.jpg" alt="" class="project-image">
-            <div class="grid-overlay">
-                <button class="button">View</button>
-            </div>
-        </div>
-        <div class="project">
-            <img src="Image/Tram.jpg" alt="" class="project-image">
-            <div class="grid-overlay">
-                <button class="button">View</button>
-            </div>
-        </div>
-        <div class="project">
-            <img onclick="on()" src="Image/Phuong.jpg" alt="" class="project-image">
-            <div class="grid-overlay">
-                <button class="button">View</button>
-            </div>
-        </div>
-        <div class="overlay">
-            <div class="overlay-inner">
-                <button class="close">Close X</button>
-                <img src="">
-            </div>
-        </div> 
-    </section>
+    </div>
     <script>
-        const buttons = document.querySelectorAll('.project');
+        const buttons = document.querySelectorAll('.col-4');
         const overlay = document.querySelector('.overlay');
         const overlayImage = document.querySelector('.overlay-inner  img');
 
@@ -129,25 +128,29 @@
         <a href="PrivacyPolicy.html"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
-    <!-------footer---->
+
     <div class="footer">
         <div class="container">
             <div class="row">
+
                 <div class="footer-col-1">
                     <img src="productImages/Logo.png" alt="">
                 </div>
                 <div class="footer-col-2">
-                    <a href="ToS.html">
+                    <a href="">
                         <p>ToS (Term of Service)</p>
                     </a>
+
                 </div>
                 <div class="footer-col-3">
-                    <a href="PrivacyPolicy.html">
+                    <a href="">
                         <p>Privacy Policy</p>
                     </a>
+
                 </div>
+
                 <div class="footer-col-4">
-                    <a href="CopyRight.html">
+                    <a href="">
                         <p>Copy right 2021</p>
                     </a>
                 </div>
@@ -155,4 +158,5 @@
         </div>
     </div>
 </body>
+
 </html>
