@@ -67,7 +67,9 @@
             <div class="cart-row">
                 <span class="cart-item cart-header cart-column">NAME ITEM</span>
               
+                <span class="cart-price cart-header cart-column">QUANTITY</span>
                 <span class="cart-price cart-header cart-column">PRICE</span>
+                
 
             </div>
 
@@ -75,7 +77,7 @@
 
     
         <div class="products-here">
-            <table style="width: 100%; margin-right: 10%; margin-left: 10%;" id="myTable" class="table" >
+            <table style="width: 100%;  margin-left: 10%;" id="myTable" class="table" >
                <tbody>
                     <tr>
                         <td  id="total"></td>
@@ -217,14 +219,18 @@ cart.forEach((element, index) => {
 
     let row = table.insertRow(index);
     let cell0 = row.insertCell(0);
-    let cell1= row.insertCell(1)
+    let cell1= row.insertCell(1);
+    let cell2 = row.insertCell(2);
+   
     
    
     
 
     cell0.innerHTML = element.title;
+    cell1.innerHTML = parseFloat(element.quantity);
+    cell2.innerHTML = parseFloat(element.price);
     
-    cell1.innerHTML = element.price;
+    
     total += parseFloat(element.price);
 });
 console.log(cart.length);
