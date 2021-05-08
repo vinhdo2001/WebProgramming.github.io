@@ -78,7 +78,11 @@ a{
 /*------------account------------*/
 .account-login, .account-retrieve, .faqs {
     padding: 50px 0;
+<<<<<<< HEAD
     background: white;
+=======
+    background: radial-gradient(#fff,#ffd6d6);
+>>>>>>> caa248db2271ad56423472e93454927c7efc5cee
     min-height: 100vh;
 }
 
@@ -206,8 +210,13 @@ a{
     .col-2 img{
         display: none;
     }
+<<<<<<< HEAD
     .col-2{
         flex: none;
+=======
+    .account-retrieve, .account-login, .faqs, .account-register{
+        min-height: 100vh;
+>>>>>>> caa248db2271ad56423472e93454927c7efc5cee
     }
 
     
@@ -231,14 +240,27 @@ a{
 
 
 }
+<<<<<<< HEAD
 /*-------------footer-------*/
 .footer{
     background:#dbf6e9;
     /* font-size: 14px; */
     padding: 60px 0 20px;
+=======
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1368px) {
+/* Styles */
+    .account-retrieve, .account-login, .faqs, .account-register{
+        min-height: 100vh;
+
+    }
+>>>>>>> caa248db2271ad56423472e93454927c7efc5cee
 
 }
 
+<<<<<<< HEAD
 .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
 
     box-sizing: border-box;
@@ -266,6 +288,14 @@ ul{
 .app-logo img{
     width: 140px; 
 }
+=======
+    .findyouraccount [type="submit"], .findyouraccount [type="text"] {
+        width: 80%;
+    }
+    .form-register label{
+        font-size: 10px;
+        margin-bottom: 5px; 
+>>>>>>> caa248db2271ad56423472e93454927c7efc5cee
 
 /*-------------footer responsive-------*/
 
@@ -276,6 +306,7 @@ ul{
     .footer-col-2, .footer-col-3, .footer-col-4 {
       width: 33%;
     }
+<<<<<<< HEAD
     
   }
   @media screen and (max-width: 767px) {
@@ -412,3 +443,7 @@ ul{
     padding-left: 32px;
     margin-bottom: 10px;
 }
+=======
+
+}
+>>>>>>> caa248db2271ad56423472e93454927c7efc5cee
