@@ -1,0 +1,13 @@
+.texting{
+    padding-top: 30px;
+    min-height: 600px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .texting{
+        padding-top: 30px;
+        min-height: 300px;
+        text-align: center;
+    }
+  }
