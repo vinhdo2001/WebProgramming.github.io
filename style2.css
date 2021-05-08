@@ -91,7 +91,7 @@ a{
 }
 
 .account-register{
-    background: radial-gradient(#fff,#ffd6d6);
+    background: white;
     min-height: 170vh;
     padding: 50px 0;
 
@@ -112,7 +112,7 @@ a{
 
 .form-login {
     margin-top: 30%;
-    background: radial-gradient(#fff,#ffd6d6);
+    background: white;
     width: 300px;
     height: 400px;
     position: relative;
@@ -123,7 +123,7 @@ a{
 }
 
 .form-register{
-    background: white;
+    background: radial-gradient(#fff,#ffd6d6);
     width: 500px;
     height: 1200px;
     position: relative;
