@@ -1,5 +1,3 @@
-// let sliderWrap = document.querySelector('.slider-wrap');
-// let slider = document.querySelector('.slider');
 let sliderWrap = document.querySelector('.slider-wrap');
 let slider = document.querySelector('.slider');
 let clonesWidth;
@@ -12,13 +10,12 @@ let items = [...document.querySelectorAll('.slider-item')];
 let images = [...document.querySelectorAll('.img-div')];
 
 let imgLinks = [
-    'https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-    'https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80',
-    'https://images.unsplash.com/photo-1550686041-366ad85a1355?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-    'https://images.unsplash.com/photo-1495001258031-d1b407bc1776?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-    'https://images.unsplash.com/photo-1507120410856-1f35574c3b45?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-    'https://images.unsplash.com/photo-1466036692599-070d032f4711?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2600&q=80'
-
+    'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
+    'https://i.imgur.com/3jOolCX.png',
+    'https://i.imgur.com/vIBzeJ6.png',
+    'https://i.imgur.com/WjvtOcr.png',
+    'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
+    'productImages//product-1.jpg'
 ]
 // apply above images as a background to the image items
 images.forEach((image, idx) => {
@@ -47,8 +44,6 @@ function getClonesWidth() {
     })
     return width;
 }
-
-
 function scrollUpdate() {
     if (window.innerWidth > 760) {
         sliderWrap.style.overflow = 'hidden';
@@ -57,9 +52,11 @@ function scrollUpdate() {
         }
 
         if (clonesWidth + scrollPos >= sliderWidth) {
+
             window.scrollTo({ top: 1 });
             scrollPos = 1;
         } else if (scrollPos <= 0) {
+            console.log('go here scrollPos, ', scrollPos)
             window.scrollTo({ top: sliderWidth - clonesWidth - 1 })
             scrollPos = sliderWidth - clonesWidth - 1
         }
@@ -87,5 +84,4 @@ function calaculateDimensions() {
     sliderWidth = slider.getBoundingClientRect().width;
     clonesWidth = getClonesWidth();
 }
-
 onLoad()
