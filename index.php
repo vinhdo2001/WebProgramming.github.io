@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    session_start();
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -212,6 +215,66 @@
                     <p>vnd 148.500</p>
                 </a>
             </div>
+            <div class="slider-item">
+                <a href="ProductDetails.html">
+                    <div class="img-div"></div>
+                    <h4>Lady's square-neck dress </h4>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star "></span>
+                    </div>
+                    <p>450.000 VND</p>
+                </a>
+
+            </div>
+            <div class="slider-item">
+                <a href="ProductDetails.html">
+                    <div class="img-div"></div>
+                    <h4>Lady's square-neck dress </h4>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star "></span>
+                    </div>
+                    <p>450.000 VND</p>
+                </a>
+
+            </div>
+            <div class="slider-item">
+                <a href="ProductDetails.html">
+                    <div class="img-div"></div>
+                    <h4>Lady's square-neck dress </h4>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star "></span>
+                    </div>
+                    <p>450.000 VND</p>
+                </a>
+
+            </div>
+            <div class="slider-item">
+                <a href="ProductDetails.html">
+                    <div class="img-div"></div>
+                    <h4>Lady's square-neck dress </h4>
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star "></span>
+                    </div>
+                    <p>450.000 VND</p>
+                </a>
+
+            </div>
         </div>
     </div>
 
@@ -243,6 +306,54 @@
     <a href="ProductBrowser.html">
         <h2 class="title">Featured Products</h2>
     </a>
+    <div class="row">
+    <?php
+    require 'phpForHomepage/product_functions.php'; 
+    require 'index2.css';
+    $featured_products_names=array();
+    $featured_products= read_featured_products();
+    $featured_products_images= [
+        'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
+        'https://i.imgur.com/3jOolCX.png',
+        'https://i.imgur.com/vIBzeJ6.png',
+        'https://i.imgur.com/WjvtOcr.png',
+        'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
+        'productImages//product-1.jpg',
+        'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
+        'https://i.imgur.com/3jOolCX.png',
+        'https://i.imgur.com/vIBzeJ6.png',
+        'https://i.imgur.com/WjvtOcr.png',
+      ];
+      $featured_products_count = 0;
+      foreach($featured_products as $featured_product){
+        $id = $featured_product['id'];
+        $name = $featured_product['name'];
+        $price = $featured_product['price'];
+        echo"
+        <a href='ProductDetail2.html'>
+            <div class='.col-3'>
+                <img src='$featured_products_images[$featured_products_count]'
+                    alt=''>
+            </div>
+            <h4>$name</h4>
+            <div class='rating'>
+                <span class='fa fa-star checked'></span>
+                <span class='fa fa-star checked'></span>
+                <span class='fa fa-star checked'></span>
+                <span class='fa fa-star '></span>
+                <span class='fa fa-star '></span>
+            </div>
+            <p>$price</p>
+        </a> 
+        ";
+        $featured_products_count++;
+        if ($featured_products_count == 10) {
+          break;
+        }
+      }
+    ?>
+    </div>
+
     <div class="row">
         <a href="ProductDetail2.html">
             <div class=".col-3">
@@ -276,7 +387,7 @@
         </a>
         <a href="ProductDetails.html">
             <div class=".col-3">
-                <img src="https://product.hstatic.net/1000370106/product/9.1_ab24be97f37444aaa5c676ddae699125_master.jpg"
+                <img src="https://product.hstatic.net/1000370106/product/19.1_f07eeeae858845a38a37873ee317fda1_master.jpg"
                     alt="">
                 <h4>Black Babydoll Mini Dress</h4>
                 <div class="rating">
@@ -289,6 +400,7 @@
                 <p>vnd 148.500</p>
             </div>
     </div>
+
     </div>
     <div class="cookie-container">
         <h2>I use cookies</h2>
