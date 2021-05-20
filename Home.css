@@ -378,9 +378,7 @@ input:focus{
 }
 
 /*About Us */ 
-.information{
-    background: radial-gradient(#fff,#ffd6d6);
-}
+
 .information p, h4{
     color: black;
 }
@@ -409,6 +407,41 @@ input:focus{
     text-align: center;
     margin-top: 7%;
     margin-bottom: 7%;
+}
+button{
+    cursor: pointer;
+}
+#portfolio{
+    margin-left: 10%;
+    background: white;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    grid-template-rows: 15fr 5fr;
+    grid-column-gap: 1%;
+}
+.project{
+    min-height: 200px;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.project img{
+    opacity: 0.9;
+}
+.project:hover .grid-overlay{
+    transform: translateY(0%);
+}
+.grid-overlay{
+    height:100%;
+    grid-column: -1;
+    grid-row:-1;
+    display: grid;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    transform: translateY(101%);
+    transition: all 0.3 ease-in-out;
 }
 /*ToS */
 .ToS h2{
@@ -489,4 +522,17 @@ input:focus{
 }
 .userInfo p{
     margin-bottom: 10px;
+}
+.consent{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: green;
+    max-width: 365px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 25 px 25 px 25px 30px;
+}
+.consent .cookie-content{
+    margin-top: 10px;
 }
