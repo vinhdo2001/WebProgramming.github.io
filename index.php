@@ -309,7 +309,7 @@
     <div class="row">
     <?php
     require 'phpForHomepage/product_functions.php'; 
-    require 'index2.css';
+    // require 'index2.css';
     $featured_products_names=array();
     $featured_products= read_featured_products();
     $featured_products_images= [
