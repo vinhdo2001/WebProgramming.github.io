@@ -80,49 +80,30 @@
     <a href="store.html">
         <h2 class="title">New Stores</h2>
     </a>
+    
     <div class="slider-wrap1">
         <div class="slider1">
-            <div class="slider-item1">
-                <a href="hnoss.html">
-                    <div class="img-div1"></div>
-                    <h4>HNOSS</h4>
-                </a>
-            </div>
-
-            <div class="slider-item1">
-                <a href="theseam.html">
-                    <div class="img-div1"></div>
-                    <h4>CHUOT TRANG</h4>
-                </a>
-            </div>
-
-            <div class="slider-item1">
-                <a href="olv.html">
-                    <div class="img-div1"></div>
-                    <h4>Len Clothing</h4>
-                </a>
-            </div>
-
-            <div class="slider-item1">
-                <a href="semir.html">
-                    <div class="img-div1"></div>
-                    <h4>NAMU</h4>
-                </a>
-            </div>
-            <div class="slider-item1">
-                <a href="polo.html">
-                    <div class="img-div1"></div>
-                    <h4>SODAPOP</h4>
-                </a>
-            </div>
-
-            <div class="slider-item1">
-                <a href="hnoss.html"></a>
-                <div class="img-div1"></div>
-                <h4>ARMOUS</h4>
-                </a>
-            </div>
-
+            <?php
+            require 'phpForHomepage/store_functions.php';
+            $new_stores=read_newest_stores();
+            $new_store_names=array();
+            $new_store_count=0;
+            foreach($new_stores as $new_store){
+                $name=$new_store['name'];
+                echo"
+                    <div class='slider-item1'>
+                        <a href='hnoss.html'>
+                            <div class='img-div1'></div>
+                            <h4>$name</h4>
+                        </a>
+                    </div>
+                    ";
+                $new_store_count++;
+                if ($new_store_count==5){
+                    break;
+                }
+            }
+            ?>
         </div>
     </div>
     <a href="store.html">
@@ -130,151 +111,37 @@
     </a>
     <div class="slider-wrap">
         <div class="slider">
-            <div class="slider-item">
-                <a href="ProductDetails.html">
-                    <div class="img-div"></div>
-                    <h4>Lady's square-neck dress </h4>
-                    <div class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star "></span>
+            <?php
+            // require 'phpForHomepage/product_functions.php';
+            $new_products=read_newest_products();
+            $new_product_names=array();
+            $new_product_count=0;
+            foreach($new_products as $new_product){
+                $name_new_products=$new_product['name'];
+                $price_new_products=$new_product['price'];
+                echo"
+                    <div class='slider-item1'>
+                        <a href='ProductDetails.html'>
+                            <div class='img-div'></div>
+                            <h4>$name_new_products </h4>
+                            <div class='rating'>
+                                <span class='fa fa-star checked'></span>
+                                <span class='fa fa-star checked'></span>
+                                <span class='fa fa-star checked'></span>
+                                <span class='fa fa-star '></span>
+                                <span class='fa fa-star '></span>
+                            </div>
+                            <p>$price_new_products</p>
+                        </a>
                     </div>
-                    <p>450.000 VND</p>
-                </a>
-
-            </div>
-            <div class="slider-item">
-                <a href="ProductDetail2.html">
-                    <div class="img-div"></div>
-                    <h4>Lady's square-neck dress </h4>
-                    <div class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star "></span>
-                    </div>
-                    <p>450.000 VND</p>
-                </a>
-            </div>
-            <div class="slider-item">
-                <a href="ProductDetails.html">
-                    <div class="img-div"></div>
-                    <h4>Highlighter powder </h4>
-                    <div class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star "></span>
-                    </div>
-                    <p>360.200 VND</p>
-                </a>
-            </div>
-            <div class="slider-item">
-                <a href="ProductDetails.html">
-                    <div class="img-div"></div>
-                    <h4>Fruit Bears Pet Avocado</h4>
-                    <div class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star "></span>
-                    </div>
-                    <p>151.100 VND</p>
-                </a>
-            </div>
-            <div class="slider-item">
-                <a href="ProductDetail2.html">
-                    <div class="img-div"></div>
-                    <h4>Orange Slit - Side Midi Dress</h4>
-                    <div class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star "></span>
-                    </div>
-                    <p>vnd 148.500</p>
-                </a>
-            </div>
-            <div class="slider-item">
-                <a href="ProductDetail2.html">
-                    <div class="img-div"></div>
-                    <h4>Orange Slit - Side Midi Dress</h4>
-                    <div class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star "></span>
-                    </div>
-                    <p>vnd 148.500</p>
-                </a>
-            </div>
-            <div class="slider-item">
-                <a href="ProductDetails.html">
-                    <div class="img-div"></div>
-                    <h4>Lady's square-neck dress </h4>
-                    <div class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star "></span>
-                    </div>
-                    <p>450.000 VND</p>
-                </a>
-
-            </div>
-            <div class="slider-item">
-                <a href="ProductDetails.html">
-                    <div class="img-div"></div>
-                    <h4>Lady's square-neck dress </h4>
-                    <div class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star "></span>
-                    </div>
-                    <p>450.000 VND</p>
-                </a>
-
-            </div>
-            <div class="slider-item">
-                <a href="ProductDetails.html">
-                    <div class="img-div"></div>
-                    <h4>Lady's square-neck dress </h4>
-                    <div class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star "></span>
-                    </div>
-                    <p>450.000 VND</p>
-                </a>
-
-            </div>
-            <div class="slider-item">
-                <a href="ProductDetails.html">
-                    <div class="img-div"></div>
-                    <h4>Lady's square-neck dress </h4>
-                    <div class="rating">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star "></span>
-                        <span class="fa fa-star "></span>
-                    </div>
-                    <p>450.000 VND</p>
-                </a>
-
-            </div>
+                    ";
+                $new_product_count++;
+                if ($new_product_count==10){
+                    break;
+                }
+            }
+            ?>
+            
         </div>
     </div>
 
@@ -283,24 +150,41 @@
         <h2 class="title">Featured Stores</h2>
     </a>
     <div class="row">
-        <a href="hnoss.html">
-            <div class=".col-3">
-                <img src="https://i.imgur.com/vNOl7V7.png" alt="">
+        <?php
+        $featured_stores_names=array();
+        $featured_stores= read_featured_stores();
+        $featured_stores_images= [
+            'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
+            'https://i.imgur.com/3jOolCX.png',
+            'https://i.imgur.com/vIBzeJ6.png',
+            'https://i.imgur.com/WjvtOcr.png',
+            'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
+            'productImages//product-1.jpg',
+            'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
+            'https://i.imgur.com/3jOolCX.png',
+            'https://i.imgur.com/vIBzeJ6.png',
+            'https://i.imgur.com/WjvtOcr.png',
+          ];
+          $featured_stores_count = 0;
+      foreach($featured_stores as $featured_store){
+        $name_featured_store = $featured_store['name'];
+        
+        echo"
+        <a href='hnoss.html'>
+            <div class='.col-3'>
+                <img src='$featured_stores_images[$featured_stores_count]' alt=''>
             </div>
             <h4>Bad Rabbit</h4>
         </a>
-        <a href="hnoss.html">
-            <div class=".col-3">
-                <img src="https://i.imgur.com/3jOolCX.png" alt="">
-                <h4>Nike</h4>
-            </div>
-        </a>
-        <a href="hnoss.html">
-            <div class=".col-3">
-                <img src="https://i.imgur.com/NwaKv5J.png" alt="">
-                <h4>LIBE</h4>
-            </div>
-        </a>
+        ";
+        $featured_stores_count++;
+        if ($featured_stores_count == 10) {
+          break;
+        }
+      }
+     ?>
+        
+
 
     </div>
     <a href="ProductBrowser.html">
@@ -308,8 +192,6 @@
     </a>
     <div class="row">
     <?php
-    require 'phpForHomepage/product_functions.php'; 
-    // require 'index2.css';
     $featured_products_names=array();
     $featured_products= read_featured_products();
     $featured_products_images= [
@@ -326,16 +208,16 @@
       ];
       $featured_products_count = 0;
       foreach($featured_products as $featured_product){
-        $id = $featured_product['id'];
-        $name = $featured_product['name'];
-        $price = $featured_product['price'];
+        $id_featured_product = $featured_product['id'];
+        $name_featured_product = $featured_product['name'];
+        $price_featured_product = $featured_product['price'];
         echo"
         <a href='ProductDetail2.html'>
             <div class='.col-3'>
                 <img src='$featured_products_images[$featured_products_count]'
                     alt=''>
             </div>
-            <h4>$name</h4>
+            <h4>$name_featured_product</h4>
             <div class='rating'>
                 <span class='fa fa-star checked'></span>
                 <span class='fa fa-star checked'></span>
@@ -343,7 +225,7 @@
                 <span class='fa fa-star '></span>
                 <span class='fa fa-star '></span>
             </div>
-            <p>$price</p>
+            <p>$price_featured_product</p>
         </a> 
         ";
         $featured_products_count++;

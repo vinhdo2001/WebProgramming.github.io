@@ -2,7 +2,7 @@
 require 'product_functions.php';
 
 function read_all_stores() {
-  $file_name = 'stores.csv';
+  $file_name = 'csvFile/stores.csv';
   $fp = fopen($file_name, 'r');
   $first = fgetcsv($fp);
   $stores = [];
@@ -22,7 +22,7 @@ function read_all_stores() {
 //   return strtotime($b['created_time'])-strtotime($a['created_time']);
 // }
 function read_newest_stores() {
-  $file_name = 'stores.csv';
+  $file_name = 'csvFile/stores.csv';
   $fp = fopen($file_name, 'r');
   $first = fgetcsv($fp);
   $stores = [];
@@ -40,7 +40,7 @@ function read_newest_stores() {
 
 }
 function read_featured_stores() {
-  $file_name = 'stores.csv';
+  $file_name = 'csvFile/stores.csv';
   $fp = fopen($file_name, 'r');
   $first = fgetcsv($fp);
   $stores = [];
