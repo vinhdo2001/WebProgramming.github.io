@@ -119,6 +119,7 @@
             foreach($new_products as $new_product){
                 $name_new_products=$new_product['name'];
                 $price_new_products=$new_product['price'];
+                // $price_new_products=$new_product['feat'];
                 echo"
                     <div class='slider-item1'>
                         <a href='ProductDetails.html'>
