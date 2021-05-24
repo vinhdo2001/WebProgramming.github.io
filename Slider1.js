@@ -19,6 +19,8 @@ let imgLinks = [
     'https://i.imgur.com/vIBzeJ6.png',
     'https://i.imgur.com/WjvtOcr.png',
     'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
+    'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
+
 ]
 // apply above images as a background to the image items
 images.forEach((image, idx) => {
@@ -55,7 +57,6 @@ function scrollUpdate() {
         }
 
         if (clonesWidth + scrollPos >= sliderWidth) {
-
             window.scrollTo({ top: 1 });
             scrollPos = 1;
         } else if (scrollPos <= 0) {

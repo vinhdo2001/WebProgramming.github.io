@@ -10,14 +10,16 @@ let items1 = [...document.querySelectorAll('.slider-item1')];
 let images1 = [...document.querySelectorAll('.img-div1')];
 
 let imgLinks1 = [
-
     'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
     'https://i.imgur.com/3jOolCX.png',
     'https://i.imgur.com/vIBzeJ6.png',
     'https://i.imgur.com/WjvtOcr.png',
     'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
-    'productImages//product-1.jpg'
-
+    'productImages//product-1.jpg',
+    'https://i.imgur.com/WjvtOcr.png',
+    'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
+    'productImages//product-1.jpg',
+    'productImages//product-1.jpg',
 
 ]
 // apply above images as a background to the image items
@@ -56,6 +58,7 @@ function scrollUpdate1() {
             scrollPos1 -= 2
         }
         if (clonesWidth1 + scrollPos1 >= sliderWidth1) {
+            window.scrollTo({ top: 1 });
             scrollPos1 = 1;
         } else if (scrollPos1 <= 0) {
             scrollPos1 = sliderWidth1 - clonesWidth1 - 1
