@@ -120,6 +120,8 @@
                 $name_new_products=$new_product['name'];
                 $price_new_products=$new_product['price'];
                 echo"
+
+                
                     <div class='slider-item1'>
                         <a href='ProductDetails.html'>
                             <div class='img-div'></div>
