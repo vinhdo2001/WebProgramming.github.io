@@ -9,6 +9,7 @@
     <title>Simba | All Products</title>
     <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="NavBar.css">
+    
     <link href="Vinh's/cookie.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Montserrat:wght@100&display=swap"
@@ -79,50 +80,53 @@
         </div>
 
         <div class="row">
-        <div class="col-4">
+        
         <?php
         require 'phpForHomepage/store_functions.php';
-    $featured_products_names=array();
-    $featured_products= read_featured_products();
-    $featured_products_images= [
-        'https://i.imgur.com/RSWzSSj.png',
-        'https://i.imgur.com/YWA4a12.png',
-        'https://i.imgur.com/nbfuley.png',
-        'https://i.imgur.com/WjvtOcr.png',
-        'https://i.imgur.com/3jOolCX.png',
-        'https://i.imgur.com/vIBzeJ6.png',
-        'https://i.imgur.com/WjvtOcr.png',
-      ];
-      $featured_products_count = 0;
-      foreach($featured_products as $featured_product){
-        $id_featured_product = $featured_product['id'];
-        $name_featured_product = $featured_product['name'];
-        $price_featured_product = $featured_product['price'];
-        echo"
-        <a href='ProductDetail2.html'>
-            <div class='.col-3'>
-                <img src='$featured_products_images[$featured_products_count]'
-                    alt=''>
-            </div>
-            <h4>$name_featured_product</h4>
-            <div class='rating'>
-                <span class='fa fa-star checked'></span>
-                <span class='fa fa-star checked'></span>
-                <span class='fa fa-star checked'></span>
-                <span class='fa fa-star '></span>
-                <span class='fa fa-star '></span>
-            </div>
-            <p>$price_featured_product</p>
-        </a> 
-        ";
-        $featured_products_count++;
-        if ($featured_products_count == 2) {
-          break;
-        }
+        $featured_products_names=array();
+        $featured_products= read_featured_products();
+        $featured_products_images= [
+            
+            'https://i.imgur.com/JZAUg1W.png',
+            'https://i.imgur.com/wPs4HIR.png',
+         
+           
+          ];
+          $featured_products_count = 0;
+          foreach($featured_products as $featured_product){
+            $id_featured_product = $featured_product['id'];
+            $name_featured_product = $featured_product['name'];
+            $price_featured_product = $featured_product['price'];
+            echo"
+            <a href='ProductDetail2.html'>
+                <div class='.col-3'>
+                    <img src='$featured_products_images[$featured_products_count]'
+                        alt=''>
+                </div>
+                <h4>$name_featured_product</h4>
+                <div class='rating'>
+                    <span class='fa fa-star checked'></span>
+                    <span class='fa fa-star checked'></span>
+                    <span class='fa fa-star checked'></span>
+                    <span class='fa fa-star '></span>
+                    <span class='fa fa-star '></span>
+                </div>
+                <p>$price_featured_product</p>
+            </a> 
+            ";
+            $featured_products_count++;
+            if ($featured_products_count == 2 ) {
+              break;
+            }
+          
+       
       }
-      
+  
+
+
     ?>
-    </div>
+
+
                 
 
             
@@ -131,16 +135,13 @@
 
            
         </div>
+        <br><br>
 
         <div class="page-btn">
+            <a href="index.php">
+                <span>&#8592;</span>
+           
             <a href="ProductBrowser.html">
-                <span>1</span>
-            </a>
-            <a href="ProductBrowser.html">
-                <span>2</span>
-            </a><a href="ProductBrowser.html">
-                <span>3</span>
-            </a><a href="ProductBrowser.html">
                 <span>&#8594;</span>
             </a>
         </div>
