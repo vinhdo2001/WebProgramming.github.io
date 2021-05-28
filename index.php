@@ -80,26 +80,32 @@
     <a href="store.html">
         <h2 class="title">New Stores</h2>
     </a>
-    
     <div class="slider-wrap1">
         <div class="slider1">
             <?php
             require 'phpForHomepage/store_functions.php';
             $new_stores=read_newest_stores();
-            $new_store_names=array();
+            // $new_store_names=array();
             $new_store_count=0;
             foreach($new_stores as $new_store){
-                $name=$new_store['name'];
+                $new_stores_name=$new_store['name'];
                 echo"
                     <div class='slider-item1'>
                         <a href='hnoss.html'>
                             <div class='img-div1'></div>
-                            <h4>$name</h4>
+                            <h4>$new_stores_name</h4>
+                            <div class='rating'>
+                            <span class='fa fa-star checked'></span>
+                            <span class='fa fa-star checked'></span>
+                            <span class='fa fa-star checked'></span>
+                            <span class='fa fa-star '></span>
+                            <span class='fa fa-star '></span>
+                        </div>
                         </a>
                     </div>
                     ";
                 $new_store_count++;
-                if ($new_store_count==5){
+                if ($new_store_count==10){
                     break;
                 }
             }
@@ -114,18 +120,15 @@
             <?php
             // require 'phpForHomepage/product_functions.php';
             $new_products=read_newest_products();
-            $new_product_names=array();
             $new_product_count=0;
             foreach($new_products as $new_product){
-                $name_new_products=$new_product['name'];
+                $new_products_name=$new_product['name'];
                 $price_new_products=$new_product['price'];
-                echo"
-
-                
+                    echo"
                     <div class='slider-item1'>
                         <a href='ProductDetails.html'>
                             <div class='img-div'></div>
-                            <h4>$name_new_products </h4>
+                            <h4>$new_products_name </h4>
                             <div class='rating'>
                                 <span class='fa fa-star checked'></span>
                                 <span class='fa fa-star checked'></span>
@@ -169,14 +172,14 @@
           ];
           $featured_stores_count = 0;
       foreach($featured_stores as $featured_store){
-        $name_featured_store = $featured_store['name'];
+        $featured_store_name = $featured_store['name'];
         
         echo"
         <a href='hnoss.html'>
             <div class='.col-3'>
                 <img src='$featured_stores_images[$featured_stores_count]' alt=''>
             </div>
-            <h4>Bad Rabbit</h4>
+            <h4>$featured_store_name</h4>
         </a>
         ";
         $featured_stores_count++;
