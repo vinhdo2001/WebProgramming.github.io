@@ -84,12 +84,13 @@
                             <hr id="Indicator">
                         </div>
 
-                        <form method="POST" action="http://localhost:4000/server.php">
-                            <input type="text" placeholder="Username" id="username" required>
-                            <input type="password" placeholder="Password" id="password" required>
+                        <form method="post" action="http://localhost:4000/server.php">
+                            <input type="email" name="email" placeholder="Email" id="email" required>
+                            <input type="password" name="password" placeholder="Password" id="password" required>
+                            <input type="hidden" name="type" value="0" required/>
                             <button type="submit" class="button">Login</button>
                             <h5><a href="ForgotPassword.html">Forgot password</a></h5>
-                            <a href="Register.html" class="button">Register</a>
+                            <a href="http://localhost:4000/Register.php" class="button">Register</a>
                         </form>
                     </div>
                 </div>

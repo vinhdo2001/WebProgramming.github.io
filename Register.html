@@ -61,7 +61,7 @@
                             <span>Register</span>
                             <hr id="Indicator">
                         </div>                 
-                        <form class="form" id="form-register">
+                        <form class="form" id="form-register" method="POST" action="http://localhost:4000/server.php">
                             <div class="form-control">
                                 <input type="text" placeholder="First name" id="fname" >
                                 <small>Error message</small>
@@ -109,7 +109,7 @@
                                 <option value="" id="JP"> <label for="JP"> Japan </label></option>
                                 <option value="" id="KR"> <label for="KR"> Korea </label></option>
                             </select>
-                            <div class="category">
+                            <div class="category" id="account_type">
                                 <input type="radio" onclick="javascript:optionCheck()" name="accountstyle" value="storeowner" id="storeowner"><label for="storeowner">Store Owners</label> 
                         
                                 <input type="radio" onclick="javascript:optionCheck()" name="accountstyle" value="shopper" id="shopper"><label for="shopper">Shoppers</label>
@@ -117,8 +117,8 @@
                             <div id="owneroption" style="visibility:hidden">
                                 <input type="text" name="business" value="Business name" placeholder="Business name">
                                 <input type="text" name="store" value="Store name" placeholder="Store name">
-                                <select name="Categories">
-                                    <option value="" id="category"> <label for="category"> Select Category </label></option>
+                                <select name="Categories" id="store_category">
+                                    <option value="" > <label for="category"> Select Category </label></option>
                                     <option value="" id="ds"> <label for="ds"> Department Store                   </label></option>
                                     <option value="" id="gs"> <label for="gs"> Grocery Store </label></option>
                                     <option value="" id="res"> <label for="res"> Restaurant </label></option>
