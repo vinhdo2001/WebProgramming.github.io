@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simba | Personal Profile</title>
+    <link rel="stylesheet" href="index2.css">
     <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="NavBar.css">
     <link href="Vinh's/cookie.css" rel="stylesheet">
@@ -57,22 +62,44 @@
     
                 </div>
             </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1 id="slogan">Favorite brands and <br> hottest trends</h1>
+                    <p id="header-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
+                        Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
+                    </p>
+                    <a href="ProductBrowser.html" class="btn">Explore now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <a href="order-placement.html"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
+                            alt="ecommerce_Image"></a>
+                </div>
+
+            </div>
         </div>
-    <h2 class="h2">
-    Personal Information</h2>
+
 
     <div class="profile">
-        <div class="img-container">
-            <img src="Image/Vinh.jpg">
-        </div>
-        <div class="name">
-            <h3> Thanh Vinh</h3>
-        </div>
         <div class="userInfo">
-            <p> <b>Email address: vinhklose0705@gmail.com</b></p>
-            <p><b>Phone number: 0912345678</b></p>
-            <p><b>Nationality: Vietnamese</b></p>
-            <p><b>Address: 702 Nguyen Van Linh, District 7, Ho Chi Minh city</b></p>
+            <p> <b>
+                <?php  
+                if(isset($_SESSION['user']) && $_SESSION['user'] == true){
+                    echo '    <h2 class="h2">
+                    Personal Information</h2>';
+                    echo $_SESSION["email"];    
+                    echo '<img src="Image/Vinh.jpg"> </br>';
+                    echo '<form method="post" action="http://localhost:4000/server.php">
+                        <button type="submit" class="button">Logout</button>
+                        <input type="hidden" name="type" value="1" required/>
+                        </form>';
+                } else {
+                    echo '<strong>You need to <a href="Login.php">login</a> to see your account</strong>';
+                }
+                ?>
+                </p> </b>
+
+
 
         </div>
     </div>

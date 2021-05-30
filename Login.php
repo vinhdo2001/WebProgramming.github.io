@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,12 +88,17 @@
                         </div>
 
                         <form method="post" action="http://localhost:4000/server.php">
+                            <?php 
+                              if(isset($_SESSION['error_message']) && $_SESSION['error_message'] ==  true){
+                                  echo 'Wrong Username/Password';
+                              };
+                             ?>
                             <input type="email" name="email" placeholder="Email" id="email" required>
                             <input type="password" name="password" placeholder="Password" id="password" required>
                             <input type="hidden" name="type" value="0" required/>
                             <button type="submit" class="button">Login</button>
                             <h5><a href="ForgotPassword.html">Forgot password</a></h5>
-                            <a href="http://localhost:4000/Register.php" class="button">Register</a>
+                            <a href="Register.php" class="button">Register</a>
                         </form>
                     </div>
                 </div>

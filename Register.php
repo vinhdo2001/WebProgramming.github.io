@@ -109,10 +109,13 @@
                         <option value="JP" id="JP"> <label for="JP"> Japan </label></option>
                         <option value="KR" id="KR"> <label for="KR"> Korea </label></option>
                     </select>
+                    <div class="form-control">
                     <div class="category" id="account_type">
                         <input type="radio" onclick="javascript:optionCheck()" name="account_type" value="storeowner" id="storeowner"><label for="storeowner">Store Owners</label>
 
-                        <input type="radio" onclick="javascript:optionCheck()" name="account_type" value="shopper" id="shopper"><label for="shopper">Shoppers</label>
+                        <input type="radio" onclick="javascript:optionCheck()" name="account_type" value="shopper" id="shopper"><label for="shopper">Shoppers</label> </br>
+                        <small>Error message</small>
+                    </div>
                     </div>
                     <div id="owneroption" style="visibility:hidden">
                         <input type="text" name="business" value="Business name" placeholder="Business name">

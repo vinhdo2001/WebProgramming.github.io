@@ -1,7 +1,5 @@
 <?php
-// Start session
 session_start();
-
 // Function to check if user already exists
 function email_and_phone_unique($email, $phone) {
     $is_unique = true;
@@ -19,14 +17,11 @@ function email_and_phone_unique($email, $phone) {
         flock($fp, LOCK_UN);
         fclose($fp);
     }
-
     return $is_unique;
 }
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Boolean values (hidden input fields in form data) to indicate type of request to PHP server
     $REQ_TYPE = $_POST['type'];     // 0: login; 1: logout; 2: register
-
     if ($REQ_TYPE == 0) {
         // Login request
         if (!empty($_POST['email']) && !empty($_POST['password'])) {
@@ -44,11 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         if (password_verify($_POST['password'], $userData[2])) {
                             // Updates user session
                             // TODO: redirects to logged in page!
-                            header("Location: http://localhost:4000/Home.php");
+                            $_SESSION['user'] = true;
+                            $_SESSION['email'] = $_POST['email'];
+                            header("Location: MyAccount(logged-in).php");
                         } else {
-                            // TODO: set error message: wrong password ($_SESSION['error_message'] = ...)
-                            $_SESSION["error_message"] = "Wrong password";
-                            header("Location: http://localhost:4000/Login.php");
+                            $_SESSION['error_message'] = true;
+                            header("Location:Login.php");      
                         }
                         break;
                     }
@@ -56,20 +52,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 flock($fp, LOCK_UN);
                 fclose($fp);
                 if (!$found) {
-                    header("Location: http://localhost:4000/Login.php");
+                    header("Location: Login.php");
                 }
             } else {
                 // Redirects back to login page because no such user exists
-                header("Location: http://localhost:4000/Login.php");
+                header("Location: Login.php");
             }
         }
-
     } else if ($REQ_TYPE == 1) {
         // Logout request
-        if (isset($_SESSION["user"])) {
+        if (isset($_SESSION['user']) && $_SESSION['user'] == true) {
             // check user session -> unset user session
-            unset($_SESSION["user"]);
-            header("Location: http://localhost:4000/Login.php");
+            unset($_SESSION['user']);
+            header("Location: Login.php");
         }
     } else if ($REQ_TYPE == 2) {
         // Sign up request
@@ -94,7 +89,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $busName = $_POST['business'];
         $storeName = $_POST['store'];
         $storeCategory = $_POST['category'];
-        
         // Checks if email and phone are unique
         if (!email_and_phone_unique($email, $phone)) {
             // error
@@ -113,12 +107,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $storeName, $storeCategory));
             flock($file, LOCK_UN);
             fclose($file);
-
             // Registration finishes -> redirects to login page
             // header("Location: http://localhost:4000/asd.php");
             header("Location: http://localhost:4000/Login.php");
         }
     }   
 }
-
 ?>

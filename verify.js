@@ -130,6 +130,13 @@ function validateInput() {
     else{
         successMessage(phone);
     }
+    if(!storeowner.checked && !shopper.checked){
+      errorMessage(storeowner, "You must choose one account type");
+      invalid = true;
+    }
+    else{
+      successMessage(storeowner);
+    }
 
   return !invalid;
 }
