@@ -83,7 +83,7 @@
     <div class="slider-wrap1">
         <div class="slider1">
             <?php
-            require 'phpForHomepage/store_functions.php';
+            require_once 'phpForHomepage/store_functions.php';
             $new_stores=read_newest_stores();
             // $new_store_names=array();
             $new_store_count=0;
@@ -118,7 +118,7 @@
     <div class="slider-wrap">
         <div class="slider">
             <?php
-            // require 'phpForHomepage/product_functions.php';
+            require_once 'phpForHomepage/product_functions.php';
             $new_products=read_newest_products();
             $new_product_count=0;
             foreach($new_products as $new_product){
@@ -188,15 +188,14 @@
         }
       }
      ?>
-        
-
-
     </div>
     <a href="ProductBrowser.html">
         <h2 class="title">Featured Products</h2>
     </a>
     <div class="row">
     <?php
+                require_once 'phpForHomepage/product_functions.php';
+
     $featured_products_names=array();
     $featured_products= read_featured_products();
     $featured_products_images= [
