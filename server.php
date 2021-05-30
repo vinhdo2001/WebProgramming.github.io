@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $found = false;
                 while ($userData = fgetcsv($fp)) {
                     // Testing whether email and phone are unique
-                    if ($userData[0] ===  $_POST['email'] || $userData[1] === $_POST['phone']) {
+                    if ($userData[0] ===  $_POST['email']) {
                         $found = true;
                         // $userData[2] is password field -> verifying...
                         if (password_verify($_POST['password'], $userData[2])) {
