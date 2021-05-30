@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,6 +63,18 @@
                     <span>Register</span>
                     <hr id="Indicator">
                 </div>
+                <?php 
+                              if(isset($_SESSION['email_used']) && $_SESSION['email_used'] ==  true){
+                                  echo "<p style='color:red;'>Email has already been used</p>";
+                                  unset($_SESSION['email_used']);
+                              };
+                             
+                              if(isset($_SESSION['phone_used']) && $_SESSION['phone_used'] ==  true){
+                                  echo "<p style='color:red;'>Phone number has already been used</p>";
+                                  unset($_SESSION['phone_used']);
+                              };
+                             ?>
+                                         
                 <form class="form" id="form-register" method="post" 
                     action="http://localhost:4000/server.php" onsubmit="return validateInput();">
                     <div class="form-control">

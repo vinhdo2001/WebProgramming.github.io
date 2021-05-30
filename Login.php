@@ -38,7 +38,7 @@
                             <a href="AboutUs.html">About us</a>
                         </li>
                         <li>
-                            <a href="MyAccount(logged-in).html">Account</a>
+                            <a href="MyAccount(logged-in).php">Account</a>
                         </li>
                         <li>
                             <a href="Fees.html">Fees</a>
@@ -87,10 +87,11 @@
                             <hr id="Indicator">
                         </div>
 
-                        <form method="post" action="http://localhost:4000/server.php">
+                        <form method="post" action="server.php">
                             <?php 
                               if(isset($_SESSION['error_message']) && $_SESSION['error_message'] ==  true){
-                                  echo 'Wrong Username/Password';
+                                  echo "<p style='color:red;'>Wrong Username/Password</p>";
+                                  unset($_SESSION['error_message']);
                               };
                              ?>
                             <input type="email" name="email" placeholder="Email" id="email" required>

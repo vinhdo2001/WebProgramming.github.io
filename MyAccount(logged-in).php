@@ -87,7 +87,7 @@ session_start();
                 if(isset($_SESSION['user']) && $_SESSION['user'] == true){
                     echo '    <h2 class="h2">
                     Personal Information</h2>';
-                    echo $_SESSION["email"];    
+                    echo $_SESSION["email"];  
                     echo '<img src="Image/Vinh.jpg"> </br>';
                     echo '<form method="post" action="http://localhost:4000/server.php">
                         <button type="submit" class="button">Logout</button>
