@@ -69,25 +69,34 @@ img {
     width: 300px;
     /* height: 250px; */
 }
+.row a p{
+    margin-bottom: 5%;
+    /* margin-left: 5%; */
+    
+}
+.row a {
+    margin-bottom: 5%;
+    
+}
+
 .slider-item img,
 .slider-item1 img {
     width: 330px;
     height: 400px;
     max-width: 100%;
-    margin-right: 130px;
+    /* margin-right: 130px; */
 }
 .slider-item h4,
-p,
-.rating {
+p, .rating {
     margin-top: 5%;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .slider-item1 h4,
 p,
 .rating {
     margin-right: 30px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 a {
     text-decoration: none;
@@ -104,7 +113,7 @@ a {
     margin-left: 8%;
     margin-right: 8%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     justify-content: space-around;
 }

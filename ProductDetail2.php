@@ -23,9 +23,14 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
-                    </a>
+                <?php
+                echo"
+                <a href='/index.php'>
+                <img src='https://i.imgur.com/WnDfSUO.png' alt='Logo' width='65%'>
+                </a>
+                ";
+                
+                ?>
                 </div>
                 <nav>
                     <input type="checkbox" id="menu-icon">
@@ -92,20 +97,25 @@
                 <section class="container content-section">
                     <div class="shop-items">
                         <div class="shop-item">
-                            <span id="shop-item-title"><h1><strong> MAXI FLORAL DRESS </strong> </h1></span>  
-                            
-                            <div class="shop-item-details">
-                                <span id="shop-item-price"><h4>60.00</h4></span>
-                               
-                                <button class="btn" id="add-button">ADD TO CART</button>
-                                <button class="btn" id="buy-button" onclick="window.location.href='order-placement.html'">Buy Now</button><br>
-                                <span class="amount"><input type="number" value="1"></span>
-                            </div>
-                    </section>
-                
-                
-              
-                
+                            <?php
+                                $product_name=$_GET['name'];
+                                $product_price=$_GET['price'];
+
+                                echo "
+                                    <span id='shop-item-title'><h1><strong> $product_name</strong> </h1></span>  
+                                    <div class='shop-item-details'>
+                                        <span id='shop-item-price'><h4>$product_price</h4></span>
+                                    
+                                        <button class='btn' id='add-button'>ADD TO CART</button>
+                                        <button class='btn' id='buy-button' onclick='window.location.href='order-placement.html''>Buy Now</button><br>
+                                        <span class='amount'><input type='number' value='1'></span>
+                                    </div>
+                                ";
+                            ?>
+                        </div>
+                    </div>
+                </section>
+
                 <select>
                     <option>Select size</option>
                     <option>XXL</option>
