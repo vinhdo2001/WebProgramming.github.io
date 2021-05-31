@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +38,7 @@
                             <a href="AboutUs.html">About us</a>
                         </li>
                         <li>
-                            <a href="MyAccount(logged-in).html">Account</a>
+                            <a href="MyAccount(logged-in).php">Account</a>
                         </li>
                         <li>
                             <a href="Fees.html">Fees</a>
@@ -84,12 +87,19 @@
                             <hr id="Indicator">
                         </div>
 
-                        <form>
-                            <input type="text" placeholder="Username" required>
-                            <input type="password" placeholder="Password" required>
+                        <form method="post" action="server.php">
+                            <?php 
+                              if(isset($_SESSION['error_message']) && $_SESSION['error_message'] ==  true){
+                                  echo "<p style='color:red;'>Wrong Username/Password</p>";
+                                  unset($_SESSION['error_message']);
+                              };
+                             ?>
+                            <input type="email" name="email" placeholder="Email" id="email" required>
+                            <input type="password" name="password" placeholder="Password" id="password" required>
+                            <input type="hidden" name="type" value="0" required/>
                             <button type="submit" class="button">Login</button>
                             <h5><a href="ForgotPassword.html">Forgot password</a></h5>
-                            <a href="Register.html" class="button">Register</a>
+                            <a href="Register.php" class="button">Register</a>
                         </form>
                     </div>
                 </div>
