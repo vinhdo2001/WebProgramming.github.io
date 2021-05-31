@@ -9,104 +9,136 @@ let city = document.getElementById('city')
 let email = document.getElementById('email')
 let zipcode = document.getElementById('zipcode')
 
-function validateInput(){
+function validateInput() {
+  let invalid = false;
     if(fname.value.trim() === ""){
-        errorMessage(fname, "First name cannot be blank");
+      errorMessage(fname, "First name cannot be blank");
+      invalid = true;
     }
     else if(fname.value.length < 3){
-        errorMessage(fname, "First name must be at least 3 characters");
+      errorMessage(fname, "First name must be at least 3 characters");
+      invalid = true;
     }
     else{
         successMessage(fname);
     }
     if(lname.value.trim() === ""){
-        errorMessage(lname, "Last name cannot be blank");
+      errorMessage(lname, "Last name cannot be blank");
+      invalid = true;
     }
     else if(lname.value.length < 3){
-        errorMessage(lname, "Last name must be at least 3 characters");
+      errorMessage(lname, "Last name must be at least 3 characters");
+      invalid = true;
     }
     else{
         successMessage(lname);
     }
     if(address.value.trim() === ""){
-        errorMessage(address, "Address cannot be blank");
+      errorMessage(address, "Address cannot be blank");
+      invalid = true;
     }
     else if(address.value.length < 3){
-        errorMessage(address, "Address must be at least 3 characters");
+      errorMessage(address, "Address must be at least 3 characters");
+      invalid = true;
     }
     else{
         successMessage(address);
     }
     if(city.value.trim() === ""){
-        errorMessage(city, "City cannot be blank");
+      errorMessage(city, "City cannot be blank");
+      invalid = true;
     }
     else if(city.value.length < 3){
-        errorMessage(city, "City must be at least 3 characters");
+      errorMessage(city, "City must be at least 3 characters");
+      invalid = true;
     }
     else{
         successMessage(city);
     }
     if(email.value.trim() === ""){
-        errorMessage(email, "Email cannot be blank");
+      errorMessage(email, "Email cannot be blank");
+      invalid = true;
     }
     else if(!isEmail(email.value)){
-        errorMessage(email, "Email invalid")
+      errorMessage(email, "Email invalid");
+      invalid = true;
     }
     else{
         successMessage(email);
     }
     if(password.value.trim() === ""){
-        errorMessage(password, "Password cannot be blank");
+      errorMessage(password, "Password cannot be blank");
+      invalid = true;
     }
     else if (password.value.length < 8 || password.value.length > 20) {
-        errorMessage(password, "Password must contains from 8 to 20 letters");
+      errorMessage(password, "Password must contains from 8 to 20 letters");
+      invalid = true;
       }
     else if (!containsLower(password.value)) {
-        errorMessage(password, "Password must contains at least one lower case letter");
+      errorMessage(password, "Password must contains at least one lower case letter");
+      invalid = true;
       }
     else if (!containsUpper(password.value)) {
-        errorMessage(password, "Password must contains at least one upper case letter");
+      errorMessage(password, "Password must contains at least one upper case letter");
+      invalid = true;
       }
     else if (!containsDigit(password.value)) {
-        errorMessage(password, "Password must contains at least one digit");
+      errorMessage(password, "Password must contains at least one digit");
+      invalid = true;
       }
     else if (!containsSpecial(password.value)) {
-        errorMessage(password, "Password must contains at least one special letter in !@#$%^&");
+      errorMessage(password, "Password must contains at least one special letter in !@#$%^&");
+      invalid = true;
       }
     else if (password.value.indexOf(' ') >= 0) {
         errorMessage(password, "Password must contains no space");
+        invalid = true;
     }
     else{
         successMessage(password);
     }
     if(conpassword.value.trim() === ""){
-        errorMessage(conpassword, "Password does not match");
+      errorMessage(conpassword, "Password does not match");
+      invalid = true;
     }
     else if(password.value.trim() != conpassword.value.trim()){
-        errorMessage(conpassword, "Password does not match")
+      errorMessage(conpassword, "Password does not match");
+      invalid = true;
     }
     else{
         successMessage(conpassword);
     }
     if(zipcode.value.trim() === ""){
-        errorMessage(zipcode, "Zipcode cannot be blank");
+      errorMessage(zipcode, "Zipcode cannot be blank");
+      invalid = true;
     }
     else if (zipcode.value.length < 4 || zipcode.value.length > 6) {
-        errorMessage(zipcode, "Zipcode must be between 4 - 6 digits");
+      errorMessage(zipcode, "Zipcode must be between 4 - 6 digits");
+      invalid = true;
     }
     else {
         successMessage(zipcode)
     }
     if(phone.value.trim() === ""){
       errorMessage(phone, "Phone cannot be blank");
+      invalid = true;
     }
     else if(!isPhone(phone.value)){
-        errorMessage(phone, "Phone number invalid")
+      errorMessage(phone, "Phone number invalid");
+      invalid = true;
     }
     else{
         successMessage(phone);
     }
+    if(!storeowner.checked && !shopper.checked){
+      errorMessage(storeowner, "You must choose one account type");
+      invalid = true;
+    }
+    else{
+      successMessage(storeowner);
+    }
 
+  return !invalid;
 }
 function isEmail(email){
     return /^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z\d\-.]+)@([a-zA-Z\d\-.]+)\.([a-zA-Z]{2,5})$/.test(email)
@@ -117,14 +149,14 @@ function errorMessage(input, message){
     let parent = input.parentElement;
     let errorMessage = parent.querySelector("small");
     errorMessage.style.visibility="visible";
-    errorMessage.innerText=message;
+    errorMessage.innerText = message;
 }
 
 function successMessage(input){
     let parent = input.parentElement;
     let errorMessage = parent.querySelector("small");
     errorMessage.style.visibility="hidden";
-    errorMessage.innerText="";
+  errorMessage.innerText = "";
 }
 
 function containsLower(str) {
@@ -180,10 +212,10 @@ function isPhone(phone) {
   return /^\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?[\d{1}]?[-\s\.]?[\d{1}]?$/.test(phone);
 }
 
-form.addEventListener("submit", (e) =>{
-    e.preventDefault();
-
-    validateInput()
-})
-
-
+// form.addEventListener("submit", e => {
+//   e.preventDefault();
+//   if (validateInput()) {
+//     alert("Helloo!");
+//     form.submit();
+//   }
+// });

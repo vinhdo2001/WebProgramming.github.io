@@ -12,6 +12,20 @@ a{
     text-decoration: none;
     color: #555;
 }
+.button {
+    display: inline-block;
+    background: #f48b29;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 10px 0px;
+    border-radius: 30px;
+}
+.button:hover{
+    background: #7ebdb4;
+    /* color:#364547 */
+}
+
+
 .container{
     max-width: 1300px ;
     margin: auto;
@@ -29,10 +43,10 @@ a{
 .slider{
     display: flex;
     align-items:center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-around;
 }
-.slider img{
+.slider .image{
     flex-basis:25%;
     padding: 10px;
     /* min-width: 200px; */
