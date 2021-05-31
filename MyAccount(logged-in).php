@@ -42,7 +42,7 @@ session_start();
                                 <a href="AboutUs.html">About us</a>
                             </li>
                             <li>
-                                <a href="MyAccount(logged-in).html">Account</a>
+                                <a href="MyAccount(logged-in).php">Account</a>
                             </li>
                             <li>
                                 <a href="Fees.html">Fees</a>
