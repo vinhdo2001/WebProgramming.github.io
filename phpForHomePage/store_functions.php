@@ -17,6 +17,26 @@ function read_all_stores() {
   }
   return $stores;
 }
+<<<<<<< HEAD
+=======
+function read_all_stores_sorted() {
+  $file_name = '../csvFile/stores.csv';
+  $fp = fopen($file_name, 'r');
+  $first = fgetcsv($fp);
+  $stores = [];
+  while ($row = fgetcsv($fp)) {
+    $i = 0;
+    $store = [];
+    foreach ($first as $col_name) {
+      $store[$col_name] =  $row[$i];
+      $i++;
+    }
+    $stores[] = $store;
+  }
+  sort($stores);
+  return $stores;
+}
+>>>>>>> parent of 10b292f (Revert "06")
 
 // function timecomp($a,$b){
 //   return strtotime($b['created_time'])-strtotime($a['created_time']);
