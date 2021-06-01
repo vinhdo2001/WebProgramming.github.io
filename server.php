@@ -94,6 +94,9 @@ function login($db_fp, $redirect_flag) {
                     header("Location:Login.php");
                 }
                 return true;
+            } else {
+                $_SESSION['error_message'] = true;
+                    header("Location:Login.php");
             }
         }
         flock($fp, LOCK_UN);
