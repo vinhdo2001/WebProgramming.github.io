@@ -62,10 +62,10 @@
                         Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
                         Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
                     </p>
-                    <a href="ProductBrowser.html" class="btn">Explore now &#8594;</a>
+                    <a href="ProductBrowser.php" class="btn">Explore now &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <a href="order-placement.html"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
+                    <a href="order-placement.php"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
                             alt="ecommerce_Image"></a>
 
                 </div>
@@ -82,28 +82,28 @@
         <div class="row row-2">
             <h2 id="all-product">All Products</h2>
             <select onChange="window.location.href=this.value">
-                <option value="Product(categories).html">Sort by categories</option>
-                <option value="T-Shirt.html">
+                <option value="Product(categories).php">Sort by categories</option>
+                <option value="T-Shirt.php">
                     T-Shirt
                 </option>
-                <option value="Sneakers.html">
+                <option value="Sneakers.php">
                     Sneakers
                 </option>
-                <option value="Sweatpants.html">
+                <option value="Sweatpants.php">
                     Sweatpants
                 </option>
-                <option value="Watch.html">
+                <option value="Watch.php">
                     Watch
                 </option>
-                <option value="ProductBrowser.html">
+                <option value="ProductBrowser.php">
                     Default Sorting
                 </option>
             </select>
         </div>
-        <h1><a href="T-Shirt.html">T-Shirts<a></h1>
+        <h1><a href="T-Shirt.php">T-Shirts<a></h1>
         <div class="row">
             <div class="col-4">
-                <a href="ProductDetails.html">
+                <a href="ProductDetails.php">
                     <img src="productImages//product-1.jpg" alt="">
                 </a>
                 <h4>Red T-shirt</h4>
@@ -117,7 +117,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="ProductDetails.html">
+                <a href="ProductDetails.php">
                     <img src="productImages/product-4.jpg" alt="">
                 </a>
                 <h4>T-Shirt</h4>
@@ -143,7 +143,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="ProductDetails.html">
+                <a href="ProductDetails.php">
                     <img src="productImages//product-3.jpg" alt="">
                 </a>
                 <h4>Skull T-shirt</h4>
@@ -158,7 +158,7 @@
             </div>
         </div>
 
-        <h1><a href="Sneakers.html">Sneakers</a></h1>
+        <h1><a href="Sneakers.php">Sneakers</a></h1>
         <div class="row">
             <div class="col-4">
                 <img src="productImages//product-2.jpg" alt="">
@@ -210,7 +210,7 @@
             </div>
         </div>
 
-        <h1><a href="Sweatpants.html">Sweatpants</a></h1>
+        <h1><a href="Sweatpants.php">Sweatpants</a></h1>
         <div class="row">
             <div class="col-4">
                 <img src="productImages//product-3.jpg" alt="">
@@ -262,7 +262,7 @@
             </div>
         </div>
 
-        <h1><a href="Watch.html"> Watch </a></h1>
+        <h1><a href="Watch.php"> Watch </a></h1>
         <div class="row">
             <div class="col-4">
                 <img src="productImages//product-8.jpg" alt="">
@@ -337,7 +337,7 @@
         <button class="cookie-btn">
             I Understand 
         </button>
-        <a href="PrivacyPolicy.html"> Learn more</a>
+        <a href="PrivacyPolicy.php"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
     <!-------footer---->
@@ -349,20 +349,20 @@
                     <img src="productImages/Logo.png" alt="">
                 </div>
                 <div class="footer-col-2">
-                    <a href="ToS.html">
+                    <a href="ToS.php">
                         <p>ToS (Term of Service)</p>
                     </a>
 
                 </div>
                 <div class="footer-col-3">
-                    <a href="PrivacyPolicy.html">
+                    <a href="PrivacyPolicy.php">
                         <p>Privacy Policy</p>
                     </a>
 
                 </div>
 
                 <div class="footer-col-4">
-                    <a href="CopyRight.html">
+                    <a href="CopyRight.php">
                         <p>Copy right 2021</p>
                     </a>
                 </div>
