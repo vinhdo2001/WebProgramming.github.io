@@ -69,7 +69,7 @@
      <div class="small-container">
      <?php 
              require_once 'phpForHomepage/store_functions.php';
-             $stores=read_all_stores_sorted();
+             $stores=read_all_stores_sorted_by_Name();
              $stores_images= [
                  'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
                  'https://product.hstatic.net/1000370106/product/5.2.1_c28c5cd9049c4a00b2471938b1f67a03_master.jpg',
@@ -85,16 +85,16 @@
 
              ];
 
-            //  echo"
-            //      <div class='row row-2'>
-            //          <h2>$store_name</h2>
-            //          <select onChange='window.location.href=this.value'>
-            //          <option value='/storeHome.php?id={$store_id}&name={$store_name}'>All Store </option>
-            //              <option value='/storeHome.php?id={$store_id}&name={$store_name}'> Sort by Name </option>
-            //              <option value='/newProductInStoreHome.php?id={$store_id}&name={$store_name}'>Sort by Category </option>
-            //          </select>
-            //      </div>
-            //  ";
+             echo"
+                 <div class='row row-2'>
+                     <h2>$store_name</h2>
+                     <select onChange='window.location.href=this.value'>
+                     <option value='/storeHome.php?id={$store_id}&name={$store_name}'>All Store </option>
+                         <option value='/storeHome.php?id={$store_id}&name={$store_name}'> Sort by Name </option>
+                         <option value='/newProductInStoreHome.php?id={$store_id}&name={$store_name}'>Sort by Category </option>
+                     </select>
+                 </div>
+             ";
          ?>
           <div class='row'> 
      <?php
