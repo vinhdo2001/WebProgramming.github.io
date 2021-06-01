@@ -1,3 +1,5 @@
+<?php include 'deleteInstall.php';
+?>
 <?php 
 session_start();
 ?>
@@ -27,7 +29,7 @@ session_start();
             <div class="container">
                 <div class="navbar">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="index.php">
                             <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
                         </a>
                     </div>
@@ -35,29 +37,29 @@ session_start();
                         <input type="checkbox" id="menu-icon">
                         <label for="menu-icon">Menu</label>
                         <ul id="MenuItems">
-                            <li>
-                                <a href="order-placement.html">Cart</a>
-                                <li>
-                            <li>
-                                <a href="AboutUs.html">About us</a>
-                            </li>
-                            <li>
-                                <a href="MyAccount(logged-in).php">Account</a>
-                            </li>
-                            <li>
-                                <a href="Fees.html">Fees</a>
-                            </li>
-    
-                            <li>
-                                <a href="FAQs.html">FAQs</a>
-                            </li>
-                            <li>
-                                <a href="Contact.html">Contact</a>
-                            </li>
-                            <li>
-                                <a href="ProductBrowser.html">Product Browser</a>
-                            </li>
-                        </ul>
+                        <li>
+                            <a href="order-placement.php">Cart</a>
+                        <li>
+                        <li>
+                            <a href="AboutUs.php">About us</a>
+                        </li>
+                        <li>
+                            <a href="MyAccount(logged-in).php">Account</a>
+                        </li>
+                        <li>
+                            <a href="Fees.php">Fees</a>
+                        </li>
+
+                        <li>
+                            <a href="FAQs.php">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="Contact.php">Contact</a>
+                        </li>
+                        <li>
+                            <a href="ProductBrowser.php">Product Browser</a>
+                        </li>
+                    </ul>
                     </nav>
     
                 </div>
@@ -69,10 +71,10 @@ session_start();
                         Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
                         Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
                     </p>
-                    <a href="ProductBrowser.html" class="btn">Explore now &#8594;</a>
+                    <a href="ProductBrowser.php" class="btn">Explore now &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <a href="order-placement.html"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
+                    <a href="order-placement.php"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
                             alt="ecommerce_Image"></a>
                 </div>
 
@@ -113,7 +115,7 @@ session_start();
         <button class="cookie-btn">
             I Understand 
         </button>
-        <a href="PrivacyPolicy.html"> Learn more</a>
+        <a href="PrivacyPolicy.php"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
  <!-------footer---->
@@ -124,17 +126,17 @@ session_start();
                 <img src="productImages/Logo.png" alt="">
             </div>
             <div class="footer-col-2">
-                <a href="ToS.html">
+                <a href="ToS.php">
                     <p>ToS (Term of Service)</p>
                 </a>
             </div>
             <div class="footer-col-3">
-                <a href="PrivacyPolicy.html">
+                <a href="PrivacyPolicy.php">
                     <p>Privacy Policy</p>
                 </a>
             </div>
             <div class="footer-col-4">
-                <a href="CopyRight.html">
+                <a href="CopyRight.php">
                     <p>Copy right 2021</p>
                 </a>
             </div>
