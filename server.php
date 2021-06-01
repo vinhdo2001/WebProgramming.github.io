@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Function to check if user already exists
 function email_unique($email, $db_file) {
     $is_unique = true;
@@ -19,6 +18,34 @@ function email_unique($email, $db_file) {
         fclose($fp);
     }
     return $is_unique;
+}
+// Function to check email regex
+function is_email($email) {
+    $is_email = true;
+    $regex = '/^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z\d\-.]+)@([a-zA-Z\d\-.]+)\.([a-zA-Z]{2,5})$/';
+    if(!preg_match($regex, $email)){
+        $is_email = false;
+    }
+    return $is_email;
+}
+// Function to check phone regex
+function is_phone($phone) {
+    $is_phone = true;
+    $regex = '/^\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?[\d{1}]?[-\s\.]?[\d{1}]?$/';
+    if(!preg_match($regex, $phone) ){
+        $is_phone = false;
+    }
+    return $is_phone;
+}
+// Function to check password regex
+function is_password($password) {
+    $is_password = true;
+    $regex = '/^(?=.{4,20}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W)/';
+        /*regex reference from https://riptutorial.com/regex/example/18996/a-password-containing-at-least-1-uppercase--1-lowercase--1-digit--1-special-character-and-have-a-length-of-at-least-of-10*/
+    if(!preg_match($regex, $password)){
+        $is_password = false;
+    }     
+    return $is_password;
 }
 // Function to check if user already exists (2 different functions for email and phone so there can be different error messages)
 function phone_unique($phone, $db_file) {
@@ -67,6 +94,9 @@ function login($db_fp, $redirect_flag) {
                     header("Location:Login.php");
                 }
                 return true;
+            } else {
+                $_SESSION['error_message'] = true;
+                    header("Location:Login.php");
             }
         }
         flock($fp, LOCK_UN);
@@ -126,16 +156,80 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // If accountType == 'store owner'
         $busName = $_POST['business'];
         $storeName = $_POST['store'];
-        $storeCategory = $_POST['category'];
+        $storeCategory = $_POST['category'];      
+        /* Form Validation */
+        $has_error = false;
+        // Checks if first name length is smaller than 3
+        if(trim(strlen($firstName)) < 2){
+            //error
+            $_SESSION['fname_error'] = true;
+            $has_error = true;
+        }
+        // Checks if last name length is smaller than 3
+        if(trim(strlen($lastName)) < 2){
+            //error
+            $_SESSION['lname_error'] = true;
+            $has_error = true;
+        }
+        // Checks if address length is smaller than 3
+        if(trim(strlen($address)) < 3){
+            //error
+            $_SESSION['address_error'] = true;
+            $has_error = true;
+        }
+        // Checks if city length is smaller than 3
+        if(trim(strlen($city)) < 3){
+            //error
+            $_SESSION['city_error'] = true;
+            $has_error = true;
+        }
+        // Checks if email is valid
+        if(!is_email($email)) {
+            //error
+            $_SESSION['email_error'] = true;
+            $has_error = true;
+        }
+        // Checks if phone is valid
+        if(!is_phone($phone)) {
+            //error
+            $_SESSION['phone_error'] = true;
+            $has_error = true;
+        }        
+        // Checks if password is valid
+        if(!is_password($_POST['password'])) {
+            //error
+            $_SESSION['password_error'] = true;
+            $has_error = true;
+        }
+        // Checks if both password fields are the same
+        if($_POST['password'] !== $_POST['conpassword']) {
+            //error
+            $_SESSION['conpassword'] = true;
+            $has_error = true;
+        }
+        // Checks if zipcode is between 4-6 digits
+        if(trim(strlen($zipCode)) < 4 || trim(strlen($zipCode)) > 6) {
+            //error
+            $_SESSION['zipcode_error'] = true;
+            $has_error = true;
+        }
         // Checks if email and phone are unique
         if (!email_unique($email, "userDB.csv") || !email_unique($email, "adminDB.csv")) {
             // error
             $_SESSION['email_used'] = true;
-            header("Location: Register.php");
+            $has_error = true;
         } 
         if (!phone_unique($phone, "userDB.csv") || !phone_unique($phone, "adminDB.csv")) {
             // error
             $_SESSION['phone_used'] = true;
+            $has_error = true;
+        } 
+        if ($accountType == null) {
+            $_SESSION['account_error'] = true;
+            $has_error = true;
+        }
+
+        if ($has_error) {
             header("Location: Register.php");
         } else {
             // is unique
@@ -154,6 +248,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // header("Location: http://localhost:4000/asd.php");
             header("Location:Login.php");
         }
+    } else if ($REQ_TYPE == 3) {
+        //Admin sign up request
+        $email = "";
+        if(isset($_POST['ademail'])){
+            $email = $_POST['ademail'];
+        }
+        $password = password_hash($_POST['adpassword'], PASSWORD_BCRYPT);
+        $conpassword = password_hash($_POST['adconpassword'], PASSWORD_BCRYPT); 
+        if($_POST['adpassword'] !== $_POST['adconpassword']) {
+            //error
+            $_SESSION['conpassword'] = true;
+        } else {            
+            $file = fopen('adminDB.csv', 'a');    // Append to database if csv exists
+            flock($file, LOCK_EX);
+            if(!file_exists("adminDB.csv")) {
+                $file = fopen('adminDB.csv', 'w');   // Write to file if database does not exist
+            }
+            // Saves user to csv file
+            fputcsv($file, array($email, $password, $conpassword));
+            flock($file, LOCK_UN);
+            fclose($file);
+            // Registration finishes -> redirects to login page
+            // header("Location: http://localhost:4000/asd.php");
+            header("Location: AdminProfile.php");
+        }   
     }   
 }
 ?>
