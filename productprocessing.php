@@ -169,7 +169,7 @@ for ($i = 0; $i < $arr_size ; $i ++) { $current_data=$arr[$i]; $new_arrivals_dat
     }
 
     function getStoreName($id){
-    $path = "../../data/stores.csv";
+    $path = "../stores.csv";
     $file = fopen($path,"r");
     $counter = 1;
     while(! feof($file)){
