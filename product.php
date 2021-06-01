@@ -63,7 +63,7 @@ else{
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
                         <li>
-                            <a href="order-placement.html">Cart</a>
+                            <a href="order-placement.php">Cart</a>
                         <li>
                         <li>
                             <a href="AboutUs.html">About us</a>
