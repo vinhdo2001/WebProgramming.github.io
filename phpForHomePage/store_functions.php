@@ -18,7 +18,10 @@ function read_all_stores() {
   return $stores;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 10b292f (Revert "06")
 function read_all_stores_sorted() {
   $file_name = '../csvFile/stores.csv';
   $fp = fopen($file_name, 'r');
