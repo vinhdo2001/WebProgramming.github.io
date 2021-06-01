@@ -26,7 +26,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
                     </a>
                 </div>
@@ -35,44 +35,32 @@
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
                         <li>
-                            <a href="AboutUs.html">About us</a>
+                            <a href="order-placement.php">Cart</a>
+                        <li>
+                        <li>
+                            <a href="AboutUs.php">About us</a>
                         </li>
                         <li>
                             <a href="MyAccount(logged-in).php">Account</a>
                         </li>
                         <li>
-                            <a href="Fees.html">Fees</a>
+                            <a href="Fees.php">Fees</a>
                         </li>
 
                         <li>
-                            <a href="FAQs.html">FAQs</a>
+                            <a href="FAQs.php">FAQs</a>
                         </li>
                         <li>
-                            <a href="Contact.html">Contact</a>
+                            <a href="Contact.php">Contact</a>
                         </li>
                         <li>
-                            <a href="ProductBrowser.html">Product Browser</a>
+                            <a href="ProductBrowser.php">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
 
             </div>
-            <!-- <div class="row">
-                <div class="col-2">
-                    <h1 id="slogan">Favorite brands and <br> hottest trends</h1>
-                    <p id="header-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
-                        Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
-                    </p>
-                    <a href="ProductBrowser.html" class="btn">Explore now &#8594;</a>
-                </div>
-                <div class="col-2">
-                    <a href="order-placement.html"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
-                            alt="ecommerce_Image"></a>
-
-                </div>
-
-            </div> -->
+            
         </div>
     </div>
     <div class="account-login">
@@ -104,7 +92,7 @@
                             ?>                            
                             <input type="hidden" name="type" value="0" required/>
                             <button type="submit" class="button">Login</button>
-                            <h5><a href="ForgotPassword.html">Forgot password</a></h5>
+                            <h5><a href="ForgotPassword.php">Forgot password</a></h5>
                             <a href="Register.php" class="button">Register</a>
                         </form>
                     </div>
@@ -122,7 +110,7 @@
         <button class="cookie-btn">
             I Understand 
         </button>
-        <a href="PrivacyPolicy.html"> Learn more</a>
+        <a href="PrivacyPolicy.php"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
 
@@ -135,20 +123,20 @@
                     <img src="productImages/Logo.png" alt="">
                 </div>
                 <div class="footer-col-2">
-                    <a href="ToS.html">
+                    <a href="ToS.php">
                         <p>ToS (Term of Service)</p>
                     </a>
 
                 </div>
                 <div class="footer-col-3">
-                    <a href="PrivacyPolicy.html">
+                    <a href="PrivacyPolicy.php">
                         <p>Privacy Policy</p>
                     </a>
 
                 </div>
 
                 <div class="footer-col-4">
-                    <a href="CopyRight.html">
+                    <a href="CopyRight.php">
                         <p>Copy right 2021</p>
                     </a>
                 </div>

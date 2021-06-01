@@ -1,6 +1,8 @@
 <?php 
     session_start();
     ?>
+    <?php include 'deleteInstall.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
