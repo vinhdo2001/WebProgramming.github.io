@@ -271,7 +271,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             fclose($file);
             // Registration finishes -> redirects to login page
             // header("Location: http://localhost:4000/asd.php");
-            header("Location: Login.php");
+            header("Location: AdminProfile.php");
         }   
     }   
 }
