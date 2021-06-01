@@ -32,6 +32,7 @@ function is_email($email) {
 function is_phone($phone) {
     $is_phone = true;
     $regex = '/^\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?[\d{1}]?[-\s\.]?[\d{1}]?$/';
+    /*regex reference from https://riptutorial.com/regex/example/18996/a-password-containing-at-least-1-uppercase--1-lowercase--1-digit--1-special-character-and-have-a-length-of-at-least-of-10*/
     if(!preg_match($regex, $phone) ){
         $is_phone = false;
     }
