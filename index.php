@@ -1,10 +1,11 @@
+<?php
+    session_start();
+?>
 <?php include 'deleteInstall.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php
-    session_start();
-?>
+
 
 <head>
     <meta charset="UTF-8">
