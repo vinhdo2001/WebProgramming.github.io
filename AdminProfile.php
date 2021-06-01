@@ -39,7 +39,7 @@ session_start();
                                 <a href="order-placement.html">Cart</a>
                                 <li>
                             <li>
-                                <a href="AboutUs.html">About us</a>
+                                <a href="AboutUs.php">About us</a>
                             </li>
                             <li>
                                 <a href="MyAccount(logged-in).php">Account</a>
