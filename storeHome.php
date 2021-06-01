@@ -1,9 +1,8 @@
 <!DOCTYPE html>
  <html lang="en">
  <?php
-require "commonphp.php";
+
 require 'phpForHomepage/store_functions.php';
-require "browseproductsprocessing.php";
 if(isset($_GET["submitName"]) || isset(($_GET["submitCatagory"]))){
         $sortedArray = setSortItems();
 } else{
@@ -11,7 +10,6 @@ if(isset($_GET["submitName"]) || isset(($_GET["submitCatagory"]))){
     $_GET["store_name"] = "A";
     $sortedArray = setSortItems();
 }
-$cssArr = ["headerandfooter","mallSort","cookies"];
 
 ?>
 
