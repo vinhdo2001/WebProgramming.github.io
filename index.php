@@ -59,7 +59,7 @@
                             <a href="Contact.html">Contact</a>
                         </li>
                         <li>
-                            <a href="ProductBrowser.html">Product Browser</a>
+                            <a href="product.php">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
@@ -72,7 +72,7 @@
                         Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
                         Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
                     </p>
-                    <a href="ProductBrowser.html" class="btn">Explore now &#8594;</a>
+                    <a href="product.php" class="btn">Explore now &#8594;</a>
                 </div>
                 <div class="col-2">
                     <a href="order-placement.html"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
@@ -195,7 +195,7 @@
       }
      ?>
     </div>
-    <a href="ProductBrowser.html">
+    <a href="product.php">
         <h2 class="title">Featured Products</h2>
     </a>
     <div class="row">
