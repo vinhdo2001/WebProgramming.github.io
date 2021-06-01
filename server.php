@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // Function to check if user already exists
 function email_unique($email, $db_file) {
     $is_unique = true;
@@ -19,6 +18,33 @@ function email_unique($email, $db_file) {
         fclose($fp);
     }
     return $is_unique;
+}
+// Function to check email regex
+function is_email($email) {
+    $is_email = true;
+    $regex = '/^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z\d\-.]+)@([a-zA-Z\d\-.]+)\.([a-zA-Z]{2,5})$/';
+    if(!preg_match($regex, $email)){
+        $is_email = false;
+    }
+    return $is_email;
+}
+// Function to check phone regex
+function is_phone($phone) {
+    $is_phone = true;
+    $regex = '/^\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?[\d{1}]?[-\s\.]?[\d{1}]?$/';
+    if(!preg_match($regex, $phone) ){
+        $is_phone = false;
+    }
+    return $is_phone;
+}
+// Function to check password regex
+function is_password($password) {
+    $is_password = true;
+    $regex = '/^(?=.{4,20}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W)/';
+    if(!preg_match($regex, $password)){
+        $is_password = false;
+    }     
+    return $is_password;
 }
 // Function to check if user already exists (2 different functions for email and phone so there can be different error messages)
 function phone_unique($phone, $db_file) {
@@ -127,15 +153,80 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $busName = $_POST['business'];
         $storeName = $_POST['store'];
         $storeCategory = $_POST['category'];
+        
+        /* Form Validation */
+        $has_error = false;
+        // Checks if first name length is smaller than 3
+        if(trim(strlen($firstName)) < 2){
+            //error
+            $_SESSION['fname_error'] = true;
+            $has_error = true;
+        }
+        // Checks if last name length is smaller than 3
+        if(trim(strlen($lastName)) < 2){
+            //error
+            $_SESSION['lname_error'] = true;
+            $has_error = true;
+        }
+        // Checks if address length is smaller than 3
+        if(trim(strlen($address)) < 3){
+            //error
+            $_SESSION['address_error'] = true;
+            $has_error = true;
+        }
+        // Checks if city length is smaller than 3
+        if(trim(strlen($city)) < 3){
+            //error
+            $_SESSION['city_error'] = true;
+            $has_error = true;
+        }
+        // Checks if email is valid
+        if(!is_email($email)) {
+            //error
+            $_SESSION['email_error'] = true;
+            $has_error = true;
+        }
+        // Checks if phone is valid
+        if(!is_phone($phone)) {
+            //error
+            $_SESSION['phone_error'] = true;
+            $has_error = true;
+        }        
+        // Checks if password is valid
+        if(!is_password($_POST['password'])) {
+            //error
+            $_SESSION['password_error'] = true;
+            $has_error = true;
+        }
+        // Checks if both password fields are the same
+        if($_POST['password'] !== $_POST['conpassword']) {
+            //error
+            $_SESSION['conpassword'] = true;
+            $has_error = true;
+        }
+        // Checks if zipcode is between 4-6 digits
+        if(trim(strlen($zipCode)) < 4 || trim(strlen($zipCode)) > 6) {
+            //error
+            $_SESSION['zipcode_error'] = true;
+            $has_error = true;
+        }
         // Checks if email and phone are unique
         if (!email_unique($email, "userDB.csv") || !email_unique($email, "adminDB.csv")) {
             // error
             $_SESSION['email_used'] = true;
-            header("Location: Register.php");
+            $has_error = true;
         } 
         if (!phone_unique($phone, "userDB.csv") || !phone_unique($phone, "adminDB.csv")) {
             // error
             $_SESSION['phone_used'] = true;
+            $has_error = true;
+        } 
+        if ($accountType == null) {
+            $_SESSION['account_error'] = true;
+            $has_error = true;
+        }
+
+        if ($has_error) {
             header("Location: Register.php");
         } else {
             // is unique
