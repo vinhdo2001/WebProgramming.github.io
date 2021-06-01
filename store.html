@@ -54,7 +54,7 @@
                             <a href="Contact.html">Contact</a>
                         </li>
                         <li>
-                            <a href="product.php">Product Browser</a>
+                            <a href="ProductBrowser.html">Product Browser</a>
                         </li>
                     </ul>
                 </nav>

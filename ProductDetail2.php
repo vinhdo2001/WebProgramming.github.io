@@ -56,7 +56,7 @@
                             <a href="Contact.html">Contact</a>
                         </li>
                         <li>
-                            <a href="product.php">Product Browser</a>
+                            <a href="ProductBrowser.html">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
@@ -146,10 +146,10 @@
     <!-- -------title----- -->
     <div class="small-container">
         <div class="row row-2">
-            <a href="product.php">
+            <a href="ProductBrowser.html">
                 <h2 id="recommended-products">Recommended Products</h2>
             </a>
-            <a href="product.php">
+            <a href="ProductBrowser.html">
                 <p id="view-more">View More</p>
             </a>
 
