@@ -50,6 +50,20 @@
             </div>
         </div>
     </div>
+    <script src="contact.js"></script>
+    <div class="cookie-container">
+        <h2>I use cookies</h2>
+        <p>
+            My website uses cookies necessary for its basic functioning.
+            By continuing browsing, you consent to my use of cookies
+            and other technologies.
+        </p>
+        <button class="cookie-btn">
+            I Understand 
+        </button>
+        <a href="PrivacyPolicy.php"> Learn more</a>
+    </div>
+    <script src="Vinh's/cookie.js"></script>
 </body>
 
 </html>
