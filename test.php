@@ -1,4 +1,6 @@
-
+<?php 
+    session_start();
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,20 +24,35 @@
     <div class="ToS">
         <h2>Terms of Service</h2>
         <h3>Agreement to terms</h3>
-        <?php 
-            $file = 'ToS.csv';
-            $fp = fopen($file, 'r');
-            $first = fgetcsv($fp);    
-        ?> 
+        <?php
+
+        $file_name = 'ToS.csv';
+        $fp = fopen($file_name, 'r');
+        $ToS = fgetcsv($fp);
+
+     
+        echo"
+        
+            <h4>$ToS[0]</h4>
+        ";
+       
+    ?>
 
 
     </div>
 
     <div> 
-        <button >
-            Edit
-        </button>
+        <form method="post" >
+            <input type="text" name="content" placeholder="Please edit the file"  required>
+            
+            <button type="submit" class="button">Login</button>
+
+        </form>
     </div>
+
+
+
+
     <div class="cookie-container">
         <h2>I use cookies</h2>
         <p>
