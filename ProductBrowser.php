@@ -22,9 +22,13 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
-                    </a>
+                <?php
+                    echo "
+                    <a href='/index.php'>
+                        <img src='https://i.imgur.com/WnDfSUO.png' alt='Logo' width='65%'>
+                    </a>";
+                    
+                    ?>
                 </div>
                 <nav>
                     <input type="checkbox" id="menu-icon">
