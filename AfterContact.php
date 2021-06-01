@@ -1,3 +1,5 @@
+<?php include 'deleteInstall.php';
+
 <!DOCTYPE html>
 <html>
 
