@@ -61,8 +61,8 @@
     </div>
 
     <?php
-        if(isset($_SESSION['login'])){
-            if($_SESSION['login'] === true){
+        if(isset($_SESSION['user'])){
+            if($_SESSION['user'] === true){
             }
             else{
                 echo '<div id="login-modal" class="modal">
@@ -89,7 +89,7 @@
                             <a href="login.php" class="button">login</a>
                         </span>
                     </div>
-                    </div>';
+        </div>';
         }
         ?>
 
