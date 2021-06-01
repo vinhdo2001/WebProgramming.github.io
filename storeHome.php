@@ -22,13 +22,9 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                <?php
-                    echo "
-                    <a href='/index.php'>
-                        <img src='https://i.imgur.com/WnDfSUO.png' alt='Logo' width='65%'>
-                    </a>";
-                    
-                    ?>
+                    <a href="index.html">
+                        <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
+                    </a>
                 </div>
                 <nav>
                     <input type="checkbox" id="menu-icon">
@@ -94,12 +90,12 @@
     $store_id=$_GET['id'];
     echo"
         <div class='row row-2'>
-        <h2>$store_name</h2>
-        <select onChange='window.location.href=this.value'>
-            <option value='/storeHome.php?id={$store_id}&name={$store_name}'>Default Sorting</option>
-            <option value='/newProductInStoreHome.php?id={$store_id}&name={$store_name}'>New Product </option>
-            <option value='/featuredProductInStoreHome.php?id={$store_id}&name={$store_name}'>Featured Product </option>
-        </select>
+            <h2>$store_name</h2>
+            <select onChange='window.location.href=this.value'>
+                <option value='/storeHome.php?id={$store_id}&name={$store_name}'>Default Sorting</option>
+                <option value='/newProductInStoreHome.php?id={$store_id}&name={$store_name}'>New Product </option>
+                <option value='hnoss-newest.html'>Featured Product </option>
+            </select>
         </div>
         
     ";
