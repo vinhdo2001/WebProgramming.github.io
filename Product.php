@@ -122,6 +122,7 @@ else{
                     class="fa fa-arrow-left"></i></span>
             <?php
             }
+<<<<<<< HEAD:Product.php
         ?>
             <?php for($i = 1; $i <= $totalPages; $i++ ): 
 
@@ -154,6 +155,8 @@ else{
         </div>
        
 =======
+=======
+>>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,):ProductBrowser.php
           
        
       }
@@ -161,6 +164,20 @@ else{
 
 
     ?>
+<<<<<<< HEAD:Product.php
+=======
+
+
+                
+
+            
+        
+      
+
+           
+        </div>
+        <br><br>
+>>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,):ProductBrowser.php
 
 
                 
