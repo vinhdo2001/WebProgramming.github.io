@@ -53,7 +53,7 @@ session_start();
                             <a href="Contact.php">Contact</a>
                         </li>
                         <li>
-                            <a href="ProductBrowser.php">Product Browser</a>
+                            <a href="product.php">Product Browser</a>
                         </li>
                     </ul>
                 </nav>

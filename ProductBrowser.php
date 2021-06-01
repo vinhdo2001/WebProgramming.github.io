@@ -52,7 +52,7 @@
                             <a href="Contact.php">Contact</a>
                         </li>
                         <li>
-                            <a href="ProductBrowser.php">Product Browser</a>
+                            <a href="product.php">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
@@ -68,7 +68,7 @@
         <div class="row row-2">
             <h2 id="all-product">All Products</h2>
             <select onChange="window.location.href=this.value">
-                <option value="ProductBrowser.php">Default Sorting</option>
+                <option value="product.php">Default Sorting</option>
                 <option value="Product(categories).php">
                     Sort by categories
                 </option>
@@ -143,7 +143,7 @@
             <a href="index.php">
                 <span>&#8592;</span>
            
-            <a href="ProductBrowser.php">
+            <a href="product.php">
                 <span>&#8594;</span>
             </a>
         </div>

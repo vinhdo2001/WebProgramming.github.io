@@ -53,7 +53,7 @@
                             <a href="Contact.php">Contact</a>
                         </li>
                         <li>
-                            <a href="ProductBrowser.php">Product Browser</a>
+                            <a href="product.php">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
@@ -140,10 +140,10 @@
     <!-- -------title----- -->
     <div class="small-container">
         <div class="row row-2">
-            <a href="ProductBrowser.php">
+            <a href="product.php">
                 <h2 id="recommended-products">Recommended Products</h2>
             </a>
-            <a href="ProductBrowser.php">
+            <a href="product.php">
                 <p id="view-more">View More</p>
             </a>
 
