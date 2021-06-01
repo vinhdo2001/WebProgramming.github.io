@@ -24,7 +24,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="productImages/Logo.png" alt="Logo" width="65%">
                     </a>
                 </div>
@@ -33,23 +33,23 @@
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
                         <li>
-                            <a href="order-placement.html">Cart</a>
+                            <a href="order-placement.php">Cart</a>
                         <li>
                         <li>
                             <a href="MyAccount(logged-in).php">Account</a>
                         </li>
                         <li>
-                            <a href="Fees.html">Fees</a>
+                            <a href="Fees.php">Fees</a>
                         </li>
 
                         <li>
-                            <a href="FAQs.html">FAQs</a>
+                            <a href="FAQs.php">FAQs</a>
                         </li>
                         <li>
-                            <a href="Contact.html">Contact</a>
+                            <a href="Contact.php">Contact</a>
                         </li>
                         <li>
-                            <a href="ProductBrowser.html">Product Browser</a>
+                            <a href="ProductBrowser.php">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
