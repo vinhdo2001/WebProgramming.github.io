@@ -17,7 +17,7 @@ function read_all_stores() {
   }
   return $stores;
 }
-function read_all_stores_sorted() {
+function read_all_stores_sorted_by_Name() {
   $file_name = '../csvFile/stores.csv';
   $fp = fopen($file_name, 'r');
   $first = fgetcsv($fp);
