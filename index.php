@@ -59,15 +59,8 @@
                             <a href="Contact.html">Contact</a>
                         </li>
                         <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                            <a href="ProductBrowser.html">Product Browser</a>
-=======
                             <a href="product.php">Product Browser</a>
->>>>>>> parent of c47b712 (index error)
-=======
-                            <a href="product.php">Product Browser</a>
->>>>>>> parent of c47b712 (index error)
+
                         </li>
                     </ul>
                 </nav>
