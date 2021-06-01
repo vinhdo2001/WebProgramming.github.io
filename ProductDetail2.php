@@ -1,3 +1,5 @@
+<?php include 'deleteInstall.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,23 +42,23 @@
                             <a href="order-placement.php">Cart</a>
                         <li>
                         <li>
-                            <a href="AboutUs.html">About us</a>
+                            <a href="AboutUs.php">About us</a>
                         </li>
                         <li>
                             <a href="MyAccount(logged-in).php">Account</a>
                         </li>
                         <li>
-                            <a href="Fees.html">Fees</a>
+                            <a href="Fees.php">Fees</a>
                         </li>
 
                         <li>
-                            <a href="FAQs.html">FAQs</a>
+                            <a href="FAQs.php">FAQs</a>
                         </li>
                         <li>
-                            <a href="Contact.html">Contact</a>
+                            <a href="Contact.php">Contact</a>
                         </li>
                         <li>
-                            <a href="ProductBrowser.html">Product Browser</a>
+                            <a href="ProductBrowser.php">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
@@ -141,10 +143,10 @@
     <!-- -------title----- -->
     <div class="small-container">
         <div class="row row-2">
-            <a href="ProductBrowser.html">
+            <a href="ProductBrowser.php">
                 <h2 id="recommended-products">Recommended Products</h2>
             </a>
-            <a href="ProductBrowser.html">
+            <a href="ProductBrowser.php">
                 <p id="view-more">View More</p>
             </a>
 
@@ -155,7 +157,7 @@
     <div class="small-container">
         <div class="row">
             <div class="col-4">
-                <a href="ProductDetails.html">
+                <a href="ProductDetails.php">
                     <img src="https://product.hstatic.net/200000000131/product/den-4_bd1da078adb84899ad7cc4029b0ed7ab_master.jpg"
                         alt="product Image">
                 </a>
@@ -171,7 +173,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="ProductDetail2.html">
+                <a href="ProductDetail2.php">
                     <img src="https://product.hstatic.net/200000000131/product/xanh-2_7df0965bbe41413c8d88ffbca01346c0_master.jpg"
                         alt="product Image">
                 </a>
@@ -186,7 +188,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="ProductDetails.html">
+                <a href="ProductDetails.php">
                     <img src="https://product.hstatic.net/200000000131/product/kem-4_cb95457e6cc94241ab632ba4a7b54331_master.jpg"
                         alt="product Image">
                 </a>
@@ -201,7 +203,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="ProductDetail2.html">
+                <a href="ProductDetail2.php">
                     <img src="https://product.hstatic.net/200000000131/product/xanh-oliu-4_ddacd30bf8c34e56ae1bbd965b14f1f9_master.jpg"
                         alt="product Image">
                 </a>
@@ -227,7 +229,7 @@
         <button class="cookie-btn">
             I Understand 
         </button>
-        <a href="PrivacyPolicy.html"> Learn more</a>
+        <a href="PrivacyPolicy.php"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
 
