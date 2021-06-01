@@ -99,8 +99,6 @@ session_start();
                 ?>
                 </p> </b>
 
-
-
         </div>
     </div>
     <div class="cookie-container">
