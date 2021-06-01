@@ -34,7 +34,7 @@
                         file_put_contents($path,$content1);
                     }
                     ?>
-                    Section: <input name="section" style="font-size:15px; padding:10px" type="text" value ="ToS" disabled>
+                    Section: <input name="section" style="font-size:15px; padding:10px" type="text" value ="CopyRight" disabled>
                     <br>
                     
                     <?php
@@ -57,7 +57,8 @@
                     <button name="submitData" style="color: blue;padding: 5px;padding-left: 15px;padding-right: 15px;margin-top: 20px;">Update</button>
                     
                 </form>
-          
+                </div>
+            </div>
     
     <div class="cookie-container">
         <h2>I use cookies</h2>
