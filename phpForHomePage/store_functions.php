@@ -17,6 +17,23 @@ function read_all_stores() {
   }
   return $stores;
 }
+function read_all_stores_sorted_by_Name() {
+  $file_name = '../csvFile/stores.csv';
+  $fp = fopen($file_name, 'r');
+  $first = fgetcsv($fp);
+  $stores = [];
+  while ($row = fgetcsv($fp)) {
+    $i = 0;
+    $store = [];
+    foreach ($first as $col_name) {
+      $store[$col_name] =  $row[$i];
+      $i++;
+    }
+    $stores[] = $store;
+  }
+  sort($stores);
+  return $stores;
+}
 
 // function timecomp($a,$b){
 //   return strtotime($b['created_time'])-strtotime($a['created_time']);
