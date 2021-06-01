@@ -149,9 +149,28 @@ else{
                     class="fa fa-arrow-right"></i></span>
             <?php
             }
+<<<<<<< HEAD:Product.php
         ?>
         </div>
        
+=======
+          
+       
+      }
+  
+
+
+    ?>
+
+
+                
+
+            
+        
+      
+
+           
+>>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,):ProductBrowser.php
         </div>
         <br><br>
 
