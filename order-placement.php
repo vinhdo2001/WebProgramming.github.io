@@ -132,8 +132,12 @@
             <div></div>
             <div></div>
             <div></div>
+
             
+            <div class="btn"><a href="thankyou.php">Order</a></div>
+            <br><br>
             <div class="btn"><a href="product.php">Continue Shopping &#8594;</a></div>
+            
         </div>
 
     
