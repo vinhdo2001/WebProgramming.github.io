@@ -22,13 +22,9 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                <?php
-                    echo "
-                    <a href='/index.php'>
-                        <img src='https://i.imgur.com/WnDfSUO.png' alt='Logo' width='65%'>
-                    </a>";
-                    
-                    ?>
+                    <a href="index.html">
+                        <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
+                    </a>
                 </div>
                 <nav>
                     <input type="checkbox" id="menu-icon">
@@ -54,7 +50,7 @@
                             <a href="Contact.html">Contact</a>
                         </li>
                         <li>
-                            <a href="product.php">Product Browser</a>
+                            <a href="ProductBrowser.html">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
@@ -69,40 +65,6 @@
             <a href="semir.html">
                 <img class="store-image" src="https://i.imgur.com/yH61xXY.png">
             </a>
-            <?php
-            require_once 'phpForHomepage/store_functions.php';
-
-        $stores= read_all_stores();
-        $stores_images= [
-            'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
-            'https://product.hstatic.net/1000370106/product/5.2.1_c28c5cd9049c4a00b2471938b1f67a03_master.jpg',
-            'https://product.hstatic.net/1000370106/product/19.2.1_3fc47167084a4c7f852ff16b6a6c4abb_master.jpg',
-            'https://product.hstatic.net/1000370106/product/9.1_ab24be97f37444aaa5c676ddae699125_master.jpg',
-            'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
-            'https://product.hstatic.net/1000370106/product/20.1_e61991eeb4bb4d00b1f9cef214f87946_master.jpg',
-            'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
-            'https://product.hstatic.net/1000370106/product/19.1_f07eeeae858845a38a37873ee317fda1_master.jpg',
-            'https://product.hstatic.net/1000370106/product/10.2.1_64d6a07edbc54c74ba0f61e21c9ad09a_master.jpg',
-            'https://product.hstatic.net/1000370106/product/25.1_d5cf847088434116804d8fa484aac20c_master.jpg',
-          ];
-          $stores_count = 0;
-      foreach($stores as $featured_store){
-        $featured_store_id=$featured_store['id'];
-        $featured_store_name = $featured_store['name'];
-        
-        echo"
-        <a href='/storeHome.php?id={$featured_store_id}&name={$featured_store_name}'>
-            <div class='.col-3'>
-                <img src='$stores_images[$stores_count]' alt=''>
-            </div>
-            <h4>$featured_store_name</h4>
-        </a>
-        ";
-        $stores_count++;
-        // if ($stores_count == 10) {
-        //   break;
-        // }
-      }
 
             <div class="row">
                 <div class="col-4">
@@ -125,10 +87,99 @@
             </div>
 
 
+            <a href="olv.html">
+                <img class="store-image" src="https://i.imgur.com/WaYxrco.png">
+            </a>
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://i.imgur.com/W67AqEy.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/8AUkTVW.png">
 
 
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/9WHrKKZ.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/PHBz1G6.png">
+
+                </div>
+            </div>
 
 
+            <a href="hnoss.html">
+                <img class="store-image" src="https://i.imgur.com/mPnxdPI.png">
+            </a>
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://i.imgur.com/xUi4GdT.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/gS1oXdb.png">
+
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/TLmjluc.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/C56Qfcs.png">
+
+                </div>
+            </div>
+
+            <a href="theseam.html">
+                <img class="store-image" src=https://i.imgur.com/eGZyNjU.png">
+            </a>
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://i.imgur.com/3jAEy8n.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/rcJ1RS7.png">
+
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/8Ap67lr.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/cVWl8Sd.png">
+
+                </div>
+            </div>
+
+
+            <a href="the19club.html">
+                <img class="store-image" src="https://i.imgur.com/8Y4ttRt.png">
+            </a>
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://i.imgur.com/0caYALX.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/7tw2qCW.png">
+
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/ISBMwuO.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/2ey4BNI.png">
+
+                </div>
+            </div>
 
 
             <a href="monde.html">
