@@ -50,16 +50,6 @@ a{
     max-width: 100%;
     
 }
-.col-3 {
-    flex-basis: 20%;
-    min-width: 200px;
-    margin-bottom: 50px;
-}
-.col-3 img {
-    width: 50%;
-    height: 80%;
-}
-
 .btn{
     display: inline-block;
     /* background: #f48b29;
