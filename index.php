@@ -39,9 +39,9 @@
                     <input type="checkbox" id="menu-icon">
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
-                        <li>
+                        <!-- <li>
                             <a href="order-placement.html">Cart</a>
-                        <li>
+                        <li> -->
                         <li>
                             <a href="AboutUs.html">About us</a>
                         </li>
