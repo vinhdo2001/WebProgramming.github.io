@@ -32,7 +32,6 @@ function is_email($email) {
 function is_phone($phone) {
     $is_phone = true;
     $regex = '/^\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?[\d{1}]?[-\s\.]?[\d{1}]?$/';
-    /*regex reference from https://riptutorial.com/regex/example/18996/a-password-containing-at-least-1-uppercase--1-lowercase--1-digit--1-special-character-and-have-a-length-of-at-least-of-10*/
     if(!preg_match($regex, $phone) ){
         $is_phone = false;
     }
@@ -42,6 +41,7 @@ function is_phone($phone) {
 function is_password($password) {
     $is_password = true;
     $regex = '/^(?=.{4,20}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?\W)/';
+        /*regex reference from https://riptutorial.com/regex/example/18996/a-password-containing-at-least-1-uppercase--1-lowercase--1-digit--1-special-character-and-have-a-length-of-at-least-of-10*/
     if(!preg_match($regex, $password)){
         $is_password = false;
     }     
@@ -94,6 +94,9 @@ function login($db_fp, $redirect_flag) {
                     header("Location:Login.php");
                 }
                 return true;
+            } else {
+                $_SESSION['error_message'] = true;
+                    header("Location:Login.php");
             }
         }
         flock($fp, LOCK_UN);
@@ -153,8 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // If accountType == 'store owner'
         $busName = $_POST['business'];
         $storeName = $_POST['store'];
-        $storeCategory = $_POST['category'];
-        
+        $storeCategory = $_POST['category'];      
         /* Form Validation */
         $has_error = false;
         // Checks if first name length is smaller than 3
@@ -246,6 +248,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // header("Location: http://localhost:4000/asd.php");
             header("Location:Login.php");
         }
+    } else if ($REQ_TYPE == 3) {
+        //Admin sign up request
+        $email = "";
+        if(isset($_POST['ademail'])){
+            $email = $_POST['ademail'];
+        }
+        $password = password_hash($_POST['adpassword'], PASSWORD_BCRYPT);
+        $conpassword = password_hash($_POST['adconpassword'], PASSWORD_BCRYPT); 
+        if($_POST['adpassword'] !== $_POST['adconpassword']) {
+            //error
+            $_SESSION['conpassword'] = true;
+        } else {            
+            $file = fopen('adminDB.csv', 'a');    // Append to database if csv exists
+            flock($file, LOCK_EX);
+            if(!file_exists("adminDB.csv")) {
+                $file = fopen('adminDB.csv', 'w');   // Write to file if database does not exist
+            }
+            // Saves user to csv file
+            fputcsv($file, array($email, $password, $conpassword));
+            flock($file, LOCK_UN);
+            fclose($file);
+            // Registration finishes -> redirects to login page
+            // header("Location: http://localhost:4000/asd.php");
+            header("Location: Login.php");
+        }   
     }   
 }
 ?>
