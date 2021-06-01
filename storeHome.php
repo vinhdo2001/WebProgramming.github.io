@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simba | All Products</title>
+    <title>Simba | Online Shopping Mall</title>
     <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="store.css">
+    <!-- <link rel="stylesheet" href="index2.css"> -->
     <link rel="stylesheet" href="NavBar.css">
-    
     <link href="Vinh's/cookie.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Montserrat:wght@100&display=swap"
@@ -60,80 +60,89 @@
     </div>
 
 
-    <!-- featured productes -->
+
+    <!-- <img class="center-fit"
+        src='https://vn-test-11.slatic.net/shop/43098843db2b4b8c2573171760477e70.jpeg_1800x1800q90.jpg_.webp?width=1400'> -->
+ 
+<div class="categories">
     <div class="small-container">
-        <!-- <h2 class="title">Featured Products</h2> -->
-        <div class="row row-2">
-            <h2 id="all-product">All Products</h2>
-            <select onChange="window.location.href=this.value">
-                <option value="ProductBrowser.html">Default Sorting</option>
-                <option value="Product(categories).html">
-                    Sort by categories
-                </option>
-                <option value="Product(Newest).html">
-                    Sort by time (newest)
-                </option>
-                <option value="Product(Oldest).html">
-                    Sort by time (oldest)
-                </option>
+    <?php 
+    require_once 'phpForHomepage/product_functions.php';
+
+    $all_products=read_all_products();
+
+    $product_images= [
+        'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
+        'https://product.hstatic.net/1000370106/product/5.2.1_c28c5cd9049c4a00b2471938b1f67a03_master.jpg',
+        'https://product.hstatic.net/1000370106/product/19.2.1_3fc47167084a4c7f852ff16b6a6c4abb_master.jpg',
+        'https://product.hstatic.net/1000370106/product/9.1_ab24be97f37444aaa5c676ddae699125_master.jpg',
+        'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
+        'https://product.hstatic.net/1000370106/product/20.1_e61991eeb4bb4d00b1f9cef214f87946_master.jpg',
+        'https://product.hstatic.net/1000370106/product/8.2_058fb4153d984e4cae66dc1769393d09_master.jpg',
+        'https://product.hstatic.net/1000370106/product/19.1_f07eeeae858845a38a37873ee317fda1_master.jpg',
+        'https://product.hstatic.net/1000370106/product/10.2.1_64d6a07edbc54c74ba0f61e21c9ad09a_master.jpg',
+        'https://product.hstatic.net/1000370106/product/25.1_d5cf847088434116804d8fa484aac20c_master.jpg',
+        'https://product.hstatic.net/1000370106/product/12.1.1_82a94763da854f5bb10c2014c823b9ab_master.jpg',
+
+    ];
+
+    $store_name=$_GET['name'];
+    $store_id=$_GET['id'];
+    echo"
+        <div class='row row-2'>
+            <h2>$store_name</h2>
+            <select onChange='window.location.href=this.value'>
+                <option value='/storeHome.php?id={$store_id}&name={$store_name}'>Default Sorting</option>
+                <option value='/newProductInStoreHome.php?id={$store_id}&name={$store_name}'>New Product </option>
+                <option value='hnoss-newest.html'>Featured Product </option>
             </select>
         </div>
-
-        <div class="row">
         
-        <?php
-        require 'phpForHomepage/store_functions.php';
-        $featured_products_names=array();
-        $featured_products= read_featured_products();
-        $featured_products_images= [
-            
-            'https://i.imgur.com/JZAUg1W.png',
-            'https://i.imgur.com/wPs4HIR.png',
-         
-           
-          ];
-          $featured_products_count = 0;
-          foreach($featured_products as $featured_product){
-            $id_featured_product = $featured_product['id'];
-            $name_featured_product = $featured_product['name'];
-            $price_featured_product = $featured_product['price'];
-            echo"
-            <a href='ProductDetail2.html'>
-                <div class='.col-3'>
-                    <img src='$featured_products_images[$featured_products_count]'
-                        alt=''>
-                </div>
-                <h4>$name_featured_product</h4>
-                <div class='rating'>
-                    <span class='fa fa-star checked'></span>
-                    <span class='fa fa-star checked'></span>
-                    <span class='fa fa-star checked'></span>
-                    <span class='fa fa-star '></span>
-                    <span class='fa fa-star '></span>
-                </div>
-                <p>$price_featured_product</p>
-            </a> 
-            ";
-            $featured_products_count++;
-            if ($featured_products_count == 2 ) {
-              break;
-            }
-      }
+    ";
     ?>
-        </div>
-        <br><br>
+  
+    <div class='row'> 
+    <?php
+        $count = 0;
+        foreach($all_products as $product){
+            $product_id=$product['id'];
+            $product_name = $product['name'];
+            $product_price = $product['price'];
+            $store=$product['store_id'];
+            if ($store==$store_id){
 
-        <div class="page-btn">
-            <a href="index.php">
-                <span>&#8592;</span>
-           
-            <a href="ProductBrowser.html">
-                <span>&#8594;</span>
-            </a>
-        </div>
+                echo"
+                <div class='.col-3'>
+                <img src='$product_images[$count]'
+                    alt='' class='product-img'>
+                </div>
+                <a href='/ProductDetail.php?id={$product_id}&name={$product_name}&price={$product_price}'>
+                    <h4>$product_name </h4>
+                    <div class='rating'>
+                        <span class='fa fa-star checked'></span>
+                        <span class='fa fa-star checked'></span>
+                        <span class='fa fa-star checked'></span>
+                        <span class='fa fa-star '></span>
+                        <span class='fa fa-star '></span>
+                    </div>
+                    <p>$product_price</p>
+                </a>
+              ";
+              $count++;
+            }
+  
+        }
+    ?>
+     </div>
+        
+       
 
 
     </div>
+</div>
+  
+    
+
     <div class="cookie-container">
         <h2>I use cookies</h2>
         <p>
@@ -147,6 +156,7 @@
         <a href="PrivacyPolicy.html"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
+
     <!-------footer---->
     <div class="footer">
         <div class="container">
