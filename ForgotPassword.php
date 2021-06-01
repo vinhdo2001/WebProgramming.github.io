@@ -22,7 +22,7 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
                     </a>
                 </div>
@@ -83,7 +83,7 @@
         <button class="cookie-btn">
             I Understand 
         </button>
-        <a href="PrivacyPolicy.html"> Learn more</a>
+        <a href="PrivacyPolicy.php"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
 
@@ -96,20 +96,20 @@
                     <img src="productImages/Logo.png" alt="">
                 </div>
                 <div class="footer-col-2">
-                    <a href="ToS.html">
+                    <a href="ToS.php">
                         <p>ToS (Term of Service)</p>
                     </a>
 
                 </div>
                 <div class="footer-col-3">
-                    <a href="PrivacyPolicy.html">
+                    <a href="PrivacyPolicy.php">
                         <p>Privacy Policy</p>
                     </a>
 
                 </div>
 
                 <div class="footer-col-4">
-                    <a href="CopyRight.html">
+                    <a href="CopyRight.php">
                         <p>Copy right 2021</p>
                     </a>
                 </div>

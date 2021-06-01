@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-    <a href="store.php">
+    <a href="ProductBrowser.php">
         <h2 class="title">New Stores</h2>
     </a>
     <div class="slider-wrap1">
@@ -119,7 +119,7 @@
             ?>
         </div>
     </div>
-    <a href="store.php">
+    <a href="ProductBrowser.php">
         <h2 class="title">New Products</h2>
     </a>
     <div class="slider-wrap">
@@ -159,7 +159,7 @@
     </div>
 
 
-    <a href="store.php">
+    <a href="ProductBrowser.php">
         <h2 class="title">Featured Stores</h2>
     </a>
     <div class="row">

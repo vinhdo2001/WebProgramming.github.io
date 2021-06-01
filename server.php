@@ -22,7 +22,7 @@ function email_unique($email, $db_file) {
 // Function to check email regex
 function is_email($email) {
     $is_email = true;
-    $regex = '/^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z\d\-.]+)@([a-zA-Z\d\-.]+)\.([a-zA-Z]{2,5})$/';
+    $regex = '/^(?!\.)(?!.*\.$)(?!.*?\.\.)^([a-zA-Z\d\-.]+)@([a-zA-Z\d\.]+)\.([a-zA-Z]{2,5})$/';
     if(!preg_match($regex, $email)){
         $is_email = false;
     }
@@ -31,7 +31,7 @@ function is_email($email) {
 // Function to check phone regex
 function is_phone($phone) {
     $is_phone = true;
-    $regex = '/^\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?[\d{1}]?[-\s\.]?[\d{1}]?$/';
+    $regex = '/^(?!.*--)\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?\d{1}[-\s\.]?[\d{1}]?[-\s\.]?[\d{1}]?$/';
     if(!preg_match($regex, $phone) ){
         $is_phone = false;
     }
