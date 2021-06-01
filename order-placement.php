@@ -60,6 +60,38 @@
         </div>
     </div>
 
+    <?php
+        if(isset($_SESSION['login'])){
+            if($_SESSION['login'] === true){
+            }
+            else{
+                echo '<div id="login-modal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            Please login to proceed.
+                            </br>
+                            <span>
+                                <a href="login.php" class="button">login</a>
+                            </span>
+                        </div>
+                        </div>';
+            }
+        }
+        else{
+            echo '<div id="login-modal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        Please login to proceed.
+                        </br>
+                        <span>
+                            <a href="login.php" class="button">login</a>
+                        </span>
+                    </div>
+                    </div>';
+        }
+        ?>
 
     <section class="container content-section">
         <h2 class="section-header">CART</h2>
@@ -97,7 +129,7 @@
             <div></div>
             <div></div>
             
-            <div class="btn"><a href="ProductBrowser.html">Continue Shopping &#8594;</a></div>
+            <div class="btn"><a href="product.php">Continue Shopping &#8594;</a></div>
         </div>
 
     
@@ -105,7 +137,7 @@
     <div class="small-container">
         <div class="row row-2">
             <h2 id="recommended-products">Recommended Products</h2>
-            <a href="ProductBrowser.html">
+            <a href="product.php">
                 <p id="view-more">View More</p>
             </a>
         </div>

@@ -82,19 +82,20 @@ for ($i=0; $i < count($sort_products); $i++) {
             $name = $data[1];
             $price = $data[2];
             if($i%2 == 0){
+                
                 $img ="https://i.imgur.com/HjLjYSv.png";
             }
             else{
                 $img ="https://i.imgur.com/o5y2seC.png";
             }
             if($i%2 == 0){
-                $link ="productdetails.html";
+                $link ="ProductDetails.html";
             }
             else{
-                $link ="productdetail2.html";
+                $link ="ProductDetail2.html";
             }
             echo '<div class="col-product-4">
-                    <a href=<' .$link.'?>
+            <a href=<' .$link.'?>>
 <img src="' .$img.'" alt="<' .$name.'>">
 </a>
 <h3>' .$name.'</h3>

@@ -430,3 +430,12 @@ html, body {
 .table td{
     width: 25%;
 }
+.modal-content {
+    margin: 20% auto;
+    padding: 20px;
+    width: 50%; 
+    background-color: #F9495F;
+    color:white;
+    border-radius: 10px;
+  
+  }
