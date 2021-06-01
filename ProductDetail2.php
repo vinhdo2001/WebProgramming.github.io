@@ -37,7 +37,7 @@
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
                         <li>
-                            <a href="order-placement.html">Cart</a>
+                            <a href="order-placement.php">Cart</a>
                         <li>
                         <li>
                             <a href="AboutUs.html">About us</a>
@@ -97,25 +97,20 @@
                 <section class="container content-section">
                     <div class="shop-items">
                         <div class="shop-item">
-                            <?php
-                                $product_name=$_GET['name'];
-                                $product_price=$_GET['price'];
-
-                                echo "
-                                    <span id='shop-item-title'><h1><strong> $product_name</strong> </h1></span>  
-                                    <div class='shop-item-details'>
-                                        <span id='shop-item-price'><h4>$product_price</h4></span>
-                                    
-                                        <button class='btn' id='add-button'>ADD TO CART</button>
-                                        <button class='btn' id='buy-button' onclick='window.location.href='order-placement.html''>Buy Now</button><br>
-                                        <span class='amount'><input type='number' value='1'></span>
-                                    </div>
-                                ";
-                            ?>
-                        </div>
-                    </div>
-                </section>
-
+                            <span id="product-name"><h1><strong> MAXI FLORAL DRESS </strong> </h1></span>  
+                            
+                            <div class="shop-item-details">
+                                <span id="product-price"><h4>60.00</h4></span>
+                               
+                                <button class="btn" id="add-button">ADD TO CART</button>
+                                <button class="btn" id="buy-button" onclick="window.location.href='order-placement.php'">Buy Now</button><br>
+                                <span class="amount"><input type="number" value="1"></span>
+                            </div>
+                    </section>
+                
+                
+              
+                
                 <select>
                     <option>Select size</option>
                     <option>XXL</option>

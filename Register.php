@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -63,61 +63,105 @@ session_start();
                     <span>Register</span>
                     <hr id="Indicator">
                 </div>
-                <?php 
-                              if(isset($_SESSION['email_used']) && $_SESSION['email_used'] ==  true){
-                                  echo "<p style='color:red;'>Email has already been used</p>";
-                                  unset($_SESSION['email_used']);
-                              };
-                             
-                              if(isset($_SESSION['phone_used']) && $_SESSION['phone_used'] ==  true){
-                                  echo "<p style='color:red;'>Phone number has already been used</p>";
-                                  unset($_SESSION['phone_used']);
-                              };
-                             ?>
-                                         
-                <form class="form" id="form-register" method="post" 
-                    action="http://localhost:4000/server.php" onsubmit="return validateInput();">
+                <?php
+                if (isset($_SESSION['email_used']) && $_SESSION['email_used'] ==  true) {
+                    echo "<p style='color:red;'>Email has already been used</p>";
+                    unset($_SESSION['email_used']);
+                };
+
+                if (isset($_SESSION['phone_used']) && $_SESSION['phone_used'] ==  true) {
+                    echo "<p style='color:red;'>Phone number has already been used</p>";
+                    unset($_SESSION['phone_used']);
+                };
+                ?>
+
+                <form class="form" id="form-register" method="post" action="server.php">
                     <div class="form-control">
-                        <input type="text" placeholder="First name" id="fname" name="fname">
-                        <small>Error message</small>
+                        <input defaultValue="" type="text" placeholder="First name" id="fname" name="fname">
+                        <?php
+                        if (isset($_SESSION['fname_error']) && $_SESSION['fname_error'] ==  true) {
+                            echo "<p style='color:red;'>First name must be at least 3 letters</p>";
+                            unset($_SESSION['fname_error']);
+                        };
+                        ?>
                     </div>
                     <div class="form-control">
-                        <input type="text" placeholder="Last name" id="lname" name="lname">
-                        <small>Error message</small>
+                        <input defaultValue="" type="text" placeholder="Last name" id="lname" name="lname">
+                        <?php
+                        if (isset($_SESSION['lname_error']) && $_SESSION['lname_error'] ==  true) {
+                            echo "<p style='color:red;'>Last name must be at least 3 letters</p>";
+                            unset($_SESSION['lname_error']);
+                        };
+                        ?>
                     </div>
                     <div class="form-control">
-                        <input type="tel" placeholder="Phone number" id="phone" name="phone">
-                        <small>Error message</small>
+                        <input defaultValue="" type="tel" placeholder="Phone number" id="phone" name="phone">
+                        <?php
+                        if (isset($_SESSION['phone_error']) && $_SESSION['phone_error'] ==  true) {
+                            echo "<p style='color:red;'>Invalid phone number</p>";
+                            unset($_SESSION['phone_error']);
+                        };
+                        ?>
                     </div>
                     <div class="form-control">
-                        <input type="text" placeholder="Email" id="email" name="email">
-                        <small>Error message</small>
+                        <input defaultValue="" type="text" placeholder="Email" id="email" name="email">
+                        <?php
+                        if (isset($_SESSION['email_error']) && $_SESSION['email_error'] ==  true) {
+                            echo "<p style='color:red;'>Invalid email</p>";
+                            unset($_SESSION['email_error']);
+                        };
+                        ?>
                     </div>
                     <div class="form-control">
-                        <input type="password" name="password" placeholder="Password" id="password">
-                        <small>Error message</small>
+                        <input defaultValue="" type="password" name="password" placeholder="Password" id="password">
+                        <?php
+                        if (isset($_SESSION['password_error']) && $_SESSION['password_error'] ==  true) {
+                            echo "<p style='color:red;'>Invalid password</p>";
+                            unset($_SESSION['password_error']);
+                        };
+                        ?>
                     </div>
                     <div class="form-control">
-                        <input type="password" name="conpassword" placeholder="Confirm password" id="conpassword">
-                        <small>Error message</small>
+                        <input defaultValue="" type="password" name="conpassword" placeholder="Confirm password" id="conpassword">
+                        <?php
+                        if (isset($_SESSION['conpassword']) && $_SESSION['conpassword'] ==  true) {
+                            echo "<p style='color:red;'>Password does not match</p>";
+                            unset($_SESSION['conpassword']);
+                        };
+                        ?>
                     </div>
                     <small>Profile picture</small>
                     <input type='file' class="custom-file-input" name='picture' placeholder="Choose your profile picture">
                     <div class="form-control">
-                        <input type="text" name="address" placeholder="Address" id="address">
-                        <small>Error message</small>
+                        <input defaultValue="" type="text" name="address" placeholder="Address" id="address">
+                        <?php
+                        if (isset($_SESSION['address_error']) && $_SESSION['address_error'] ==  true) {
+                            echo "<p style='color:red;'>Address must be at least 3 letters</p>";
+                            unset($_SESSION['address_error']);
+                        };
+                        ?>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="city" placeholder="City" id="city">
-                        <small>Error message</small>
+                        <input defaultValue="" type="text" name="city" placeholder="City" id="city">
+                        <?php
+                        if (isset($_SESSION['city_error']) && $_SESSION['city_error'] ==  true) {
+                            echo "<p style='color:red;'>City must be at least 3 letters</p>";
+                            unset($_SESSION['city_error']);
+                        };
+                        ?>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="zipcode" placeholder="Zip code (4 to 6 digits)" id="zipcode">
-                        <small>Error message</small>
+                        <input defaultValue="" type="text" name="zipcode" placeholder="Zip code (4 to 6 digits)" id="zipcode">
+                        <?php
+                        if (isset($_SESSION['zipcode_error']) && $_SESSION['zipcode_error'] ==  true) {
+                            echo "<p style='color:red;'>Zipcode must be from 4 to 6 digits</p>";
+                            unset($_SESSION['zipcode_error']);
+                        };
+                        ?>
                         <br> </br>
                     </div>
 
-                    <select name="country">
+                    <select defaultValue="" name="country">
                         <option value="" id="country"> <label for="country"> Select Country </label></option>
                         <option value="VN" id="VN"> <label for="VN"> Vietnam </label></option>
                         <option value="US" id="US"> <label for="US"> The United States of America </label></option>
@@ -125,12 +169,17 @@ session_start();
                         <option value="KR" id="KR"> <label for="KR"> Korea </label></option>
                     </select>
                     <div class="form-control">
-                    <div class="category" id="account_type">
-                        <input type="radio" onclick="javascript:optionCheck()" name="account_type" value="storeowner" id="storeowner"><label for="storeowner">Store Owners</label>
+                        <div class="category" id="account_type">
+                            <input type="radio" onclick="javascript:optionCheck()" name="account_type" value="storeowner" id="storeowner"><label for="storeowner">Store Owners</label>
 
-                        <input type="radio" onclick="javascript:optionCheck()" name="account_type" value="shopper" id="shopper"><label for="shopper">Shoppers</label> </br>
-                        <small>Error message</small>
-                    </div>
+                            <input type="radio" onclick="javascript:optionCheck()" name="account_type" value="shopper" id="shopper"><label for="shopper">Shoppers</label> </br>
+                            <?php
+                            if (isset($_SESSION['account_error']) && $_SESSION['account_error'] ==  true) {
+                                echo "<p style='color:red;'>One account type must be chosen</p>";
+                                unset($_SESSION['account_error']);
+                            };
+                            ?>
+                        </div>
                     </div>
                     <div id="owneroption" style="visibility:hidden">
                         <input type="text" name="business" value="Business name" placeholder="Business name">

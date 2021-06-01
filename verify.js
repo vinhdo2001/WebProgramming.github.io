@@ -15,7 +15,7 @@ function validateInput() {
       errorMessage(fname, "First name cannot be blank");
       invalid = true;
     }
-    else if(fname.value.length < 3){
+    else if(fname.value.length < 2){
       errorMessage(fname, "First name must be at least 3 characters");
       invalid = true;
     }
@@ -26,7 +26,7 @@ function validateInput() {
       errorMessage(lname, "Last name cannot be blank");
       invalid = true;
     }
-    else if(lname.value.length < 3){
+    else if(lname.value.length < 2){
       errorMessage(lname, "Last name must be at least 3 characters");
       invalid = true;
     }
@@ -37,7 +37,7 @@ function validateInput() {
       errorMessage(address, "Address cannot be blank");
       invalid = true;
     }
-    else if(address.value.length < 3){
+    else if(address.value.length < 2){
       errorMessage(address, "Address must be at least 3 characters");
       invalid = true;
     }
@@ -48,7 +48,7 @@ function validateInput() {
       errorMessage(city, "City cannot be blank");
       invalid = true;
     }
-    else if(city.value.length < 3){
+    else if(city.value.length < 2){
       errorMessage(city, "City must be at least 3 characters");
       invalid = true;
     }

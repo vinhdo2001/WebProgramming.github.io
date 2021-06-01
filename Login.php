@@ -96,6 +96,12 @@
                              ?>
                             <input type="email" name="email" placeholder="Email" id="email" required>
                             <input type="password" name="password" placeholder="Password" id="password" required>
+                            <?php
+                            if (isset($_SESSION['login_error']) && $_SESSION['login_error'] ==  true) {
+                                echo "<p style='color:red;'>Login credentials can't be blank</p>";
+                                unset($_SESSION['login_error']);
+                            };
+                            ?>                            
                             <input type="hidden" name="type" value="0" required/>
                             <button type="submit" class="button">Login</button>
                             <h5><a href="ForgotPassword.html">Forgot password</a></h5>

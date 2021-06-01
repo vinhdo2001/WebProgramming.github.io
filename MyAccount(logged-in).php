@@ -89,7 +89,7 @@ session_start();
                     Personal Information</h2>';
                     echo $_SESSION["email"];  
                     echo '<img src="Image/Vinh.jpg"> </br>';
-                    echo '<form method="post" action="http://localhost:4000/server.php">
+                    echo '<form method="post" action="server.php">
                         <button type="submit" class="button">Logout</button>
                         <input type="hidden" name="type" value="1" required/>
                         </form>';
