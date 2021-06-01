@@ -39,9 +39,9 @@
                     <input type="checkbox" id="menu-icon">
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
-                        <!-- <li>
+                        <li>
                             <a href="order-placement.html">Cart</a>
-                        <li> -->
+                        <li>
                         <li>
                             <a href="AboutUs.html">About us</a>
                         </li>
@@ -59,15 +59,7 @@
                             <a href="Contact.html">Contact</a>
                         </li>
                         <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
                             <a href="ProductBrowser.html">Product Browser</a>
-=======
-                            <a href="product.php">Product Browser</a>
->>>>>>> parent of c47b712 (index error)
-=======
-                            <a href="product.php">Product Browser</a>
->>>>>>> parent of c47b712 (index error)
                         </li>
                     </ul>
                 </nav>
@@ -80,7 +72,7 @@
                         Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
                         Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
                     </p>
-                    <a href="product.php" class="btn">Explore now &#8594;</a>
+                    <a href="ProductBrowser.html" class="btn">Explore now &#8594;</a>
                 </div>
                 <div class="col-2">
                     <a href="order-placement.html"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
@@ -203,7 +195,7 @@
       }
      ?>
     </div>
-    <a href="product.php">
+    <a href="ProductBrowser.html">
         <h2 class="title">Featured Products</h2>
     </a>
     <div class="row">

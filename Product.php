@@ -1,3 +1,31 @@
+<?php
+session_start();
+require "productprocessing.php";
+$all_products = getAllProducts($_SESSION["storeID"]);
+$number_of_products = count($all_products);
+$limit = 2;
+$page = (isset($_GET['page']) && is_numeric($_GET['page']) ) ? $_GET['page'] : 1;
+$paginationStart = ($page - 1) * $limit;
+$no_of_lines = $number_of_products;
+$new_arrivals = ["", "", "", "",""];
+$allRecrods = $no_of_lines;
+// Calculate total pages
+$totalPages = ceil($allRecrods / $limit);
+// Prev + Next
+$prev = $page - 1;
+$next = $page + 1;
+$path = "products.csv";
+$last_product = $paginationStart + $limit;
+$sort_value = 1;
+if(isset($_GET['sort'])){
+    $sort_products = sortSelect($_GET['sort']);
+}
+else{
+    $sort_products = sortCSVFile($path);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,9 +50,13 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
-                    </a>
+                <?php
+                    echo "
+                    <a href='/index.php'>
+                        <img src='https://i.imgur.com/WnDfSUO.png' alt='Logo' width='65%'>
+                    </a>";
+                    
+                    ?>
                 </div>
                 <nav>
                     <input type="checkbox" id="menu-icon">
@@ -50,7 +82,7 @@
                             <a href="Contact.html">Contact</a>
                         </li>
                         <li>
-                            <a href="ProductBrowser.html">Product Browser</a>
+                            <a href="product.php">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
@@ -65,22 +97,16 @@
         <!-- <h2 class="title">Featured Products</h2> -->
         <div class="row row-2">
             <h2 id="all-product">All Products</h2>
-            <select onChange="window.location.href=this.value">
-                <option value="ProductBrowser.html">Default Sorting</option>
-                <option value="Product(categories).html">
-                    Sort by categories
-                </option>
-                <option value="Product(Newest).html">
-                    Sort by time (newest)
-                </option>
-                <option value="Product(Oldest).html">
-                    Sort by time (oldest)
-                </option>
-            </select>
+            <select onchange="sort_products()" id="sort_select">
+                    <option value="1" <?php echo ($sort_value == 1) ? "selected" : ""; ?>>Sort by default</option>
+                    <option value="2" <?php echo ($sort_value == 2) ? "selected" : ""; ?>>Sort A-Z</option>
+                    <option value="3" <?php echo ($sort_value == 3) ? "selected" : ""; ?>>Sort by Price</option>
+                    <option value="4" <?php echo ($sort_value == 4) ? "selected" : ""; ?>>Sort by time (newest)</option>
+                    <option value="5" <?php echo ($sort_value == 5) ? "selected" : ""; ?>>Sort by time (oldest)</option>
+                </select>
         </div>
 
         <div class="row">
-<<<<<<< HEAD:Product.php
             <?php displayProduct($sort_products,  $paginationStart, $last_product)?>
         </div>
         <div class="page-btn">
@@ -131,46 +157,6 @@
 =======
 =======
 >>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,):ProductBrowser.php
-=======
-        
-        <?php
-        require 'phpForHomepage/store_functions.php';
-        $featured_products_names=array();
-        $featured_products= read_featured_products();
-        $featured_products_images= [
-            
-            'https://i.imgur.com/JZAUg1W.png',
-            'https://i.imgur.com/wPs4HIR.png',
-         
-           
-          ];
-          $featured_products_count = 0;
-          foreach($featured_products as $featured_product){
-            $id_featured_product = $featured_product['id'];
-            $name_featured_product = $featured_product['name'];
-            $price_featured_product = $featured_product['price'];
-            echo"
-            <a href='ProductDetail2.html'>
-                <div class='.col-3'>
-                    <img src='$featured_products_images[$featured_products_count]'
-                        alt=''>
-                </div>
-                <h4>$name_featured_product</h4>
-                <div class='rating'>
-                    <span class='fa fa-star checked'></span>
-                    <span class='fa fa-star checked'></span>
-                    <span class='fa fa-star checked'></span>
-                    <span class='fa fa-star '></span>
-                    <span class='fa fa-star '></span>
-                </div>
-                <p>$price_featured_product</p>
-            </a> 
-            ";
-            $featured_products_count++;
-            if ($featured_products_count == 2 ) {
-              break;
-            }
->>>>>>> 2f9d74b6f34122576e0d13635a771629a0075e81:ProductBrowser.php
           
        
       }
@@ -201,17 +187,11 @@
       
 
            
+>>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,):ProductBrowser.php
         </div>
         <br><br>
 
-        <div class="page-btn">
-            <a href="index.php">
-                <span>&#8592;</span>
-           
-            <a href="ProductBrowser.html">
-                <span>&#8594;</span>
-            </a>
-        </div>
+       
 
 
     </div>
@@ -257,6 +237,8 @@
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
+        <script src="product.js"></script>
 </body>
 
 </html>

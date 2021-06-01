@@ -23,14 +23,9 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                <?php
-                echo"
-                <a href='/index.php'>
-                <img src='https://i.imgur.com/WnDfSUO.png' alt='Logo' width='65%'>
-                </a>
-                ";
-                
-                ?>
+                    <a href="index.html">
+                        <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
+                    </a>
                 </div>
                 <nav>
                     <input type="checkbox" id="menu-icon">
@@ -43,7 +38,7 @@
                             <a href="AboutUs.html">About us</a>
                         </li>
                         <li>
-                            <a href="MyAccount(logged-in).html">Account</a>
+                            <a href="MyAccount(logged-in).php">Account</a>
                         </li>
                         <li>
                             <a href="Fees.html">Fees</a>
@@ -56,7 +51,7 @@
                             <a href="Contact.html">Contact</a>
                         </li>
                         <li>
-                            <a href="product.php">Product Browser</a>
+                            <a href="ProductBrowser.html">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
@@ -97,25 +92,20 @@
                 <section class="container content-section">
                     <div class="shop-items">
                         <div class="shop-item">
-                            <?php
-                                $product_name=$_GET['name'];
-                                $product_price=$_GET['price'];
-
-                                echo "
-                                    <span id='shop-item-title'><h1><strong> $product_name</strong> </h1></span>  
-                                    <div class='shop-item-details'>
-                                        <span id='shop-item-price'><h4>$product_price</h4></span>
-                                    
-                                        <button class='btn' id='add-button'>ADD TO CART</button>
-                                        <button class='btn' id='buy-button' onclick='window.location.href='order-placement.html''>Buy Now</button><br>
-                                        <span class='amount'><input type='number' value='1'></span>
-                                    </div>
-                                ";
-                            ?>
-                        </div>
-                    </div>
-                </section>
-
+                            <span id="shop-item-title"><h1><strong> MAXI FLORAL DRESS </strong> </h1></span>  
+                            
+                            <div class="shop-item-details">
+                                <span id="shop-item-price"><h4>60.00</h4></span>
+                               
+                                <button class="btn" id="add-button">ADD TO CART</button>
+                                <button class="btn" id="buy-button" onclick="window.location.href='order-placement.html'">Buy Now</button><br>
+                                <span class="amount"><input type="number" value="1"></span>
+                            </div>
+                    </section>
+                
+                
+              
+                
                 <select>
                     <option>Select size</option>
                     <option>XXL</option>
@@ -146,10 +136,10 @@
     <!-- -------title----- -->
     <div class="small-container">
         <div class="row row-2">
-            <a href="product.php">
+            <a href="ProductBrowser.html">
                 <h2 id="recommended-products">Recommended Products</h2>
             </a>
-            <a href="product.php">
+            <a href="ProductBrowser.html">
                 <p id="view-more">View More</p>
             </a>
 
