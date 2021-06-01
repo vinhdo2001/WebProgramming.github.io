@@ -82,6 +82,58 @@
         </div>
 
         <div class="row">
+<<<<<<< HEAD:Product.php
+            <?php displayProduct($sort_products,  $paginationStart, $last_product)?>
+        </div>
+        <div class="page-btn">
+            <?php 
+            if($page == 1){ 
+        ?>
+            <span class="active_pagination"><i class="fa fa-arrow-left"></i></span>
+            <?php
+            } else{
+        ?>
+            <span class="pagination_span"
+                onclick="window.location.href='<?php echo "product.php?sort=".$sort_value."&page=". $prev; ?>'"><i
+                    class="fa fa-arrow-left"></i></span>
+            <?php
+            }
+<<<<<<< HEAD:Product.php
+        ?>
+            <?php for($i = 1; $i <= $totalPages; $i++ ): 
+
+            if($page == $i){
+                ?>
+            <span class="active_pagination" onclick="window.location.href='#'"><?php echo $i; ?></span>
+            <?php
+            } else{
+                ?>
+            <span class="pagination_span"
+                onclick="window.location.href='product.php?sort=<?php echo $sort_value ?>&page=<?php echo $i; ?>'"><?php echo $i; ?></span>
+            <?php
+            }
+        ?>
+            <?php endfor; ?>
+            <?php 
+            if($page >= $totalPages){ 
+        ?>
+            <span class="active_pagination"><i class="fa fa-arrow-right"></i></span>
+            <?php
+            } else{
+        ?>
+            <span class="pagination_span"
+                onclick="window.location.href='<?php echo "product.php?sort=".$sort_value."&page=". $next; ?>'"><i
+                    class="fa fa-arrow-right"></i></span>
+            <?php
+            }
+<<<<<<< HEAD:Product.php
+        ?>
+        </div>
+       
+=======
+=======
+>>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,):ProductBrowser.php
+=======
         
         <?php
         require 'phpForHomepage/store_functions.php';
@@ -120,6 +172,7 @@
             if ($featured_products_count == 2 ) {
               break;
             }
+>>>>>>> 2f9d74b6f34122576e0d13635a771629a0075e81:ProductBrowser.php
           
        
       }
@@ -127,6 +180,20 @@
 
 
     ?>
+<<<<<<< HEAD:Product.php
+=======
+
+
+                
+
+            
+        
+      
+
+           
+        </div>
+        <br><br>
+>>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,):ProductBrowser.php
 
 
                 
