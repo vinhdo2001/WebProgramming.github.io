@@ -19,7 +19,10 @@ function read_all_stores() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 10b292f (Revert "06")
 =======
 >>>>>>> parent of 10b292f (Revert "06")
 function read_all_stores_sorted() {
