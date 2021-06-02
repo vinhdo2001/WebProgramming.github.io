@@ -2,7 +2,7 @@
 require 'phpForHomePage/product_Functions.php';
 function readAllStore() {
   //This function read all the store lines by lines
-  $fileName = 'stores.csv';
+  $fileName = '../csvFile/stores.csv';
   $open = fopen($fileName, 'r');
   $first = fgetcsv($open);
   $stores = [];
@@ -42,7 +42,7 @@ function read_newest_stores() {
   $fp = fopen($file_name, 'r');
   $first = fgetcsv($fp);
   $stores = [];
-  while ($row = fgetcsv($open)) {
+  while ($row = fgetcsv($fp)) {
     $i = 0;
     $store = [];
     foreach ($first as $colName) {
@@ -57,11 +57,11 @@ function read_newest_stores() {
 }
 function readFeaturedStores() {
   //This function read all the featured stores lines by lines
-  $fileName = 'stores.csv';
+  $fileName = '../csvFile/stores.csv';
   $open = fopen($fileName, 'r');
   $first = fgetcsv($open);
   $stores = [];
-  while ($row = fgetcsv($open)) {
+  while ($row = fgetcsv($fp)) {
     $i = 0;
     $store = [];
     foreach ($first as $colName) {

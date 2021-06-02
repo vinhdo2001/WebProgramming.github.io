@@ -1,11 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
     session_start();
 ?>
-<?php include 'deleteInstall.php';
-?>
-<!DOCTYPE html>
-<html lang="en">
-
 
 <head>
     <meta charset="UTF-8">
@@ -42,9 +39,6 @@
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
                         <li>
-                            <a href="order-placement.php">Cart</a>
-                        <li>
-                        <li>
                             <a href="AboutUs.php">About us</a>
                         </li>
                         <li>
@@ -75,10 +69,10 @@
                         Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
                         Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
                     </p>
-                    <a href="product.php" class="btn">Explore now &#8594;</a>
+                    <a href="ProductBrowser.html" class="btn">Explore now &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <a href="order-placement.php"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
+                    <a href="order-placement.html"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
                             alt="ecommerce_Image"></a>
                 </div>
 
@@ -137,7 +131,7 @@
                 $price_new_products=$new_product['price'];
                     echo"
                     <div class='slider-item1'>
-                        <a href='/ProductDetail.php?name={$new_products_name}&price={$price_new_products}'>
+                        <a href='/ProductDetail2.php?name={$new_products_name}&price={$price_new_products}'>
                             <div class='img-div'></div>
                             <h4>$new_products_name </h4>
                             <div class='rating'>
@@ -162,7 +156,7 @@
     </div>
 
 
-    <a href="product.php">
+    <a href="store.html">
         <h2 class="title">Featured Stores</h2>
     </a>
     <div class="row">
@@ -183,7 +177,6 @@
           ];
           $featured_stores_count = 0;
       foreach($featured_stores as $featured_store){
-        $featured_store_id = $featured_store['id'];
         $featured_store_name = $featured_store['name'];
         $featured_store_id = $featured_store['id'];
         
@@ -202,7 +195,7 @@
       }
      ?>
     </div>
-    <a href="product.php">
+    <a href="ProductBrowser.html">
         <h2 class="title">Featured Products</h2>
     </a>
     <div class="row">
@@ -234,7 +227,7 @@
         $name_featured_product = $featured_product['name'];
         $price_featured_product = $featured_product['price'];
         echo"
-        <a href='/ProductDetail.php?name={$name_featured_product}&price={$price_featured_product}'>
+        <a href='/ProductDetail2.php?name={$name_featured_product}&price={$price_featured_product}'>
             <div class='.col-3'>
                 <img src='$featured_products_images[$featured_products_count]'
                     alt=''>
@@ -270,7 +263,7 @@
         <button class="cookie-btn">
             I Understand
         </button>
-        <a href="PrivacyPolicy.php"> Learn more</a>
+        <a href="PrivacyPolicy.html"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
     <!-------footer---->
@@ -282,20 +275,20 @@
                     <img src="productImages/Logo.png" alt="">
                 </div>
                 <div class="footer-col-2">
-                    <a href="ToS.php">
+                    <a href="ToS.html">
                         <p>ToS (Term of Service)</p>
                     </a>
 
                 </div>
                 <div class="footer-col-3">
-                    <a href="PrivacyPolicy.php">
+                    <a href="PrivacyPolicy.html">
                         <p>Privacy Policy</p>
                     </a>
 
                 </div>
 
                 <div class="footer-col-4">
-                    <a href="CopyRight.php">
+                    <a href="CopyRight.html">
                         <p>Copy right 2021</p>
                     </a>
                 </div>
