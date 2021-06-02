@@ -63,11 +63,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                             <a href="ProductBrowser.html">Product Browser</a>
 
                             <a href="product.php">Product Browser</a>
 
+=======
+                            <a href="product.php">Product Browser</a>
+>>>>>>> parent of 19a905d (part 07)
 
 =======
                             <a href="ProductBrowser.html">Product Browser</a>
