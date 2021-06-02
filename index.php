@@ -31,7 +31,6 @@
                 <a href='/index.php'>
                 <img src='https://i.imgur.com/WnDfSUO.png' alt='Logo' width='65%'></img>
                 </a>";
-                
                 ?>
                     
                 </div>
@@ -39,9 +38,9 @@
                     <input type="checkbox" id="menu-icon">
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
-                        <!-- <li>
+                        <li>
                             <a href="order-placement.html">Cart</a>
-                        <li> -->
+                        <li>
                         <li>
                             <a href="AboutUs.html">About us</a>
                         </li>
@@ -59,12 +58,15 @@
                             <a href="Contact.html">Contact</a>
                         </li>
                         <li>
-                        <?php
-                            echo"
-                            <a href='/storeHome.php'> Browse</a>";
-                            
-                        ?>
-                         
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                            <a href="ProductBrowser.html">Product Browser</a>
+
+                            <a href="product.php">Product Browser</a>
+
 
                         </li>
                     </ul>
@@ -78,13 +80,13 @@
                         Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
                         Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
                     </p>
-                    <a href="product.php" class="btn">Explore now &#8594;</a>
+                    <a href="ProductBrowser.html" class="btn">Explore now &#8594;</a>
                 </div>
                 <div class="col-2">
                     <a href="order-placement.html"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
                             alt="ecommerce_Image"></a>
                 </div>
-
+<!-- hello -->
             </div>
         </div>
     </div>
@@ -99,11 +101,10 @@
             // $new_store_names=array();
             $new_store_count=0;
             foreach($new_stores as $new_store){
-                $new_stores_id=$new_store['id'];
                 $new_stores_name=$new_store['name'];
                 echo"
                     <div class='slider-item1'>
-                        <a href='/storeHome.php?id={$new_stores_id}&name={$new_stores_name}'>
+                        <a href=''>
                             <div class='img-div1'></div>
                             <h4>$new_stores_name</h4>
                             <div class='rating'>
@@ -139,7 +140,7 @@
                 $price_new_products=$new_product['price'];
                     echo"
                     <div class='slider-item1'>
-                        <a href='/ProductDetail.php?name={$new_products_name}&price={$price_new_products}'>
+                        <a href='/ProductDetail2.php?name={$new_products_name}&price={$price_new_products}'>
                             <div class='img-div'></div>
                             <h4>$new_products_name </h4>
                             <div class='rating'>
@@ -185,11 +186,10 @@
           ];
           $featured_stores_count = 0;
       foreach($featured_stores as $featured_store){
-        $featured_store_id = $featured_store['id'];
         $featured_store_name = $featured_store['name'];
         
         echo"
-        <a href='/storeHome.php?id={$featured_store_id}&name={$featured_store_name}'>
+        <a href='hnoss.html'>
             <div class='.col-3'>
                 <img src='$featured_stores_images[$featured_stores_count]' alt=''>
             </div>
@@ -203,7 +203,7 @@
       }
      ?>
     </div>
-    <a href="product.php">
+    <a href="ProductBrowser.html">
         <h2 class="title">Featured Products</h2>
     </a>
     <div class="row">
@@ -231,7 +231,7 @@
         $name_featured_product = $featured_product['name'];
         $price_featured_product = $featured_product['price'];
         echo"
-        <a href='/ProductDetail.php?name={$name_featured_product}&price={$price_featured_product}'>
+        <a href='/ProductDetail2.php?name={$name_featured_product}&price={$price_featured_product}'>
             <div class='.col-3'>
                 <img src='$featured_products_images[$featured_products_count]'
                     alt=''>
