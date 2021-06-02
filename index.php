@@ -129,7 +129,7 @@
                 $price_new_products=$new_product['price'];
                     echo"
                     <div class='slider-item1'>
-                        <a href='/ProductDetail.php?name={$new_products_name}&price={$price_new_products}'>
+                        <a href='/ProductDetail.php?id={$new_products_id}&name={$new_products_name}&price={$price_new_products}'>
                             <div class='img-div'></div>
                             <h4>$new_products_name </h4>
                             <div class='rating'>
@@ -225,7 +225,7 @@
         $name_featured_product = $featured_product['name'];
         $price_featured_product = $featured_product['price'];
         echo"
-        <a href='/ProductDetail.php?name={$name_featured_product}&price={$price_featured_product}'>
+        <a href='/ProductDetail.php?id={$id_featured_product}&name={$name_featured_product}&price={$price_featured_product}'>
             <div class='.col-3'>
                 <img src='$featured_products_images[$featured_products_count]'
                     alt=''>
