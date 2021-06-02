@@ -186,11 +186,11 @@ $fileTitle = "Contact Us";
                             $mallID = $mallInfo["id"];
                             echo "<div class='mallCont'>";
                             if($num % 2 == 0){
-                                echo "<a href='sport/index.php?storeID={$mallID}'><img class='mallimg' src='https://product.hstatic.net/1000370106/product/12.1.1_c1b1a19b8a734a2e9a4c365e0a030bb9_master.jpg'></a>";
-                                echo "<a href='sport/index.php?storeID={$mallID}'><h2>{$mallName}</h2></a>";
+                                echo "<a href='/storeHome.php?id={$mallID}&name={$mallName}'><img class='mallimg' src='https://product.hstatic.net/1000370106/product/12.1.1_c1b1a19b8a734a2e9a4c365e0a030bb9_master.jpg'></a>";
+                                echo "<a href='/storeHome.php?id={$mallID}&name={$mallName}'><h2>{$mallName}</h2></a>";
                             }else{
-                                echo "<a href='game/index.php?storeID={$mallID}'><img class='mallimg' src='https://product.hstatic.net/1000370106/product/4.1_7143819b4290477d8d3ab42da4d1602c_master.jpg'></a>";
-                                echo "<a href='game/index.php?storeID={$mallID}'><h2>{$mallName}</h2></a>";
+                                echo "<a href='/storeHome.php?id={$mallID}&name={$mallName}'><img class='mallimg' src='https://product.hstatic.net/1000370106/product/4.1_7143819b4290477d8d3ab42da4d1602c_master.jpg'></a>";
+                                echo "<a href='/storeHome.php?id={$mallID}&name={$mallName}'><h2>{$mallName}</h2></a>";
 
                             }
                             $num ++;
