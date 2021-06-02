@@ -85,9 +85,10 @@ function login($db_fp, $redirect_flag) {
                     $_SESSION['user'] = true;
                     $_SESSION['email'] = $_POST['email'];
                     $_SESSION['role'] = 'user';
-                    $_SESSION['admin'] = true;
                     if ($db_fp === "../csvFile/adminDB.csv") {
                         $_SESSION['role'] = 'admin';
+                        $_SESSION['admin'] = true;
+                        header("Location: AdminProfile.php");
                     }
                     header("Location: MyAccount(logged-in).php");
                 } else {
