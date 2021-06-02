@@ -244,7 +244,7 @@
         </a> 
         ";
         $featured_products_count++;
-        if ($featured_products_count == 12) {
+        if ($featured_products_count == 10) {
           break;
         }
       }
