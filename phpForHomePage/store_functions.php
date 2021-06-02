@@ -17,14 +17,7 @@ function read_all_stores() {
   }
   return $stores;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 10b292f (Revert "06")
-=======
->>>>>>> parent of 10b292f (Revert "06")
+
 function read_all_stores_sorted() {
   $file_name = '../csvFile/stores.csv';
   $fp = fopen($file_name, 'r');
@@ -42,7 +35,7 @@ function read_all_stores_sorted() {
   sort($stores);
   return $stores;
 }
->>>>>>> parent of 10b292f (Revert "06")
+
 
 // function timecomp($a,$b){
 //   return strtotime($b['created_time'])-strtotime($a['created_time']);
