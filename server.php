@@ -85,7 +85,7 @@ function login($db_fp, $redirect_flag) {
                     $_SESSION['user'] = true;
                     $_SESSION['email'] = $_POST['email'];
                     $_SESSION['role'] = 'user';
-                    if ($db_fp === "adminDB.csv") {
+                    if ($db_fp === "../csvFile/adminDB.csv") {
                         $_SESSION['role'] = 'admin';
                     }
                     header("Location: MyAccount(logged-in).php");
@@ -122,9 +122,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Login request
         if (!empty($_POST['email']) && !empty($_POST['password'])) {
             // Login
-            $found_as_admin = login("adminDB.csv", false);
+            $found_as_admin = login("../csvFile/adminDB.csv", false);
             if (!$found_as_admin) {
-                login("userDB.csv", true);
+                login("../csvFile/userDB.csv", true);
             }
         }
     } else if ($REQ_TYPE == 1) {
@@ -214,12 +214,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $has_error = true;
         }
         // Checks if email and phone are unique
-        if (!email_unique($email, "userDB.csv") || !email_unique($email, "adminDB.csv")) {
+        if (!email_unique($email, "../csvFile/userDB.csv") || !email_unique($email, "../csvFile/adminDB.csv")) {
             // error
             $_SESSION['email_used'] = true;
             $has_error = true;
         } 
-        if (!phone_unique($phone, "userDB.csv") || !phone_unique($phone, "adminDB.csv")) {
+        if (!phone_unique($phone, "../csvFile/userDB.csv") || !phone_unique($phone, "../csvFile/adminDB.csv")) {
             // error
             $_SESSION['phone_used'] = true;
             $has_error = true;
@@ -233,10 +233,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: Register.php");
         } else {
             // is unique
-            $file = fopen('userDB.csv', 'a');    // Append to database if csv exists
+            $file = fopen('../csvFile/userDB.csv', 'a');    // Append to database if csv exists
             flock($file, LOCK_EX);
-            if(!file_exists("userDB.csv")) {
-                $file = fopen('userDB.csv', 'w');   // Write to file if database does not exist
+            if(!file_exists("../csvFile/userDB.csv")) {
+                $file = fopen('../csvFile/userDB.csv', 'w');   // Write to file if database does not exist
             }
             // Saves user to csv file
             fputcsv($file, array($email, $phone, $password, $conpassword, $firstName, $lastName, 
@@ -260,10 +260,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             //error
             $_SESSION['conpassword'] = true;
         } else {            
-            $file = fopen('adminDB.csv', 'a');    // Append to database if csv exists
+            $file = fopen('../csvFile/adminDB.csv', 'a');    // Append to database if csv exists
             flock($file, LOCK_EX);
-            if(!file_exists("adminDB.csv")) {
-                $file = fopen('adminDB.csv', 'w');   // Write to file if database does not exist
+            if(!file_exists("../csvFile/adminDB.csv")) {
+                $file = fopen('../csvFile/adminDB.csv', 'w');   // Write to file if database does not exist
             }
             // Saves user to csv file
             fputcsv($file, array($email, $password, $conpassword));

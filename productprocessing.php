@@ -89,10 +89,10 @@ for ($i=0; $i < count($sort_products); $i++) {
                 $img ="https://i.imgur.com/o5y2seC.png";
             }
             if($i%2 == 0){
-                $link ="ProductDetails.html";
+                $link ="ProductDetails.php";
             }
             else{
-                $link ="ProductDetail2.html";
+                $link ="ProductDetails.php";
             }
             echo '<div class="col-product-4">
             <a href=<' .$link.'?>>

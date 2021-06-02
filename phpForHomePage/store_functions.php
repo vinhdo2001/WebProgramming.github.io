@@ -1,16 +1,16 @@
 <?php
-require 'product_functions.php';
-
-function read_all_stores() {
-  $file_name = '../csvFile/stores.csv';
-  $fp = fopen($file_name, 'r');
-  $first = fgetcsv($fp);
+require 'phpForHomePage/product_Functions.php';
+function readAllStore() {
+  //This function read all the store lines by lines
+  $fileName = 'stores.csv';
+  $open = fopen($fileName, 'r');
+  $first = fgetcsv($open);
   $stores = [];
-  while ($row = fgetcsv($fp)) {
+  while ($row = fgetcsv($open)) {
     $i = 0;
     $store = [];
-    foreach ($first as $col_name) {
-      $store[$col_name] =  $row[$i];
+    foreach ($first as $colName) {
+      $store[$colName] =  $row[$i];
       $i++;
     }
     $stores[] = $store;
@@ -18,19 +18,17 @@ function read_all_stores() {
   return $stores;
 }
 
-// function timecomp($a,$b){
-//   return strtotime($b['created_time'])-strtotime($a['created_time']);
-// }
-function read_newest_stores() {
-  $file_name = '../csvFile/stores.csv';
-  $fp = fopen($file_name, 'r');
-  $first = fgetcsv($fp);
+function readNewestStore() {
+  //This function read all the newest stores lines by lines
+  $fileName = 'stores.csv';
+  $open = fopen($fileName, 'r');
+  $first = fgetcsv($open);
   $stores = [];
-  while ($row = fgetcsv($fp)) {
+  while ($row = fgetcsv($open)) {
     $i = 0;
     $store = [];
-    foreach ($first as $col_name) {
-      $store[$col_name] =  $row[$i];
+    foreach ($first as $colName) {
+      $store[$colName] =  $row[$i];
       $i++;
     }
     $stores[] = $store;
@@ -39,16 +37,17 @@ function read_newest_stores() {
   return $stores;
 
 }
-function read_featured_stores() {
-  $file_name = '../csvFile/stores.csv';
-  $fp = fopen($file_name, 'r');
-  $first = fgetcsv($fp);
+function readFeaturedStores() {
+  //This function read all the featured stores lines by lines
+  $fileName = 'stores.csv';
+  $open = fopen($fileName, 'r');
+  $first = fgetcsv($open);
   $stores = [];
-  while ($row = fgetcsv($fp)) {
+  while ($row = fgetcsv($open)) {
     $i = 0;
     $store = [];
-    foreach ($first as $col_name) {
-      $store[$col_name] =  $row[$i];
+    foreach ($first as $colName) {
+      $store[$colName] =  $row[$i];
       $i++;
     }
     if ($store['featured']=="TRUE"){
@@ -59,10 +58,11 @@ function read_featured_stores() {
 }
 
 
-function get_store($store_id) {
-  $stores = read_all_stores();
+function getStore($storeID) {
+  //Get the a store ID for testing
+  $stores = readAllStore();
   foreach ($stores as $p) {
-    if ($p['id'] == $store_id) {
+    if ($p['id'] == $storeID) {
       return $p;
     }
   }
