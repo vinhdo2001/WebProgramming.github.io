@@ -88,7 +88,7 @@ function login($db_fp, $redirect_flag) {
                     if ($db_fp === "../csvFile/adminDB.csv") {
                         $_SESSION['role'] = 'admin';
                         $_SESSION['admin'] = true;
-                        header("Location: AdminProfile.php");
+                        header("Location: Dashboard.php");
                     }
                     header("Location: MyAccount(logged-in).php");
                 } else {
@@ -273,7 +273,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             fclose($file);
             // Registration finishes -> redirects to login page
             // header("Location: http://localhost:4000/asd.php");
-            header("Location: AdminProfile.php");
+            header("Location: Dashboard.php");
         }   
     }
     else if ($REQ_TYPE == 4) {

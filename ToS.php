@@ -67,6 +67,8 @@
 					Terms of Service
 				</div>
 				<div class="panel-body">
+
+                
                     <?php 
                     if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
                         echo '<form  method = "post" >';
@@ -92,7 +94,11 @@
                     <button name="submitData" style="color: blue;padding: 5px;padding-left: 15px;padding-right: 15px;margin-top: 20px;">Update</button>
                     
                 </form>';
-                    } else {
+                    } 
+                    else if(isset($_SESSION['user']) && $_SESSION['user'] == true){
+                        $path = "ToS.txt";
+                    $file= file_get_contents($path);
+                    $content = explode(" - ", $file);
                         echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px; width: 100%">'.$content[0].'</p>';
                     }
                     ?>
