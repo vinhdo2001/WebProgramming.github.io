@@ -102,7 +102,7 @@
                         <?php 
                         $product_name=$_GET['name'];
                         $product_id=$_GET['id'];
-                        <span id="product-name"><h1><strong> $product_name </strong> </h1></span>  
+                        echo "<span id='product-name'><h1><strong> $product_name </strong> </h1></span>";
                         ?>
                             
                             <div class="shop-item-details">
