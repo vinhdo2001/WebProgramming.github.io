@@ -215,6 +215,8 @@
         'https://product.hstatic.net/1000370106/product/18.1_f6ff8ba828ab4f13a86b4fb1b31081b3_master.jpg',
         'https://product.hstatic.net/1000370106/product/19.1_f07eeeae858845a38a37873ee317fda1_master.jpg',
         'https://product.hstatic.net/1000370106/product/12.1.1_82a94763da854f5bb10c2014c823b9ab_master.jpg',
+        'http://www.simpleimageresizer.com/_uploads/photos/82a3d6fe/Screen_Shot_2021-05-31_at_10.50.55_50.png',
+
 
       ];
       $featured_products_count = 0;
