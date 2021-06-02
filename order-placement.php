@@ -168,6 +168,7 @@
             
             <br><br>
             <button class="btn" onclick=" <?php order_function() ?>"> </button>
+            <br><br>
             <div class="btn"><a href="product.php">Continue Shopping &#8594;</a></div>
             
         </div>
