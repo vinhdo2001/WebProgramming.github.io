@@ -105,7 +105,6 @@
              $product_price = $product['price'];
              $store=$product['store_id'];
              if ($store==$store_id){
-
                  echo"
                  <div class='.col-3'>
                  <img src='$product_images[$count]'
