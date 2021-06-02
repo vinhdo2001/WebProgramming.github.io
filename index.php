@@ -59,21 +59,12 @@
                             <a href="Contact.html">Contact</a>
                         </li>
                         <li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                             <a href="ProductBrowser.html">Product Browser</a>
-=======
-=======
->>>>>>> parent of 19a905d (part 07)
-=======
->>>>>>> parent of 19a905d (part 07)
-=======
->>>>>>> parent of 19a905d (part 07)
+
                             <a href="product.php">Product Browser</a>
 
->>>>>>> parent of 19a905d (part 07)
+
                         </li>
                     </ul>
                 </nav>

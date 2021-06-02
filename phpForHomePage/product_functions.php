@@ -1,7 +1,7 @@
 <?php
 
 function read_all_products() {
-  $file_name = '../csvfile/products.csv';
+  $file_name = 'products.csv';
   $fp = fopen($file_name, 'r');
   $first = fgetcsv($fp);
   $products = [];
@@ -19,7 +19,7 @@ function read_all_products() {
 
 
 function read_newest_products() {
-  $file_name = '../csvfile/products.csv';
+  $file_name = 'products.csv';
   $fp = fopen($file_name, 'r');
   $first = fgetcsv($fp);
   $products = [];
@@ -38,7 +38,7 @@ function read_newest_products() {
 
 }
 function read_featured_products() {
-  $file_name = '../csvfile/products.csv';
+  $file_name = 'products.csv';
   $fp = fopen($file_name, 'r');
   $first = fgetcsv($fp);
   $products = [];
