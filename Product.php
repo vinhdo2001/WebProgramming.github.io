@@ -1,5 +1,18 @@
 <?php
 session_start();
+$counter = 1;
+$featured_store_products = [];
+$new_arrivals = ["", "", "", "",""];
+$all_products = getAllProducts($_SESSION["storeID"]);
+$storeName = getStoreName($_SESSION["storeID"]);
+$number_of_products = count($all_products);
+get_new_arrivals($all_products, $number_of_products);
+foreach ($all_products as $product) {
+    $data = explode(",",$product);
+    if(trim($data[6]) == "TRUE"){
+        array_push($featured_store_products, $product);
+    }
+}
 require "productprocessing.php";
 $all_products = getAllProducts($_SESSION["storeID"]);
 $number_of_products = count($all_products);

@@ -172,11 +172,11 @@ $fileTitle = "Contact Us";
                             $mallID = $mallInfo["id"];
                             echo "<div class='mallCont'>";
                             if($num % 2 == 0){
-                                echo "<a href='sport/index.php?storeID={$mallID}'><img class='mallimg' src='https://i.imgur.com/eNzg9Tj.png'></a>";
-                                echo "<a href='sport/index.php?storeID={$mallID}'><h2>{$mallName}</h2></a>";
+                                echo "<a href='index.php?storeID={$mallID}'><img class='mallimg' src='https://i.imgur.com/eNzg9Tj.png'></a>";
+                                echo "<a href='index.php?storeID={$mallID}'><h2>{$mallName}</h2></a>";
                             }else{
-                                echo "<a href='game/index.php?storeID={$mallID}'><img class='mallimg' src='https://i.imgur.com/X3TOrCf.png'></a>";
-                                echo "<a href='game/index.php?storeID={$mallID}'><h2>{$mallName}</h2></a>";
+                                echo "<a href='index.php?storeID={$mallID}'><img class='mallimg' src='https://i.imgur.com/X3TOrCf.png'></a>";
+                                echo "<a href='index.php?storeID={$mallID}'><h2>{$mallName}</h2></a>";
 
                             }
                             $num ++;
