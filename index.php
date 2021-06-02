@@ -96,7 +96,7 @@
                 $new_stores_name=$new_store['name'];
                 echo"
                     <div class='slider-item1'>
-                        <a href='/storeHome.php?id={$new_stores_id}&name={$new_stores_name}''>
+                        <a href='/storeHome.php?id={$new_stores_id}&name={$new_stores_name}'>
                             <div class='img-div1'></div>
                             <h4>$new_stores_name</h4>
                             <div class='rating'>
@@ -180,9 +180,10 @@
           $featured_stores_count = 0;
       foreach($featured_stores as $featured_store){
         $featured_store_name = $featured_store['name'];
+        $featured_store_id = $featured_store['id'];
         
         echo"
-        <a href='hnoss.html'>
+        <a href='/storeHome.php?id={$featured_store_id}&name={$featured_store_name}'>
             <div class='.col-3'>
                 <img src='$featured_stores_images[$featured_stores_count]' alt=''>
             </div>
