@@ -19,7 +19,46 @@
 </head>
 
 <body>
-    
+<div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
+                    </a>
+                </div>
+                <nav>
+                    <input type="checkbox" id="menu-icon">
+                    <label for="menu-icon">Menu</label>
+                    <ul id="MenuItems">
+                        <li><img src="https://i.imgur.com/vPyCGZZ.png" width="30px" height="30px" alt=""></li>
+                        <li>
+                            <a href="AboutUs.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="MyAccount(logged-in).php">Account</a>
+                        </li>
+                        <li>
+                            <a href="Fees.html">Fees</a>
+                        </li>
+
+                        <li>
+                            <a href="FAQs.html">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="Contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="ProductBrowser.html">Product Browser</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- <img src="https://i.imgur.com/vPyCGZZ.png" width="30px" height="30px" alt=""> -->
+                <!-- <img src="https://i.imgur.com/OA07E9Y.png" class="menu-icon"> -->
+
+            </div>
+        </div>
+    </div>
 
     <div class="panel-wrapper">
 				<div class="panel-head">
@@ -41,7 +80,7 @@
                     $path = "ToS.txt";
                     $file= file_get_contents($path);
                     $content = explode(" - ", $file);
-                    echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px;">'.$content[0].'</p>'
+                    echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px; width: 100%">'.$content[0].'</p>'
                         ;
                     ?>
                     <textarea  name="text" style="margin-top:20px;display:none" class="text" cols="40" rows="10" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ducimus odio porro perspiciatis. Eligendi quae iste mollitia est, rerum dolorem veritatis sint, culpa totam quam voluptates vero maxime. Libero, dolore.</textarea>
