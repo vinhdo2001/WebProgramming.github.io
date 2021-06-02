@@ -21,7 +21,7 @@ function timecomp($a,$b){
   return strtotime($b['created_time'])-strtotime($a['created_time']);
 }
 function read_newest_products() {
-  $file_name = '../csv/products.csv';
+  $file_name = '../csvfile/products.csv';
   $fp = fopen($file_name, 'r');
   $first = fgetcsv($fp);
   $products = [];
