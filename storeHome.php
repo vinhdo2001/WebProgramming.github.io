@@ -129,10 +129,11 @@
                  echo"
                  <div class=''mallDiv''>
                  <div class='mallCont'>
-                 <img src='$product_images[$count]'
-                     alt='' class='product-img'>
+                 
                  
                  <a href='/ProductDetail.php?id={$product_id}&name={$product_name}&price={$product_price}'>
+                 <img src='$product_images[$count]'
+                     alt='' class='product-img'>
                      <h4>$product_name </h4>
                      <div class='rating'>
                          <span class='fa fa-star checked'></span>
