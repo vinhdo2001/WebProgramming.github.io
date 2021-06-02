@@ -196,6 +196,19 @@ $fileTitle = "Contact Us";
           
 ?>
 </main>
+<div class="cookie-container">
+        <h2>I use cookies</h2>
+        <p>
+            My website uses cookies necessary for its basic functioning.
+            By continuing browsing, you consent to my use of cookies
+            and other technologies.
+        </p>
+        <button class="cookie-btn">
+            I Understand
+        </button>
+        <a href="PrivacyPolicy.html"> Learn more</a>
+    </div>
+    <script src="Vinh's/cookie.js"></script>
 <div class="footer">
         <div class="container">
             <div class="row">
