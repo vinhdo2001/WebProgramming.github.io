@@ -39,9 +39,6 @@
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
                         <li>
-                            <a href="order-placement.html">Cart</a>
-                        <li>
-                        <li>
                             <a href="AboutUs.html">About us</a>
                         </li>
                         <li>
@@ -57,7 +54,8 @@
                         <li>
                             <a href="Contact.html">Contact</a>
                         </li>
-                            <a href="ProductBrowser.html">Browser</a>
+                        <li>
+                            <a href="ProductBrowser.html">Browse</a>
 
                         </li>
                     </ul>
