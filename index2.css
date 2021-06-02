@@ -262,7 +262,12 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     margin: 10% 10% 10% 10%;
+    /* margin-left: 5%; */
 }
+.mallCont{
+    margin-left: 4%;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .footer-col-1 {
         width: 100%;
