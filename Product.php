@@ -63,23 +63,23 @@ else{
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
                         <li>
-                            <a href="order-placement.html">Cart</a>
+                            <a href="order-placement.php">Cart</a>
                         <li>
                         <li>
-                            <a href="AboutUs.html">About us</a>
+                            <a href="AboutUs.php">About us</a>
                         </li>
                         <li>
-                            <a href="MyAccount(logged-in).html">Account</a>
+                            <a href="MyAccount(logged-in).php">Account</a>
                         </li>
                         <li>
-                            <a href="Fees.html">Fees</a>
+                            <a href="Fees.php">Fees</a>
                         </li>
 
                         <li>
-                            <a href="FAQs.html">FAQs</a>
+                            <a href="FAQs.php">FAQs</a>
                         </li>
                         <li>
-                            <a href="Contact.html">Contact</a>
+                            <a href="Contact.php">Contact</a>
                         </li>
                         <li>
                             <a href="product.php">Product Browser</a>
@@ -205,7 +205,7 @@ else{
         <button class="cookie-btn">
             I Understand 
         </button>
-        <a href="PrivacyPolicy.html"> Learn more</a>
+        <a href="PrivacyPolicy.php"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
     <!-------footer---->
@@ -217,20 +217,20 @@ else{
                     <img src="productImages/Logo.png" alt="">
                 </div>
                 <div class="footer-col-2">
-                    <a href="ToS.html">
+                    <a href="ToS.php">
                         <p>ToS (Term of Service)</p>
                     </a>
 
                 </div>
                 <div class="footer-col-3">
-                    <a href="PrivacyPolicy.html">
+                    <a href="PrivacyPolicy.php">
                         <p>Privacy Policy</p>
                     </a>
 
                 </div>
 
                 <div class="footer-col-4">
-                    <a href="CopyRight.html">
+                    <a href="CopyRight.php">
                         <p>Copy right 2021</p>
                     </a>
                 </div>
