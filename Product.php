@@ -144,10 +144,10 @@ else{
                                 $img ="https://i.imgur.com/X3TOrCf.png";
                             }
                             if($i%2 == 0){
-                                $link ="productdetail.php";
+                                $link ="productdetails.php";
                             }
                             else{
-                                $link ="productdetail.php";
+                                $link ="productdetails.php";
                             }
             ?>
             
