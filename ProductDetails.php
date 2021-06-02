@@ -25,9 +25,14 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.php">
-                        <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
-                    </a>
+                <?php
+                echo"
+                <a href='/index.php'>
+                <img src='https://i.imgur.com/WnDfSUO.png' alt='Logo' width='65%'>
+                </a>
+                ";
+                
+                ?>
                 </div>
                 <nav>
                     <input type="checkbox" id="menu-icon">
@@ -59,7 +64,6 @@
                 </nav>
 
             </div>
-
         </div>
     </div>
     </div>
@@ -67,24 +71,24 @@
     <div class="small-container single-product">
         <div class="row">
             <div class="col-2">
-                <img src="https://product.hstatic.net/200000000131/product/xanh-nhat-2_aff2a13a0d4f430f80556527ff49da42_master.jpg"
+                <img src="https://product.hstatic.net/200000000131/product/hong-bong-tim-1_2b9574b156aa4450a7e3780917ad7217_master.jpg"
                     id="ProductImg" alt="" width="100%">
                 <div class="small-img-row">
                     <div class="small-img-col">
-                        <img src="https://product.hstatic.net/200000000131/product/xanh-nhat-1_30a23f5ae67a44d6a19559d66094f4e3_master.jpg"
+                        <img src="https://product.hstatic.net/200000000131/product/hong-bong-tim-4_79fa8a336d1b40dcad4eabb1dc42b3f0_master.jpg"
                             alt="" width="100%">
                     </div>
                     <div class="small-img-col">
-                        <img src="https://product.hstatic.net/200000000131/product/xanh-nhat-4_86e05054aacc436fa4f7d155bf502197_master.jpg"
+                        <img src="https://product.hstatic.net/200000000131/product/hong-bong-tim-2_f2e22af71467428e9900189670104aef_master.jpg"
                             alt="" width="100%">
                     </div>
                     <div class="small-img-col">
-                        <img src="https://product.hstatic.net/200000000131/product/xanh-nhat-3_c4e92926de70412a9778f3142ab44c31_master.jpg"
+                        <img src="https://product.hstatic.net/200000000131/product/hong-bong-tim-3_d4a2b74cdd1543439d26a90aac2b76e0_master.jpg"
                             alt="" width="100%">
 
                     </div>
                     <div class="small-img-col">
-                        <img src="https://product.hstatic.net/200000000131/product/xanh-nhat-2_aff2a13a0d4f430f80556527ff49da42_master.jpg"
+                        <img src="https://product.hstatic.net/200000000131/product/hong-bong-tim-4_79fa8a336d1b40dcad4eabb1dc42b3f0_master.jpg"
                             alt="" width="100%">
 
                     </div>
@@ -95,18 +99,19 @@
                 <section class="container content-section">
                     <div class="shop-items">
                         <div class="shop-item">
-                            <span id="product-name"><h1><strong> SHORT HAND CROP LINEN SEMI</strong> </h1></strong> </h1></span>  
+                            <span id="product-name"><h1><strong> MAXI FLORAL DRESS </strong> </h1></span>  
                             
                             <div class="shop-item-details">
-                                <span id="product-price"><h4>50.00</h4></span>
+                                <span id="product-price"><h4>60.00</h4></span>
                                
                                 <button class="btn" id="add-button">ADD TO CART</button>
                                 <button class="btn" id="buy-button" onclick="window.location.href='order-placement.php'">Buy Now</button><br>
-                                
-                                <span class="quantity"><input id="quantity" type="text" value="1"></span>
+                                <span class="quantity"><input type="number" value="1"></span>
                             </div>
                     </section>
                 
+                
+              
                 
                 <select>
                     <option>Select size</option>
@@ -115,25 +120,23 @@
                     <option>M</option>
                     <option>S</option>
                 </select>
-                <!-- <input type="number" value="1"> -->
- 
+                
+                
                 <h3>Description:</h3>
                 <p>
+                    Characteristics: Feminine - Young - Sexy.
 
-                    Characteristics: Dynamic - Youthful - Modern.
+                    Category: Travel clothing, picnic, streetwear, party.
 
-                    Category: Streetwear.
+                    Size: S / M /L.
 
-                    Size: S / M / L.
+                    Material: Chiffon Chiffon.
 
-                    Material: Synthetic linen.
+                    Color: Pink purple cotton.
 
-                    Color: Nude - Black - Light Blue - Pink.
+                    Note: Low temperature iron, light wash.
 
-                    Note: Light wash, do not soak.
-
-                    Female sample measurements: Height: 168 cm. Measurements 3 rounds: 83 - 59 - 86 (Wear size S).
-                </p>
+                    s </p>
             </div>
         </div>
     </div>
@@ -170,7 +173,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="ProductDetails.php">
+                <a href="ProductDetail2.php">
                     <img src="https://product.hstatic.net/200000000131/product/xanh-2_7df0965bbe41413c8d88ffbca01346c0_master.jpg"
                         alt="product Image">
                 </a>
@@ -200,7 +203,7 @@
                 <p>$50.00</p>
             </div>
             <div class="col-4">
-                <a href="ProductDetails.php">
+                <a href="ProductDetail2.php">
                     <img src="https://product.hstatic.net/200000000131/product/xanh-oliu-4_ddacd30bf8c34e56ae1bbd965b14f1f9_master.jpg"
                         alt="product Image">
                 </a>
@@ -259,5 +262,6 @@
         </div>
     </div>
 </body>
+<script src="testing.js"></script>
 
 </html>
