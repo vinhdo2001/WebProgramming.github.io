@@ -53,7 +53,12 @@
                              <a href="Contact.html">Contact</a>
                          </li>
                          <li>
-                             <a href="ProductBrowser.html">Product Browser</a>
+                         <?php
+                            echo"
+                            <a href='/storeHome.php'>
+                            Browser
+                            </a>";
+                            ?>t
                          </li>
                      </ul>
                  </nav>
