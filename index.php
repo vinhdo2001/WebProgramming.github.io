@@ -60,12 +60,16 @@
                         </li>
                         <li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                             <a href="ProductBrowser.html">Product Browser</a>
 
                             <a href="product.php">Product Browser</a>
 
 
+=======
+                            <a href="ProductBrowser.html">Product Browser</a>
+>>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,)
 =======
                             <a href="ProductBrowser.html">Product Browser</a>
 >>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,)
