@@ -14,7 +14,7 @@ $totalPages = ceil($allRecrods / $limit);
 // Prev + Next
 $prev = $page - 1;
 $next = $page + 1;
-$path = "products.csv";
+$path = "../csvfile/products.csv";
 $last_product = $paginationStart + $limit;
 $sort_value = 1;
 if(isset($_GET['sort'])){
