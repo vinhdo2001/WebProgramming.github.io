@@ -67,25 +67,19 @@
 					Terms of Service
 				</div>
 				<div class="panel-body">
-                <form  method = "post" >
-                <?php
-                    if(isset($_POST['submitData'])){
-                        $content1 = $_POST['text'];
+                    <?php 
+                    if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
+                        echo '<form  method = "post" >';
+                        if(isset($_POST['submitData'])){
+                            $content1 = $_POST['text'];
+                            $path = "ToS.txt";
+                            file_put_contents($path,$content1);
+                        }
                         $path = "ToS.txt";
-                        file_put_contents($path,$content1);
-                    }
-                    ?>
-                    
-                    <br>
-                    
-                    <?php
-                    $path = "ToS.txt";
                     $file= file_get_contents($path);
                     $content = explode(" - ", $file);
-                    echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px; width: 100%">'.$content[0].'</p>'
-                        ;
-                    ?>
-                    <textarea  name="text" style="margin-top:20px;display:none" class="text" cols="40" rows="10" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ducimus odio porro perspiciatis. Eligendi quae iste mollitia est, rerum dolorem veritatis sint, culpa totam quam voluptates vero maxime. Libero, dolore.</textarea>
+                    echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px; width: 100%">'.$content[0].'</p>';
+                    echo '<textarea  name="text" style="margin-top:20px;display:none" class="text" cols="40" rows="10" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ducimus odio porro perspiciatis. Eligendi quae iste mollitia est, rerum dolorem veritatis sint, culpa totam quam voluptates vero maxime. Libero, dolore.</textarea>
                     <br>
                     
                     <p style="cursor: pointer;
@@ -97,7 +91,20 @@
                     </p>
                     <button name="submitData" style="color: blue;padding: 5px;padding-left: 15px;padding-right: 15px;margin-top: 20px;">Update</button>
                     
-                </form>
+                </form>';
+                    } else {
+                        echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px; width: 100%">'.$content[0].'</p>';
+                    }
+                    ?>
+                <?php
+                    
+                    ?>
+                    
+                    <br>
+                    
+                    <?php
+                    ?>
+                    
                 </div>
             </div>
     
