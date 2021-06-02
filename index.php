@@ -205,7 +205,7 @@
     $featured_products_names=array();
     $featured_products= read_featured_products();
     $featured_products_images= [
-        'http://www.simpleimageresizer.com/_uploads/photos/82a3d6fe/Screen_Shot_2021-05-31_at_10.50.55_50.png',
+        
         'https://product.hstatic.net/1000370106/product/12.1.1_c1b1a19b8a734a2e9a4c365e0a030bb9_master.jpg',
         'https://product.hstatic.net/1000370106/product/4.1_7143819b4290477d8d3ab42da4d1602c_master.jpg',
         'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
@@ -215,11 +215,13 @@
         'https://product.hstatic.net/1000370106/product/18.1_f6ff8ba828ab4f13a86b4fb1b31081b3_master.jpg',
         'https://product.hstatic.net/1000370106/product/19.1_f07eeeae858845a38a37873ee317fda1_master.jpg',
         'https://product.hstatic.net/1000370106/product/12.1.1_82a94763da854f5bb10c2014c823b9ab_master.jpg',
-        'http://www.simpleimageresizer.com/_uploads/photos/82a3d6fe/Screen_Shot_2021-05-31_at_10.50.55_50.png',
+        'https://product.hstatic.net/1000370106/product/12.1.1_c1b1a19b8a734a2e9a4c365e0a030bb9_master.jpg',
+        'https://product.hstatic.net/1000370106/product/4.1_7143819b4290477d8d3ab42da4d1602c_master.jpg',
+        
 
 
       ];
-      $featured_products_count = 0;
+      $featured_products_count = 1;
       foreach($featured_products as $featured_product){
         $id_featured_product = $featured_product['id'];
         $name_featured_product = $featured_product['name'];
@@ -242,7 +244,7 @@
         </a> 
         ";
         $featured_products_count++;
-        if ($featured_products_count == 10) {
+        if ($featured_products_count == 11) {
           break;
         }
       }
