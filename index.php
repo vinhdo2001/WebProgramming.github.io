@@ -77,7 +77,7 @@
                     <a href="order-placement.html"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
                             alt="ecommerce_Image"></a>
                 </div>
-<!-- hello -->
+
             </div>
         </div>
     </div>
@@ -123,7 +123,7 @@
     <div class="slider-wrap">
         <div class="slider">
             <?php
-            require_once 'phpForHomepage/product_functions.php';
+            // require_once 'phpForHomepage/product_functions.php';
             $new_products=read_newest_products();
             $new_product_count=0;
             foreach($new_products as $new_product){
@@ -189,9 +189,9 @@
         </a>
         ";
         $featured_stores_count++;
-        // if ($featured_stores_count == 10) {
-        //   break;
-        // }
+        if ($featured_stores_count == 10) {
+          break;
+        }
       }
      ?>
     </div>
@@ -200,7 +200,7 @@
     </a>
     <div class="row">
     <?php
-        require_once 'phpForHomepage/product_functions.php';
+        // require_once 'phpForHomepage/product_functions.php';
 
     $featured_products_names=array();
     $featured_products= read_featured_products();
