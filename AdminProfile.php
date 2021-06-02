@@ -84,7 +84,7 @@ session_start();
         <div class="userInfo">
             <p> <b>
                 <?php  
-                if(isset($_SESSION['user']) && $_SESSION['user'] == true){
+                if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
                     echo '    <h2 class="h2">
                     Personal Information</h2>';
                     echo $_SESSION["email"];  

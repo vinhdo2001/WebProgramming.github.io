@@ -1,11 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
     session_start();
 ?>
-<?php include 'deleteInstall.php';
-?>
-<!DOCTYPE html>
-<html lang="en">
-
 
 <head>
     <meta charset="UTF-8">
@@ -34,7 +31,6 @@
                 <a href='/index.php'>
                 <img src='https://i.imgur.com/WnDfSUO.png' alt='Logo' width='65%'></img>
                 </a>";
-                
                 ?>
                     
                 </div>
@@ -42,9 +38,6 @@
                     <input type="checkbox" id="menu-icon">
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
-                        <li>
-                            <a href="order-placement.php">Cart</a>
-                        <li>
                         <li>
                             <a href="AboutUs.php">About us</a>
                         </li>
@@ -62,11 +55,8 @@
                             <a href="Contact.php">Contact</a>
                         </li>
                         <li>
-                        <?php
-                            echo"
-                            <a href='/storeHome.php'> Browse</a>";
-                            
-                        ?>
+                            <a href="browseproducts.php">Browse</a>
+
                         </li>
                     </ul>
                 </nav>
@@ -79,17 +69,17 @@
                         Earum laudantium doloribus aliquam alias tempore, neque obcaecati qui dignissimos doloremque!
                         Exercitationem ducimus doloribus voluptate odit atque sit perferendis blanditiis repellat ipsam.
                     </p>
-                    <a href="product.php" class="btn">Explore now &#8594;</a>
+                    <a href="ProductBrowser.html" class="btn">Explore now &#8594;</a>
                 </div>
                 <div class="col-2">
-                    <a href="order-placement.php"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
+                    <a href="order-placement.html"><img src="productImages/ecommerce_Image.png" id="ecommerce_Image"
                             alt="ecommerce_Image"></a>
                 </div>
 
             </div>
         </div>
     </div>
-    <a href="product.php">
+    <a href="browseproducts.php">
         <h2 class="title">New Stores</h2>
     </a>
     <div class="slider-wrap1">
@@ -128,10 +118,11 @@
     <a href="product.php">
         <h2 class="title">New Products</h2>
     </a>
+    
     <div class="slider-wrap">
         <div class="slider">
             <?php
-            require_once 'phpForHomepage/product_functions.php';
+            // require_once 'phpForHomepage/product_functions.php';
             $new_products=read_newest_products();
             $new_product_count=0;
             foreach($new_products as $new_product){
@@ -140,7 +131,7 @@
                 $price_new_products=$new_product['price'];
                     echo"
                     <div class='slider-item1'>
-                        <a href='/ProductDetail.php?name={$new_products_name}&price={$price_new_products}'>
+                        <a href='/ProductDetail2.php?name={$new_products_name}&price={$price_new_products}'>
                             <div class='img-div'></div>
                             <h4>$new_products_name </h4>
                             <div class='rating'>
@@ -165,7 +156,7 @@
     </div>
 
 
-    <a href="product.php">
+    <a href="store.html">
         <h2 class="title">Featured Stores</h2>
     </a>
     <div class="row">
@@ -186,8 +177,8 @@
           ];
           $featured_stores_count = 0;
       foreach($featured_stores as $featured_store){
-        $featured_store_id = $featured_store['id'];
         $featured_store_name = $featured_store['name'];
+        $featured_store_id = $featured_store['id'];
         
         echo"
         <a href='/storeHome.php?id={$featured_store_id}&name={$featured_store_name}'>
@@ -198,23 +189,23 @@
         </a>
         ";
         $featured_stores_count++;
-        // if ($featured_stores_count == 10) {
-        //   break;
-        // }
+        if ($featured_stores_count == 10) {
+          break;
+        }
       }
      ?>
     </div>
-    <a href="product.php">
+    <a href="ProductBrowser.html">
         <h2 class="title">Featured Products</h2>
     </a>
     <div class="row">
     <?php
-        require_once 'phpForHomepage/product_functions.php';
+        // require_once 'phpForHomepage/product_functions.php';
 
     $featured_products_names=array();
     $featured_products= read_featured_products();
     $featured_products_images= [
-        'http://www.simpleimageresizer.com/_uploads/photos/82a3d6fe/Screen_Shot_2021-05-31_at_10.50.55_50.png',
+        
         'https://product.hstatic.net/1000370106/product/12.1.1_c1b1a19b8a734a2e9a4c365e0a030bb9_master.jpg',
         'https://product.hstatic.net/1000370106/product/4.1_7143819b4290477d8d3ab42da4d1602c_master.jpg',
         'https://product.hstatic.net/1000370106/product/16.2.1_28aa5cfe2b394ddba01c4845bbd81739_master.jpg',
@@ -224,6 +215,10 @@
         'https://product.hstatic.net/1000370106/product/18.1_f6ff8ba828ab4f13a86b4fb1b31081b3_master.jpg',
         'https://product.hstatic.net/1000370106/product/19.1_f07eeeae858845a38a37873ee317fda1_master.jpg',
         'https://product.hstatic.net/1000370106/product/12.1.1_82a94763da854f5bb10c2014c823b9ab_master.jpg',
+        'https://product.hstatic.net/1000370106/product/12.1.1_c1b1a19b8a734a2e9a4c365e0a030bb9_master.jpg',
+        'https://product.hstatic.net/1000370106/product/4.1_7143819b4290477d8d3ab42da4d1602c_master.jpg',
+        
+
 
       ];
       $featured_products_count = 0;
@@ -232,7 +227,7 @@
         $name_featured_product = $featured_product['name'];
         $price_featured_product = $featured_product['price'];
         echo"
-        <a href='/ProductDetail.php?name={$name_featured_product}&price={$price_featured_product}'>
+        <a href='/ProductDetail2.php?name={$name_featured_product}&price={$price_featured_product}'>
             <div class='.col-3'>
                 <img src='$featured_products_images[$featured_products_count]'
                     alt=''>
@@ -249,7 +244,7 @@
         </a> 
         ";
         $featured_products_count++;
-        if ($featured_products_count == 10) {
+        if ($featured_products_count == 12) {
           break;
         }
       }
@@ -268,7 +263,7 @@
         <button class="cookie-btn">
             I Understand
         </button>
-        <a href="PrivacyPolicy.php"> Learn more</a>
+        <a href="PrivacyPolicy.html"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
     <!-------footer---->
@@ -280,20 +275,20 @@
                     <img src="productImages/Logo.png" alt="">
                 </div>
                 <div class="footer-col-2">
-                    <a href="ToS.php">
+                    <a href="ToS.html">
                         <p>ToS (Term of Service)</p>
                     </a>
 
                 </div>
                 <div class="footer-col-3">
-                    <a href="PrivacyPolicy.php">
+                    <a href="PrivacyPolicy.html">
                         <p>Privacy Policy</p>
                     </a>
 
                 </div>
 
                 <div class="footer-col-4">
-                    <a href="CopyRight.php">
+                    <a href="CopyRight.html">
                         <p>Copy right 2021</p>
                     </a>
                 </div>

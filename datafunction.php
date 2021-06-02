@@ -9,7 +9,7 @@ function getData($fileName, $cleanProccessingOn = false){
     if ($file != null){
         while(!feof($file)){
             $line = fgets($file);
-            if(strpos($line, ":") != false){
+            if(str_contains($line, ":")){
                 $split = explode(":", $line);
                 $dataArr[$split[0]] = $split[1];
             } else {
@@ -78,19 +78,9 @@ function getCSVfile($filepath){
     return $results;
 }
 
-
-function getAdminID(){
-    //This function return admin ID as a string
-    $dataAssArr = getData("../data/admin.txt");
-    $id = $dataAssArr["id"];
-    $id = str_replace("\n","",$id);
-    $id = trim($id);
-    return $id;
-}
-
 function getRegisterEmail(){
     //This function return email information array of registred user.
-    $filepath = '../data/register.csv';
+    $filepath = 'register.csv';
     $db = getCSVfile($filepath);
     $results = [];
     foreach($db as $data){
@@ -101,7 +91,7 @@ function getRegisterEmail(){
 
 function getRegisterPhoneNvm(){
     //This function return phone number information array of registred user.
-    $filepath = '../data/register.csv';
+    $filepath = 'register.csv';
     $db = getCSVfile($filepath);
     $results = [];
     foreach($db as $data){

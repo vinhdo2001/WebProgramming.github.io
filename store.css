@@ -135,6 +135,17 @@ width: 100%;
     transform: translateX(-50);
 
 }
+.mallDiv{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10% 10% 10% 10%;
+    /* margin-left: 5%; */
+}
+.mallCont img{
+    width: 20%;
+    height: 350px;
+    /* margin-left: 4%; */
+}
 h4{
     color: #555;
     font-weight:bolder;
