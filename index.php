@@ -67,8 +67,6 @@
                             <a href='/storeHome.php'> Browse</a>";
                             
                         ?>
-                         
-
                         </li>
                     </ul>
                 </nav>
