@@ -31,7 +31,6 @@
                 <a href='/index.php'>
                 <img src='https://i.imgur.com/WnDfSUO.png' alt='Logo' width='65%'></img>
                 </a>";
-                
                 ?>
                     
                 </div>
