@@ -91,7 +91,7 @@ session_start();
                     echo '<img src="Image/Vinh.jpg"> </br>';
                     echo '<form method="post" action="http://localhost:4000/server.php">
                         <button type="submit" class="button">Logout</button>
-                        <input type="hidden" name="type" value="1" required/>
+                        <input type="hidden" name="type" value="4" required/>
                         </form>';
                 } else {
                     echo '<strong>You need to <a href="Login.php">login</a> to see your account</strong>';

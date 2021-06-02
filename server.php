@@ -275,6 +275,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // header("Location: http://localhost:4000/asd.php");
             header("Location: AdminProfile.php");
         }   
+    }
+    else if ($REQ_TYPE == 4) {
+        // Logout request admin
+        if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
+            // check user session -> unset user session
+            unset($_SESSION['admin']);
+            header("Location: Login.php");
+        }
     }   
 }
 ?>
