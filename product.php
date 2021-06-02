@@ -66,20 +66,20 @@ else{
                             <a href="order-placement.php">Cart</a>
                         <li>
                         <li>
-                            <a href="AboutUs.html">About us</a>
+                            <a href="AboutUs.php">About us</a>
                         </li>
                         <li>
-                            <a href="MyAccount(logged-in).html">Account</a>
+                            <a href="MyAccount(logged-in).php">Account</a>
                         </li>
                         <li>
-                            <a href="Fees.html">Fees</a>
+                            <a href="Fees.php">Fees</a>
                         </li>
 
                         <li>
-                            <a href="FAQs.html">FAQs</a>
+                            <a href="FAQs.php">FAQs</a>
                         </li>
                         <li>
-                            <a href="Contact.html">Contact</a>
+                            <a href="Contact.php">Contact</a>
                         </li>
                         <li>
                             <a href="product.php">Product Browser</a>
@@ -122,6 +122,7 @@ else{
                     class="fa fa-arrow-left"></i></span>
             <?php
             }
+<<<<<<< HEAD:Product.php
         ?>
             <?php for($i = 1; $i <= $totalPages; $i++ ): 
 
@@ -149,9 +150,44 @@ else{
                     class="fa fa-arrow-right"></i></span>
             <?php
             }
+<<<<<<< HEAD:Product.php
         ?>
         </div>
        
+=======
+=======
+>>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,):ProductBrowser.php
+          
+       
+      }
+  
+
+
+    ?>
+<<<<<<< HEAD:Product.php
+=======
+
+
+                
+
+            
+        
+      
+
+           
+        </div>
+        <br><br>
+>>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,):ProductBrowser.php
+
+
+                
+
+            
+        
+      
+
+           
+>>>>>>> parent of 23558fb (productDetail, storeHome, newProductInStoreHome,):ProductBrowser.php
         </div>
         <br><br>
 
@@ -169,7 +205,7 @@ else{
         <button class="cookie-btn">
             I Understand 
         </button>
-        <a href="PrivacyPolicy.html"> Learn more</a>
+        <a href="PrivacyPolicy.php"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
     <!-------footer---->
@@ -181,20 +217,20 @@ else{
                     <img src="productImages/Logo.png" alt="">
                 </div>
                 <div class="footer-col-2">
-                    <a href="ToS.html">
+                    <a href="ToS.php">
                         <p>ToS (Term of Service)</p>
                     </a>
 
                 </div>
                 <div class="footer-col-3">
-                    <a href="PrivacyPolicy.html">
+                    <a href="PrivacyPolicy.php">
                         <p>Privacy Policy</p>
                     </a>
 
                 </div>
 
                 <div class="footer-col-4">
-                    <a href="CopyRight.html">
+                    <a href="CopyRight.php">
                         <p>Copy right 2021</p>
                     </a>
                 </div>
