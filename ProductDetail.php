@@ -106,7 +106,7 @@
                                
                                 <button class="btn" id="add-button">ADD TO CART</button>
                                 <button class="btn" id="buy-button" onclick="window.location.href='order-placement.php'">Buy Now</button><br>
-                                <span class="amount"><input type="number" value="1"></span>
+                                <span class="quantity"><input type="number" value="1"></span>
                             </div>
                     </section>
                 

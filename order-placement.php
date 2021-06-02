@@ -18,7 +18,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css" />
-    <script src="cart.js" async></script>
+   
 </head>
 
 <body>
@@ -70,7 +70,7 @@
             }
             else{
                 echo '<div id="login-modal" class="modal">
-                        <!-- Modal content -->
+                       
                         <div class="modal-content">
                             <span class="close">&times;</span>
                             Please login to proceed.
@@ -298,5 +298,7 @@ document.getElementById("field2").value = "you must add coupon";
 }
 
 </script>
+<script src="product.js"></script>
+<script src="cart.js"></script>
 
 </html>
