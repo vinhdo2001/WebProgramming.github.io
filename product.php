@@ -108,116 +108,55 @@ else{
 
         <div class="row">
             
-        <?php
-                $sort_products = $all_products;
-                $path = "products.csv";
-                if(isset($_GET['sort'])){
-                    $sort_value = $_GET['sort'];
-
-                    if($sort_value == 1){
-                        $sort_products = sortCSVFile($path);
-                    } else if($sort_value == 2){
-                        $sort_products = sortCSVFile($path, 1);
-                    } else if($sort_value == 3){
-                        $sort_products = sortCSVFile($path, 2);
-                    } else if($sort_value == 4){
-                        $sort_products = sortCSVFile($path, 3, false);
-                    }else if($sort_value == 5){
-                        $sort_products = sortCSVFile($path, 3);
-                    } else{
-                        $sort_products = sortCSVFile($path);
-                    }
-                } else{
-                    $sort_products = sortCSVFile($path);
-                }
-                for ($i=0; $i < count($sort_products); $i++) {
-                    $link = "";
-                   if($i != 0){
-                        if(($i > $paginationStart) && ($i < $last_product + 1)){
-                            $data = $sort_products[$i];
-                            $name = $data[1];
-                            $price = $data[2];
-                            if($i%2 == 0){
-                                $img ="https://i.imgur.com/eNzg9Tj.png";
-                            }
-                            else{
-                                $img ="https://i.imgur.com/X3TOrCf.png";
-                            }
-                            if($i%2 == 0){
-                                $link ="productdetails.php";
-                            }
-                            else{
-                                $link ="productdetails.php";
-                            }
-            ?>
-            
-            <div class="col-product-4">
-                <a href= <?php echo $link?>>
-                    <img src="<?php echo $img; ?>" alt="<?php echo $name; ?>">
-                </a>
-                <h3><?php echo $name; ?></h3>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-                <p>$<?php echo $price; ?></p>
+        <?php displayProduct($sort_products,  $paginationStart, $last_product)?>
             </div>
-            
-            <?php
-                        }
-                   }
+            <div class="page-btn">
+                <?php 
+                if($page == 1){ 
+            ?>
+                <span class="active_pagination"><i class="fa fa-arrow-left"></i></span>
+                <?php
+                } else{
+            ?>
+                <span class="pagination_span"
+                    onclick="window.location.href='<?php echo "product.php?sort=".$sort_value."&page=". $prev; ?>'"><i
+                        class="fa fa-arrow-left"></i></span>
+                <?php
                 }
             ?>
-        </div>
-        <div class="page-btn">
-            <?php 
-            if($page == 1){ 
-        ?>
-            <span class="active_pagination"><i class="fa fa-arrow-left"></i></span>
-            <?php
-            } else{
-        ?>
-            <span class="pagination_span"
-                onclick="window.location.href='<?php echo "product.php?sort=".$sort_value."&page=". $prev; ?>'"><i
-                    class="fa fa-arrow-left"></i></span>
-            <?php
-            }
-        ?>
-            <?php for($i = 1; $i <= $totalPages; $i++ ): 
+                <?php for($i = 1; $i <= $totalPages; $i++ ): 
 
-            if($page == $i){
-                ?>
-            <span class="active_pagination" onclick="window.location.href='#'"><?php echo $i; ?></span>
-            <?php
-            } else{
-                ?>
-            <span class="pagination_span"
-                onclick="window.location.href='product.php?sort=<?php echo $sort_value ?>&page=<?php echo $i; ?>'"><?php echo $i; ?></span>
-            <?php
-            }
-        ?>
-            <?php endfor; ?>
-            <?php 
-            if($page >= $totalPages){ 
-        ?>
-            <span class="active_pagination"><i class="fa fa-arrow-right"></i></span>
-            <?php
-            } else{
-        ?>
-            <span class="pagination_span"
-                onclick="window.location.href='<?php echo "product.php?sort=".$sort_value."&page=". $next; ?>'"><i
-                    class="fa fa-arrow-right"></i></span>
-            <?php
-            }
-        ?>
-        </div>
+                if($page == $i){
+                    ?>
+                <span class="active_pagination" onclick="window.location.href='#'"><?php echo $i; ?></span>
+                <?php
+                } else{
+                    ?>
+                <span class="pagination_span"
+                    onclick="window.location.href='product.php?sort=<?php echo $sort_value ?>&page=<?php echo $i; ?>'"><?php echo $i; ?></span>
+                <?php
+                }
+            ?>
+                <?php endfor; ?>
+                <?php 
+                if($page >= $totalPages){ 
+            ?>
+                <span class="active_pagination"><i class="fa fa-arrow-right"></i></span>
+                <?php
+                } else{
+            ?>
+                <span class="pagination_span"
+                    onclick="window.location.href='<?php echo "product.php?sort=".$sort_value."&page=". $next; ?>'"><i
+                        class="fa fa-arrow-right"></i></span>
+                <?php
+                }
+            ?>
+
        
           
        
       }
+    </div>
   
 
 
