@@ -2,7 +2,7 @@
 function sortByName($standartLetter){
     //This function receives the standard letter as parameters
     //and returns array which only matched with the standard letter.
-    $storeArr = getCSVfile("phpforhomepage/stores.csv");
+    $storeArr = getCSVfile("../csvFile/stores.csv");
     $result = [];
     foreach($storeArr as $data){
         $checkFirstLetter = stripos($data["name"], $standartLetter);
@@ -16,7 +16,7 @@ function sortByName($standartLetter){
 function sortByCatagory($standardCatID){
     //This function receives the standard cateagory id as parameters
     //and returns array which only matched with the standard cateagory id.
-    $storeArr = getCSVfile("phpforhomepage/stores.csv");
+    $storeArr = getCSVfile("../csvFile/stores.csv");
     foreach($storeArr as $data){
         if($data["category_id"] == $standardCatID){
             $result[] = $data;

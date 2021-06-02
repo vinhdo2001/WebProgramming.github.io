@@ -1,5 +1,4 @@
 <?php
-
 function read_all_products() {
   $file_name = '../csvFile/products.csv';
   $fp = fopen($file_name, 'r');
@@ -20,6 +19,7 @@ function read_all_products() {
 function timecomp($a,$b){
   return strtotime($b['created_time'])-strtotime($a['created_time']);
 }
+
 function read_newest_products() {
   $file_name = '../csvFile/products.csv';
   $fp = fopen($file_name, 'r');
