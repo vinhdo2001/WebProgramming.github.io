@@ -154,7 +154,7 @@
     </div>
 
 
-    <a href="store.html">
+    <a href="browseproducts.php">
         <h2 class="title">Featured Stores</h2>
     </a>
     <div class="row">
@@ -193,7 +193,7 @@
       }
      ?>
     </div>
-    <a href="ProductBrowser.html">
+    <a href="product.php">
         <h2 class="title">Featured Products</h2>
     </a>
     <div class="row">
