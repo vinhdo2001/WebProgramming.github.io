@@ -37,9 +37,6 @@ function read_all_stores_sorted() {
 }
 
 
-// function timecomp($a,$b){
-//   return strtotime($b['created_time'])-strtotime($a['created_time']);
-// }
 function read_newest_stores() {
   $file_name = '../csvFile/stores.csv';
   $fp = fopen($file_name, 'r');

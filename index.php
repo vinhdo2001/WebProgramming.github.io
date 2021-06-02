@@ -92,10 +92,11 @@
             // $new_store_names=array();
             $new_store_count=0;
             foreach($new_stores as $new_store){
+                $new_stores_id=$new_store['id'];
                 $new_stores_name=$new_store['name'];
                 echo"
                     <div class='slider-item1'>
-                        <a href=''>
+                        <a href='/storeHome.php?id={$new_stores_id}&name={$new_stores_name}''>
                             <div class='img-div1'></div>
                             <h4>$new_stores_name</h4>
                             <div class='rating'>
