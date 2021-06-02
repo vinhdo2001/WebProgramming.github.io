@@ -17,6 +17,7 @@ function read_all_stores() {
   }
   return $stores;
 }
+<<<<<<< HEAD
 
 function read_all_stores_sorted() {
   $file_name = '../csvFile/stores.csv';
@@ -35,6 +36,8 @@ function read_all_stores_sorted() {
   sort($stores);
   return $stores;
 }
+=======
+>>>>>>> parent of 19a905d (part 07)
 
 
 // function timecomp($a,$b){
