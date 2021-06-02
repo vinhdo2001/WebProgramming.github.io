@@ -99,7 +99,11 @@
                 <section class="container content-section">
                     <div class="shop-items">
                         <div class="shop-item">
-                            <span id="product-name"><h1><strong> MAXI FLORAL DRESS </strong> </h1></span>  
+                        <?php 
+                        $product_name=$_GET['name'];
+                        $product_id=$_GET['id'];
+                        <span id="product-name"><h1><strong> $product_name </strong> </h1></span>  
+                        ?>
                             
                             <div class="shop-item-details">
                                 <span id="product-price"><h4>60.00</h4></span>
