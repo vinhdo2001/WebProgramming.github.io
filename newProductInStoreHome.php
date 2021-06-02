@@ -106,10 +106,11 @@
              $store=$product['store_id'];
              if ($store==$store_id){
                  echo"
-                 <div class='.col-3'>
+                 <div class=''mallDiv''>
+                 <div class='mallCont'>
                  <img src='$product_images[$count]'
                      alt='' class='product-img'>
-                 </div>
+                
                  <a href='/ProductDetail.php?id={$product_id}&name={$product_name}&price={$product_price}'>
                      <h4>$product_name </h4>
                      <div class='rating'>
@@ -119,8 +120,11 @@
                          <span class='fa fa-star '></span>
                          <span class='fa fa-star '></span>
                      </div>
-                     <p>$product_price</p>
+                     <a>$product_price</a>
                  </a>
+                 </div>
+                 </div>
+                 
                ";
                $count++;
                if ($count == 5) {
