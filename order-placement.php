@@ -90,7 +90,7 @@
                         Please login to proceed.
                         </br>
                         <span>
-                            <a href="login.php" class="button">login</a>
+                            <a href="register.php" class="button">login</a>
                         </span>
                     </div>
         </div>';
