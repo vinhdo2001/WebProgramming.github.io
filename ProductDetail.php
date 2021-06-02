@@ -102,11 +102,14 @@
                         <?php 
                         $product_name=$_GET['name'];
                         $product_id=$_GET['id'];
+                        $product_price=$_GET['price'];
+
                         echo "<span id='product-name'><h1><strong> $product_name </strong> </h1></span>";
                         ?>
                             
                             <div class="shop-item-details">
-                                <span id="product-price"><h4>60.00</h4></span>
+                                <?php
+                                echo "<span id='product-price'><h4>$product_price</h4></span>";?>
                                
                                 <button class="btn" id="add-button">ADD TO CART</button>
                                 <button class="btn" id="buy-button" onclick="window.location.href='order-placement.php'">Buy Now</button><br>
