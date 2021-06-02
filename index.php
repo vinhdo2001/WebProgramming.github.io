@@ -221,7 +221,7 @@
 
 
       ];
-      $featured_products_count = 1;
+      $featured_products_count = 0;
       foreach($featured_products as $featured_product){
         $id_featured_product = $featured_product['id'];
         $name_featured_product = $featured_product['name'];
@@ -244,7 +244,7 @@
         </a> 
         ";
         $featured_products_count++;
-        if ($featured_products_count == 11) {
+        if ($featured_products_count == 12) {
           break;
         }
       }
