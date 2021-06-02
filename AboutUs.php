@@ -73,21 +73,80 @@
                 <img src="Image/Nguyen.jpg" alt="product Image" class="project-image">
                 <h4>Khoi Nguyen</h4>
                 <p>Guitarist</p>
+                
+                <form  method=POST enctype="multipart/form-data" >
+                    Choose file: <input type="file" name="file"/><br>
+                    <input type="submit" value="Upload picture" name="upload"/> 
+                    <?php
+                            if(isset($_POST["upload"])) //check if user has submitted or not
+                            {
+                            if($_FILES["file"]["name"]!=NULL)
+                            {
+
+                            if($_FILES["file"]["type"]=="image/jpeg"
+                            ||$_FILES["file"]["type"]=="image/png"
+                            ||$_FILES["file"]["type"]=="image/gif"
+                            )
+                            {
+                            if($_FILES["file"]["size"]>2048576)
+                            {
+                            echo "File is too heavy, please choose another picture";
+                            }
+
+                            // check file existence
+                            elseif (file_exists("" . $_FILES["file"]["name"])) 
+                            {
+                            echo $_FILES["file"]["name"]." File already exists. ";
+                            }
+
+                            else{
+
+                            $path = ""; // file luu vào thu muc chua file upload
+                            $tmp_name = $_FILES['file']['tmp_name'];
+                            $name = $_FILES['file']['name'];
+                            $type = $_FILES['file']['type']; 
+                            $size = $_FILES['file']['size']; 
+                            // Upload file
+                            move_uploaded_file($tmp_name,$path.$name);
+                            echo "File uploaded! <br />";
+                            echo "Tên file : ".$name."<br />";
+                            echo "Kieu file : ".$type."<br />";
+                            echo "File size : ".$size;
+                            }
+                            }
+                            else {
+                            echo "Invalid file";
+                            }
+                            }
+                            else 
+                            {
+                            echo "Please select file";
+                            }
+                            }
+
+                            ?>               
+                </form>
             </div>
             <div class="col-4">
                 <img src="Image/Phuong.jpg" alt="product Image" class="project-image">
                 <h4>Lam Phuong</h4>
                 <p>Need information</p>
+                <button>Upload</button>
+
             </div>
             <div class="col-4">
                 <img src="Image/Tram.jpg" alt="product Image" class="project-image">
                 <h4>Ngoc Tram</h4>
                 <p>Need information</p>
+                <button>Upload</button>
+
             </div>
             <div class="col-4">
                 <img src="Image/Vinh.jpg" alt="product Image" class="project-image">
                 <h4>Thanh Vinh</h4>
                 <p>futbol lover</p>
+                <button>Upload</button>
+
             </div>
             <div class="overlay">
                 <div class="overlay-inner">
@@ -127,7 +186,7 @@
         <button class="cookie-btn">
             I Understand 
         </button>
-        <a href="PrivacyPolicy.html"> Learn more</a>
+        <a href="PrivacyPolicy.php"> Learn more</a>
     </div>
     <script src="Vinh's/cookie.js"></script>
 

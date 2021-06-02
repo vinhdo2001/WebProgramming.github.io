@@ -82,7 +82,7 @@
         </div>
 
         <div class="row">
-<<<<<<< HEAD:Product.php
+
             <?php displayProduct($sort_products,  $paginationStart, $last_product)?>
         </div>
         <div class="page-btn">
@@ -98,7 +98,7 @@
                     class="fa fa-arrow-left"></i></span>
             <?php
             }
-<<<<<<< HEAD:Product.php
+
         ?>
             <?php for($i = 1; $i <= $totalPages; $i++ ): 
 
