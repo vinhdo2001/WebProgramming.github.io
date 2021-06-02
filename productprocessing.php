@@ -100,7 +100,7 @@ for ($i=0; $i < count($sort_products); $i++) {
             }
             echo '<div class="col-product-4">
                     <a href='.$link.'>
-<img src="img/product/' .$img.'" alt="<' .$name.'>">
+<img src="' .$img.'" alt="<' .$name.'>">
 </a>
 <h3>' .$name.'</h3>
 <div class="rating">
