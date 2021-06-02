@@ -42,15 +42,9 @@
                     <input type="checkbox" id="menu-icon">
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
-<<<<<<< HEAD
                         <li>
                             <a href="order-placement.php">Cart</a>
                         <li>
-=======
-                        <!-- <li>
-                            <a href="order-placement.html">Cart</a>
-                        <li> -->
->>>>>>> 8ca1f7d97ce95ffa1797c52ddf5eccc6f0abe0a1
                         <li>
                             <a href="AboutUs.php">About us</a>
                         </li>
@@ -68,9 +62,6 @@
                             <a href="Contact.php">Contact</a>
                         </li>
                         <li>
-<<<<<<< HEAD
-                            <a href="product.php">Product Browser</a>
-=======
                         <?php
                             echo"
                             <a href='/storeHome.php'> Browse</a>";
@@ -78,7 +69,6 @@
                         ?>
                          
 
->>>>>>> 8ca1f7d97ce95ffa1797c52ddf5eccc6f0abe0a1
                         </li>
                     </ul>
                 </nav>
@@ -202,11 +192,7 @@
         $featured_store_name = $featured_store['name'];
         
         echo"
-<<<<<<< HEAD
-        <a href='hnoss.php'>
-=======
         <a href='/storeHome.php?id={$featured_store_id}&name={$featured_store_name}'>
->>>>>>> 8ca1f7d97ce95ffa1797c52ddf5eccc6f0abe0a1
             <div class='.col-3'>
                 <img src='$featured_stores_images[$featured_stores_count]' alt=''>
             </div>
