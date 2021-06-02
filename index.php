@@ -62,8 +62,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <a href="ProductBrowser.html">Product Browser</a>
 =======
+=======
+>>>>>>> parent of 19a905d (part 07)
 =======
 >>>>>>> parent of 19a905d (part 07)
 =======

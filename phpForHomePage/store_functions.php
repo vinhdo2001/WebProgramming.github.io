@@ -20,6 +20,7 @@ function read_all_stores() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 function read_all_stores_sorted() {
   $file_name = '../csvFile/stores.csv';
@@ -41,6 +42,8 @@ function read_all_stores_sorted() {
 =======
 >>>>>>> parent of 19a905d (part 07)
 
+=======
+>>>>>>> parent of 19a905d (part 07)
 =======
 >>>>>>> parent of 19a905d (part 07)
 =======
