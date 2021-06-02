@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+    ?>
 <?php include 'deleteInstall.php';
 ?>
 <!DOCTYPE html>
@@ -7,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simba | Copyright</title>
+    <title>Simba | Terms of Service</title>
     <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="NavBar.css">
     <link href="Vinh's/cookie.css" rel="stylesheet">
@@ -18,11 +21,11 @@
 </head>
 
 <body>
-    <div class="header">
+<div class="header">
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="https://i.imgur.com/WnDfSUO.png" alt="Logo" width="65%">
                     </a>
                 </div>
@@ -30,9 +33,7 @@
                     <input type="checkbox" id="menu-icon">
                     <label for="menu-icon">Menu</label>
                     <ul id="MenuItems">
-                        <li>
-                            <a href="order-placement.php">Cart</a>
-                        <li>
+                        <li><img src="https://i.imgur.com/vPyCGZZ.png" width="30px" height="30px" alt=""></li>
                         <li>
                             <a href="AboutUs.php">About us</a>
                         </li>
@@ -50,23 +51,56 @@
                             <a href="Contact.php">Contact</a>
                         </li>
                         <li>
-                            <a href="product.php">Product Browser</a>
+                            <a href="ProductBrowser.php">Product Browser</a>
                         </li>
                     </ul>
                 </nav>
+                <!-- <img src="https://i.imgur.com/vPyCGZZ.png" width="30px" height="30px" alt=""> -->
+                <!-- <img src="https://i.imgur.com/OA07E9Y.png" class="menu-icon"> -->
 
             </div>
         </div>
     </div>
 
-    <div class="policy">
-        <h2>Copyrights </h2>
-        <h3>Copyrights Notice</h3>
-        <p>The entire hennemanarchitects.com Web site is Copyright ©2005-2021 by Henneman & Associates, LLC. All Rights Reserved. The hennemanarchitects.com site may not be copied or duplicated in whole or part by any means without express prior agreement in writing or unless specifically noted on the site.<br/><br/>
-
-            Some photographs or documents contained on the site may be the copyrighted property of others; acknowledgement of those copyrights is hereby given. All such material is used with the permission of the owner.</p>
-
-    </div>
+    <div class="panel-wrapper">
+				<div class="panel-head">
+					Copyright
+				</div>
+				<div class="panel-body">
+                <form  method = "post" >
+                <?php
+                    if(isset($_POST['submitData'])){
+                        $content1 = $_POST['text'];
+                        $path = "ToS.txt";
+                        file_put_contents($path,$content1);
+                    }
+                    ?>
+                    Section: <input name="section" style="font-size:15px; padding:10px" type="text" value ="CopyRight" disabled>
+                    <br>
+                    
+                    <?php
+                    $path = "CopyRight.txt";
+                    $file= file_get_contents($path);
+                    $content = explode(" - ", $file);
+                    echo '<p class="text1" style= "border: solid 1px;margin-right: 774px;margin-top: 10px; width: 100%">'.$content[0].'</p>'
+                        ;
+                    ?>
+                    <textarea  name="text" style="margin-top:20px;display:none" class="text" cols="40" rows="10" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates ducimus odio porro perspiciatis. Eligendi quae iste mollitia est, rerum dolorem veritatis sint, culpa totam quam voluptates vero maxime. Libero, dolore.</textarea>
+                    <br>
+                    
+                    <p style="cursor: pointer;
+                            border: solid 2px black;
+                            margin-right: 1055px;
+                            padding-left: 10px;
+                            color: blue;" 
+                         id="buttonEdit" class="edit" >Edit
+                    </p>
+                    <button name="submitData" style="color: blue;padding: 5px;padding-left: 15px;padding-right: 15px;margin-top: 20px;">Update</button>
+                    
+                </form>
+                </div>
+            </div>
+    
     <div class="cookie-container">
         <h2>I use cookies</h2>
         <p>
@@ -77,10 +111,8 @@
         <button class="cookie-btn">
             I Understand 
         </button>
-        <a href="PrivacyPolicy.html"> Learn more</a>
+        <a href="PrivacyPolicy.php"> Learn more</a>
     </div>
-    
-
     <script src="Vinh's/cookie.js"></script>
 <!-------footer---->
 <div class="footer">
@@ -91,26 +123,54 @@
                 <img src="productImages/Logo.png" alt="">
             </div>
             <div class="footer-col-2">
-                <a href="ToS.html">
+                <a href="ToS.php">
                     <p>ToS (Term of Service)</p>
                 </a>
 
             </div>
             <div class="footer-col-3">
-                <a href="PrivacyPolicy.html">
+                <a href="PrivacyPolicy.php">
                     <p>Privacy Policy</p>
                 </a>
 
             </div>
 
             <div class="footer-col-4">
-                <a href="CopyRight.html">
+                <a href="CopyRight.php">
                     <p>Copy right 2021</p>
                 </a>
             </div>
         </div>
     </div>
 </div>
-</body>
+<script>
+            var text = document.getElementsByClassName("text");
+            var text1 = document.getElementsByClassName("text1");
+            var edits = document.getElementsByClassName("edit");
+            for(let i=0;i<edits.length;i++){
+                edits[i].addEventListener("click",function(){
+                text1[i].style.display="none";
+                text[i].style.display="block";
+                })
+            }
 
+
+        
+        $(document).ready(function() {
+        $('.nav-btn').on('click', function(event) {
+            event.preventDefault();
+            /* Act on the event */
+            $('.sidebar').slideToggle('fast');
+
+            window.onresize = function(){
+                if ($(window).width() >= 768) {
+                    $('.sidebar').show();
+                } else {
+                    $('.sidebar').hide();
+                }
+            };
+        });
+        });
+    </script>
+</body>
 </html>
