@@ -65,7 +65,10 @@
             <a href="semir.html">
                 <img class="store-image" src="https://i.imgur.com/yH61xXY.png">
             </a>
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of aa68943 (phuong edit)
 
             <div class="row">
                 
@@ -88,6 +91,128 @@
                 </div>
             </div>
 
+<<<<<<< HEAD
+=======
+
+            <a href="olv.html">
+                <img class="store-image" src="https://i.imgur.com/WaYxrco.png">
+            </a>
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://i.imgur.com/W67AqEy.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/8AUkTVW.png">
+
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/9WHrKKZ.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/PHBz1G6.png">
+
+                </div>
+            </div>
+
+
+            <a href="hnoss.html">
+                <img class="store-image" src="https://i.imgur.com/mPnxdPI.png">
+            </a>
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://i.imgur.com/xUi4GdT.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/gS1oXdb.png">
+
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/TLmjluc.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/C56Qfcs.png">
+
+                </div>
+            </div>
+
+            <a href="theseam.html">
+                <img class="store-image" src=https://i.imgur.com/eGZyNjU.png">
+            </a>
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://i.imgur.com/3jAEy8n.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/rcJ1RS7.png">
+
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/8Ap67lr.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/cVWl8Sd.png">
+
+                </div>
+            </div>
+
+
+            <a href="the19club.html">
+                <img class="store-image" src="https://i.imgur.com/8Y4ttRt.png">
+            </a>
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://i.imgur.com/0caYALX.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/7tw2qCW.png">
+
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/ISBMwuO.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/2ey4BNI.png">
+
+                </div>
+            </div>
+
+
+            <a href="monde.html">
+                <img class="store-image" src="https://i.imgur.com/90Wh2G7.png">
+            </a>
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://i.imgur.com/MDon8vF.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/8jIDVjw.png">
+
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/PSTwD3V.png">
+
+                </div>
+                <div class="col-4">
+                    <img src="https://i.imgur.com/1QkrOM3.png">
+
+                </div>
+            </div>
+
+>>>>>>> parent of aa68943 (phuong edit)
         </div>
     </div>
     <div class="cookie-container">
