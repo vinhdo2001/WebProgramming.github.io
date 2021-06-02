@@ -97,6 +97,37 @@
         }
         ?>
 
+<?php
+    function order_function(){
+        if(isset($_SESSION['user'])){
+            if($_SESSION['user'] === true){
+            }
+            else{
+                echo '<div id="login-modal" class="modal">
+                       
+                        
+                            
+                            </br>
+                            <span>
+                                <a href="thankyou.php" class="button">order</a>
+                           
+                        </div>';
+            }
+        }
+        else{
+            echo '<div id="login-modal" class="modal">
+                   
+                       
+                        </br>
+                        <span>
+                            <a href="login.php" class="button">order</a>
+                        </span>
+                   
+        </div>';
+        }
+    }
+        ?>
+
     <section class="container content-section">
         <h2 class="section-header">CART</h2>
         <div class="product-container">
@@ -134,8 +165,9 @@
             <div></div>
 
             
-            <div class="btn"><a href="thankyou.php">Order</a></div>
+            
             <br><br>
+            <button class="btn" onclick=" <?php order_function() ?>"> </button>
             <div class="btn"><a href="product.php">Continue Shopping &#8594;</a></div>
             
         </div>
