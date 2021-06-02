@@ -1,5 +1,7 @@
 <?php
 session_start();
+require "productprocessing.php";
+
 $counter = 1;
 $featured_store_products = [];
 $new_arrivals = ["", "", "", "",""];
@@ -13,7 +15,7 @@ foreach ($all_products as $product) {
         array_push($featured_store_products, $product);
     }
 }
-require "productprocessing.php";
+
 $all_products = getAllProducts($_SESSION["storeID"]);
 $number_of_products = count($all_products);
 $limit = 2;
