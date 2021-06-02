@@ -10,11 +10,11 @@ if(isset($_GET["submitName"]) || isset(($_GET["submitCatagory"]))){
 }
 
 // Load template
-
+require_once "head.php";
 $cssArr = ["headerandfooter","mallSort","cookies"];
 $fileTitle = "Contact Us";
-
-
+callCSSfile($cssArr, $fileTitle);
+require_once "header.php";
 ?>
 
 <main>
@@ -90,11 +90,11 @@ $fileTitle = "Contact Us";
                             $mallID = $mallInfo["id"];
                             echo "<div class='mallCont'>";
                             if($num % 2 == 0){
-                                echo "<a href='/index.php?storeID={$mallID}'><img class='mallimg' src='image/vinh.jpg'></a>";
-                                echo "<a href='/index.php?storeID={$mallID}'><h2>{$mallName}</h2></a>";
+                                echo "<a href='sport/index.php?storeID={$mallID}'><img class='mallimg' src='New_products/mall4.jpg'></a>";
+                                echo "<a href='sport/index.php?storeID={$mallID}'><h2>{$mallName}</h2></a>";
                             }else{
-                                echo "<a href='/index.php?storeID={$mallID}'><img class='mallimg' src='image/vinh.jpg'></a>";
-                                echo "<a href='/index.php?storeID={$mallID}'><h2>{$mallName}</h2></a>";
+                                echo "<a href='game/index.php?storeID={$mallID}'><img class='mallimg' src='New_products/mall4.jpg'></a>";
+                                echo "<a href='game/index.php?storeID={$mallID}'><h2>{$mallName}</h2></a>";
 
                             }
                             $num ++;
