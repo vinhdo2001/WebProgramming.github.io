@@ -119,6 +119,7 @@
     <a href="store.html">
         <h2 class="title">New Products</h2>
     </a>
+    
     <div class="slider-wrap">
         <div class="slider">
             <?php
